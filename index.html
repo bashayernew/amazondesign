@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="images/logo.png">
+<title>Amazon International</title>
+<meta name="description" content="Amazon International — exhibition booth design & build and interior decor, Kuwait.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=Noto+Sans+Arabic:wght@300..700&family=Readex+Pro:wght@200..700&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --paper:#FFFFFF;
+  --mist:#F2F6FD;
+  --line:#DBE3F1;
+  --ink:#0A1834;
+  --navy:#0B2A66;
+  --navy-deep:#061B45;
+  --blue:#1554D6;
+  --blue-bright:#3B86F7;
+  --red:#D71A28;
+  --red-deep:#B3121F;
+  --muted:#586584;
+  --display:"Readex Pro","Manrope","Helvetica Neue",Arial,sans-serif;
+  --body:"Manrope","Helvetica Neue",Arial,sans-serif;
+  --gutter:clamp(16px, 4vw, 48px);
+  --max:1200px;
+  --radius:4px;
+  --r-btn:999px;
+  --r-field:12px;
+  --r-card:16px;
+  --rail:58px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+html[lang="ar"]{
+  --display:"Readex Pro","Noto Sans Arabic",Tahoma,sans-serif;
+  --body:"Noto Sans Arabic","Readex Pro",Tahoma,sans-serif;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:28px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;font-weight:600}
+html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3{letter-spacing:-.02em;line-height:1.14}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3{letter-spacing:0;line-height:1.4}
+p{margin:0}
+
+/* keeps page content clear of the floating side rail */
+.pad-rail{padding-inline-start:var(--rail)}
+
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+html[lang="ar"] .eyebrow{letter-spacing:0;font-size:14px;text-transform:none}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--red)}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:var(--r-btn);font-family:var(--display);font-weight:600;font-size:15px;border:1.5px solid transparent;
+  transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-red{background:linear-gradient(135deg,#E62A3C,var(--red) 55%,var(--red-deep));color:#fff;box-shadow:0 14px 30px -14px rgba(215,26,40,.7)}
+.btn-red:hover{transform:translateY(-2px);box-shadow:0 20px 38px -14px rgba(215,26,40,.8)}
+.btn-line{border-color:rgba(11,42,102,.26);color:var(--navy);background:#fff;box-shadow:0 12px 26px -20px rgba(11,42,102,.9)}
+.btn-line:hover{background:linear-gradient(135deg,var(--navy),var(--blue) 75%,#2E77EE);color:#fff;border-color:transparent;transform:translateY(-2px);box-shadow:0 18px 34px -14px rgba(21,84,214,.62)}
+.btn-white{background:#fff;color:var(--navy);box-shadow:0 14px 30px -14px rgba(4,16,44,.7)}
+.btn-white:hover{background:linear-gradient(135deg,#fff,#E4EEFF);transform:translateY(-2px);box-shadow:0 20px 38px -14px rgba(4,16,44,.8)}
+html[dir="rtl"] .flip{transform:scaleX(-1)}
+
+/* ---------- page top (scrolls away, covers nothing) ---------- */
+.topbar{background:linear-gradient(90deg,#061B45,#0B2A66);color:#C9D3E6;font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:6px 20px;padding-block:8px;flex-wrap:wrap}
+.topbar a:hover{color:#fff}
+.topbar .tb-left{display:flex;gap:6px 20px;flex-wrap:wrap}
+.topbar .tb-i{display:inline-flex;align-items:center;gap:7px;min-width:0}
+.topbar .tb-i svg{width:14px;height:14px;flex:none;opacity:.7}
+.topbar .tb-i span{overflow-wrap:anywhere}
+.topbar .tb-addr{display:inline-flex}
+.ltr{direction:ltr;unicode-bidi:isolate}
+header.site{background:#fff;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}
+.brand{display:flex;align-items:center;gap:12px;flex:none}
+.brand .logo-img{height:50px;width:auto}
+.brand .logo-fallback{display:flex;align-items:center;gap:12px}
+.brand .logo-fallback svg{height:44px;width:auto}
+.brand .wm{display:flex;flex-direction:column;line-height:1;direction:ltr}
+.brand .wm b{font-family:"Readex Pro",sans-serif;font-weight:600;font-size:19px;letter-spacing:.16em;color:var(--navy)}
+.brand .wm small{font-family:"Readex Pro",sans-serif;font-weight:400;font-size:8.4px;letter-spacing:.4em;color:var(--red);margin-top:6px}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.lang{border:1.5px solid var(--line);background:#fff;color:var(--navy);border-radius:var(--r-btn);padding:10px 17px;font-family:var(--display);font-weight:600;font-size:14px;transition:border-color .2s}
+.lang:hover{border-color:var(--navy)}
+.nav .btn{padding:12px 22px}
+
+/* ---------- floating side rail ---------- */
+.rail{position:fixed;inset-inline-start:16px;top:50%;translate:0 -50%;z-index:60;
+  display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.rail ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;position:relative}
+.rail-track{position:absolute;inset-inline-start:5px;top:14px;bottom:14px;width:2px;background:rgba(124,136,158,.42);border-radius:2px;overflow:hidden}
+.rail-fill{display:block;width:100%;height:0;background:var(--red);border-radius:2px;transition:height .15s linear}
+.rail a{display:flex;align-items:center;height:28px;width:12px;position:relative}
+.rail .dot{width:12px;height:12px;flex:none;border-radius:50%;background:#fff;border:2px solid #97A3BA;position:relative;z-index:1;
+  box-shadow:0 2px 8px rgba(10,23,51,.22);
+  transition:border-color .3s var(--ease),background .3s var(--ease),scale .3s var(--ease)}
+/* the section name pops out beside the dot; it floats, so it never pushes the page */
+.rail .lbl{position:absolute;inset-inline-start:23px;top:50%;translate:0 -50%;z-index:2;
+  font-family:var(--display);font-size:13.5px;font-weight:600;color:var(--navy);white-space:nowrap;
+  background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 13px;
+  box-shadow:0 10px 24px -12px rgba(10,23,51,.55);
+  opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .25s var(--ease),visibility .25s var(--ease)}
+.rail a:hover .dot{border-color:var(--navy);scale:1.15}
+.rail a:hover .lbl,.rail a:focus-visible .lbl{opacity:1;visibility:visible}
+.rail a.on .dot{border-color:var(--red);background:var(--red);scale:1.2;box-shadow:0 0 0 5px rgba(215,26,40,.16),0 2px 10px rgba(215,26,40,.45)}
+.rail a.on .lbl{opacity:1;visibility:visible;color:var(--red);border-color:rgba(215,26,40,.35)}
+.rail .sep{height:14px}
+.rail .util{display:flex;flex-direction:column;gap:7px;margin-inline-start:-12px}
+.rail .fab{width:36px;height:36px;flex:none;display:grid;place-items:center;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:var(--navy);font-family:var(--display);font-weight:700;font-size:11.5px;box-shadow:0 6px 18px -8px rgba(10,23,51,.45);transition:all .25s var(--ease)}
+.rail .fab:hover{border-color:var(--navy);transform:scale(1.08)}
+.rail .fab svg{width:17px;height:17px}
+.rail .fab.red{background:linear-gradient(135deg,#E62A3C,var(--red-deep));border-color:transparent;color:#fff;box-shadow:0 8px 20px -8px rgba(215,26,40,.85)}
+.rail .fab.red:hover{background:var(--red-deep);border-color:var(--red-deep)}
+.rail .fab.wa{background:linear-gradient(135deg,#2FE07C,#1DB755);border-color:transparent;color:#fff;box-shadow:0 8px 20px -8px rgba(37,211,102,.85)}
+.rail .fab.wa:hover{background:#1DB755;border-color:#1DB755}
+
+/* ---------- image slots ---------- */
+.slot{position:relative;overflow:hidden;background:var(--mist);isolation:isolate;max-width:100%}
+.slot::before{content:"";position:absolute;inset:0;z-index:-1;
+  background-image:repeating-linear-gradient(135deg, transparent 0 14px, rgba(13,37,86,.055) 14px 15px);}
+.slot .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:16px;color:var(--muted);z-index:-1}
+.slot .ph svg{width:34px;height:34px;color:var(--blue);opacity:.5}
+.slot .ph b{font-family:var(--display);font-size:13.5px;font-weight:600;color:var(--navy)}
+.slot .ph code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11.5px;direction:ltr;background:#fff;border:1px solid var(--line);padding:3px 8px;border-radius:3px;max-width:100%;overflow-wrap:anywhere}
+.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding-block:clamp(40px,6vw,80px) clamp(56px,7vw,96px);overflow:hidden}
+.hero::after{content:"";position:absolute;inset-inline-end:-10%;top:-30%;width:58%;height:140%;background:linear-gradient(180deg,var(--mist),#fff 80%);z-index:-1;transform:skewX(-8deg)}
+html[dir="rtl"] .hero::after{transform:skewX(8deg)}
+.hero-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:clamp(32px,5vw,68px);align-items:center}
+.hero h1{font-size:clamp(38px,5.6vw,74px);font-weight:600;color:var(--navy);margin-block:22px 24px}
+.hero h1 em{font-style:normal;color:var(--red);display:block}
+html[lang="ar"] .hero h1{font-size:clamp(34px,5vw,66px);font-weight:500}
+.hero .lead{font-size:clamp(16.5px,1.4vw,18.5px);color:var(--muted);max-width:52ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero .caps{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:42px;padding-top:26px;border-top:1px solid var(--line);font-family:var(--display);font-size:14px;font-weight:600;color:var(--navy)}
+.hero .caps span{display:inline-flex;align-items:center;gap:9px}
+.hero .caps span::before{content:"";width:7px;height:7px;background:var(--red);transform:rotate(45deg)}
+
+.hero-visual{position:relative;padding:34px 0 0 34px}
+html[dir="rtl"] .hero-visual{padding:34px 34px 0 0}
+.hero-visual .slot{aspect-ratio:4/4.3;border-radius:18px;box-shadow:0 44px 84px -40px rgba(11,42,102,.55)}
+.hero-visual .dim{position:absolute;inset:0;pointer-events:none;overflow:visible}
+.dim line,.dim path{stroke:var(--navy);stroke-width:1.2;fill:none}
+.dim .draw{stroke-dasharray:600;stroke-dashoffset:0;animation:draw 1.6s var(--ease) both .3s}
+@keyframes draw{from{stroke-dashoffset:600}to{stroke-dashoffset:0}}
+.dim text{font-family:"Manrope",sans-serif;font-size:12px;font-weight:600;fill:var(--navy);letter-spacing:.04em}
+.hero-badge{position:absolute;inset-inline-start:-18px;bottom:36px;background:linear-gradient(145deg,#0B2A66,#164FA8 70%,#1E63D6);color:#fff;padding:22px 26px;max-width:250px;border-radius:18px;border-inline-start:4px solid var(--red);box-shadow:0 28px 56px -22px rgba(9,38,92,.8)}
+.hero-badge b{display:block;font-family:var(--display);font-size:16.5px;font-weight:600;margin-bottom:5px}
+.hero-badge span{font-size:13.5px;color:#B9C6DF;line-height:1.6;display:block}
+
+/* ---------- sections ---------- */
+section{position:relative}
+.sec{padding-block:clamp(68px,8.5vw,120px)}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:24px 60px;align-items:end;margin-bottom:clamp(40px,5vw,60px)}
+.sec-head h2{font-size:clamp(30px,3.9vw,52px);color:var(--navy);margin-top:16px}
+.sec-head p{color:var(--muted);font-size:16.5px;max-width:56ch}
+.tint{background:var(--mist)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(36px,6vw,84px);align-items:center}
+.about-media{position:relative}
+.about-media .slot.a1{aspect-ratio:4/5;border-radius:18px}
+.about-media .slot.a2{position:absolute;width:48%;aspect-ratio:1;inset-inline-end:-8%;bottom:-10%;border:8px solid #fff;border-radius:18px;box-shadow:0 30px 60px -28px rgba(11,42,102,.45)}
+.about-media .slot.a2 .ph code{display:none}
+.about-copy h2{font-size:clamp(28px,3.5vw,46px);color:var(--navy);margin-block:16px 24px}
+.about-copy > p{font-size:17px;color:#28344F;max-width:60ch}
+.about-copy > p + p{margin-top:16px;color:var(--muted);font-size:16px}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;margin-top:34px}
+.pillars div{background:#fff;padding:24px}
+.pillars h3{font-size:12.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:10px;font-weight:700}
+html[lang="ar"] .pillars h3{letter-spacing:0;font-size:15px;text-transform:none}
+.pillars p{font-size:15.5px;color:#28344F;line-height:1.65}
+.pillars .slogan{grid-column:1/-1;background:linear-gradient(120deg,#0B2A66,#1A57C4 85%,#2468DE)}
+.pillars .slogan p{font-family:var(--display);font-size:clamp(19px,2.1vw,25px);font-weight:500;color:#fff}
+.pillars .slogan h3{color:#FF8A93}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;display:flex;flex-direction:column;transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 30px 60px -34px rgba(10,23,51,.4);border-color:transparent}
+.svc:hover .slot img{transform:scale(1.05)}
+.svc .slot{aspect-ratio:16/10}
+.svc .slot .ph code{font-size:10.5px}
+.svc-body{padding:26px 26px 30px;display:flex;flex-direction:column;gap:12px;flex:1}
+.svc-top{display:flex;align-items:center;gap:14px}
+.svc-ic{width:46px;height:46px;flex:none;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,#EAF1FF,#D7E5FE);color:var(--navy);box-shadow:inset 0 0 0 1px rgba(21,84,214,.1);transition:background .3s,color .3s,box-shadow .3s}
+.svc:hover .svc-ic{background:linear-gradient(135deg,#E62A3C,var(--red-deep));color:#fff;box-shadow:0 10px 22px -10px rgba(215,26,40,.75)}
+.svc-ic svg{width:24px;height:24px}
+.svc h3{font-size:19.5px;color:var(--navy)}
+.svc p{color:var(--muted);font-size:15.5px}
+.svc ul{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.svc li{font-family:var(--display);font-size:12.5px;font-weight:600;color:var(--navy);background:linear-gradient(135deg,#EDF3FF,#DEE9FE);padding:6px 13px;border-radius:999px}
+
+/* stand types */
+.stands{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.stand{background:#fff;border:1px solid var(--line);border-radius:var(--r-card);padding:24px;display:flex;flex-direction:column;gap:14px}
+.stand svg{width:100%;height:auto;max-width:100%}
+.stand .k{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.stand h3{font-size:18.5px;color:var(--navy)}
+.stand .open{font-family:var(--display);font-size:12.5px;font-weight:600;color:var(--red);white-space:nowrap}
+.stand p{font-size:14.5px;color:var(--muted);line-height:1.65}
+.stand-legend{display:flex;gap:28px;flex-wrap:wrap;margin-top:26px;font-size:14px;color:var(--muted)}
+.stand-legend span{display:inline-flex;align-items:center;gap:10px}
+.stand-legend i{display:inline-block;width:26px;height:4px}
+
+/* process */
+.process{background:linear-gradient(165deg,#061B45 0%,#0B2A66 44%,#154DA6 100%);color:#fff;overflow:hidden}
+.process::after{content:"";position:absolute;inset-inline-end:-12%;top:-25%;width:62%;height:130%;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(72,146,255,.38),rgba(72,146,255,0) 72%);z-index:0}
+.process .wrap{position:relative;z-index:1}
+.process::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.process .sec-head h2{color:#fff}
+.process .sec-head p{color:#AEBBD6}
+.process .eyebrow{color:#FF7C86}.process .eyebrow::before{background:#FF7C86}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;list-style:none;margin:0;padding:0}
+.step{padding:32px 26px 10px;border-inline-start:1px solid rgba(255,255,255,.14);position:relative}
+.step:first-child{border-inline-start:none;padding-inline-start:0}
+.step .n{font-family:var(--display);font-size:13.5px;font-weight:600;color:#FF7C86;letter-spacing:.08em}
+html[lang="ar"] .step .n{letter-spacing:0}
+.step h3{font-size:21px;margin-block:16px 12px}
+.step p{color:#AEBBD6;font-size:15px}
+.step .bar{height:3px;background:rgba(255,255,255,.12);margin-top:20px;position:relative;overflow:hidden}
+.step .bar::after{content:"";position:absolute;inset:0;background:var(--red);transform-origin:left;transform:scaleX(var(--p))}
+html[dir="rtl"] .step .bar::after{transform-origin:right}
+
+/* portfolio */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{border:1.5px solid var(--line);background:#fff;color:var(--navy);padding:10px 18px;border-radius:40px;font-family:var(--display);font-weight:600;font-size:13.5px;transition:all .25s}
+.filters button:hover{border-color:var(--navy)}
+.filters button[aria-pressed="true"]{background:linear-gradient(135deg,var(--navy),var(--blue));border-color:transparent;color:#fff;box-shadow:0 12px 26px -14px rgba(21,84,214,.7)}
+.filters button span{opacity:.6;margin-inline-start:6px;font-variant-numeric:tabular-nums}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-flow:dense;gap:14px;margin-top:34px}
+.work{grid-column:span 4;position:relative;border:none;border-radius:14px;overflow:hidden;padding:0;background:none;text-align:start;display:block;color:inherit}
+.work.wide{grid-column:span 8}
+.work .slot{aspect-ratio:4/3;height:100%}
+.work.wide .slot{aspect-ratio:auto}
+.work .cap{position:absolute;inset-inline:0;bottom:0;padding:48px 20px 18px;background:linear-gradient(to top,rgba(5,20,56,.9),rgba(5,20,56,.45) 55%,transparent);color:#fff;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;opacity:0;transform:translateY(8px);transition:all .35s var(--ease)}
+.work:hover .cap,.work:focus-visible .cap{opacity:1;transform:none}
+.work:hover .slot img{transform:scale(1.05)}
+.work .cap b{font-family:var(--display);font-size:15.5px;font-weight:600;display:block}
+.work .cap small{font-size:12.5px;color:#C4CFE4}
+.work .cap i{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(135deg,#E62A3C,var(--red-deep));flex:none;box-shadow:0 8px 20px -8px rgba(215,26,40,.8)}
+.work .cap i svg{width:16px;height:16px}
+.work .tag{position:absolute;top:14px;inset-inline-start:14px;background:#fff;color:var(--navy);font-size:12px;font-weight:600;padding:6px 13px;border-radius:999px;font-family:var(--display);box-shadow:0 6px 16px -8px rgba(6,22,60,.5)}
+.work[hidden]{display:none}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(5,16,44,.95);display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,60px)}
+.lb .slot{width:min(1100px,100%);aspect-ratio:16/10;border-radius:16px;background:#0E2A5E}
+.lb .slot::before{background-image:repeating-linear-gradient(135deg,transparent 0 14px,rgba(255,255,255,.05) 14px 15px)}
+.lb .slot .ph{color:#AEBBD6}.lb .slot .ph b{color:#fff}
+.lb .slot img{object-fit:contain}
+.lb-btn{position:absolute;width:52px;height:52px;border:none;border-radius:50%;background:#fff;color:var(--navy);display:grid;place-items:center;box-shadow:0 12px 28px -12px rgba(0,0,0,.7);transition:background .2s,color .2s,transform .2s}
+.lb-btn:hover{background:linear-gradient(135deg,#E62A3C,var(--red-deep));color:#fff;transform:scale(1.06)}
+.lb-btn svg{width:20px;height:20px}
+.lb-close{top:calc(20px + env(safe-area-inset-top,0px));inset-inline-end:20px}
+.lb-prev{inset-inline-start:20px;top:50%;translate:0 -50%}
+.lb-next{inset-inline-end:20px;top:50%;translate:0 -50%}
+.lb-cap{position:absolute;bottom:calc(22px + env(safe-area-inset-bottom,0px));inset-inline:0;text-align:center;color:#fff;font-family:var(--display)}
+.lb-cap small{display:block;color:#AEBBD6;font-family:var(--body);font-variant-numeric:tabular-nums}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.why div{padding:30px 28px 4px;border-inline-end:1px solid var(--line)}
+.why div:first-child{padding-inline-start:0}
+.why div:last-child{padding-inline-end:0;border-inline-end:none}
+.why svg{width:28px;height:28px;color:var(--red)}
+.why h3{font-size:17.5px;color:var(--navy);margin-block:16px 10px}
+.why p{font-size:15px;color:var(--muted);max-width:30ch}
+
+/* map: live Google map, with a fallback panel where embedded maps are blocked */
+.map-fb{position:relative;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:clamp(24px,4vw,48px);padding:clamp(26px,4vw,44px)}
+.map-fb .art{position:relative}
+.map-fb .art svg{width:100%;height:auto;display:block}
+.map-fb h3{font-size:clamp(20px,2.3vw,26px);color:var(--navy)}
+.map-fb p{color:var(--muted);margin-top:12px;font-size:16px;line-height:1.7}
+.map-fb .btn{margin-top:20px}
+.map.blocked .pin{display:none}
+@media (max-width:760px){ .map-fb{grid-template-columns:1fr} }
+
+/* CTA band */
+.band{background:linear-gradient(100deg,#061B45 0%,#0F3C8C 52%,#2064D8 100%);color:#fff;overflow:hidden}
+.band::after{content:"";position:absolute;inset-inline-start:-8%;bottom:-60%;width:55%;height:160%;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(96,163,255,.34),rgba(96,163,255,0) 72%);z-index:0}
+.band .wrap{position:relative;z-index:1}
+.band .wrap{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;padding-block:clamp(52px,6vw,78px);position:relative}
+.band h2{font-size:clamp(26px,3.2vw,42px);max-width:22ch}
+.band p{color:#B9C6DF;margin-top:12px;max-width:52ch}
+.band .swoosh{position:absolute;inset-inline-end:-80px;top:-40px;width:520px;opacity:.16;pointer-events:none}
+.band .ctas{display:flex;gap:14px;flex-wrap:wrap;position:relative}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,5vw,68px)}
+.cinfo{display:flex;flex-direction:column;gap:14px}
+.citem{display:flex;gap:18px;align-items:flex-start;padding:22px;border:1px solid var(--line);border-radius:var(--r-card);background:#fff;transition:border-color .25s,box-shadow .25s}
+.citem:hover{border-color:rgba(21,84,214,.45);box-shadow:0 16px 34px -24px rgba(11,42,102,.9)}
+.citem .ic{width:48px;height:48px;flex:none;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,#EAF1FF,#D7E5FE);color:var(--red);box-shadow:inset 0 0 0 1px rgba(21,84,214,.1)}
+.citem .ic svg{width:22px;height:22px}
+.citem small{display:block;font-size:12px;font-weight:600;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-family:var(--display)}
+html[lang="ar"] .citem small{letter-spacing:0;font-size:14px;text-transform:none}
+.citem .v{font-family:var(--display);font-size:17.5px;font-weight:600;color:var(--navy);margin-top:5px;display:flex;flex-direction:column;gap:2px}
+.citem .v a:hover{color:var(--red)}
+.citem .v .ltr{text-align:start}
+.copy{margin-inline-start:auto;border:1px solid var(--line);background:#fff;color:var(--muted);font-family:var(--display);font-size:12px;padding:7px 14px;border-radius:var(--r-btn);align-self:center;transition:all .2s}
+.copy:hover{color:var(--navy);border-color:var(--navy)}
+.copy .ci{display:none;width:16px;height:16px}
+
+form.quote{background:var(--mist);border-radius:20px;padding:clamp(24px,3.5vw,38px);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form.quote h3{grid-column:1/-1;font-size:23px;color:var(--navy)}
+form.quote .full{grid-column:1/-1}
+form.quote label{display:flex;flex-direction:column;gap:7px;font-family:var(--display);font-size:13.5px;font-weight:600;color:var(--navy)}
+form.quote input,form.quote select,form.quote textarea{font-family:var(--body);font-weight:400;font-size:15px;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:var(--r-field);padding:14px 16px;width:100%;transition:border-color .2s}
+form.quote input:focus,form.quote select:focus,form.quote textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(21,84,214,.14)}
+form.quote textarea{min-height:118px;resize:vertical}
+form.quote .send{grid-column:1/-1;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+form.quote .note{grid-column:1/-1;font-size:13.5px;color:var(--muted);margin-top:-4px}
+.wa-btn{background:linear-gradient(135deg,#2FE07C,#25D366 55%,#1DB755);color:#fff;box-shadow:0 14px 30px -14px rgba(37,211,102,.8)}
+.wa-btn:hover{transform:translateY(-2px);box-shadow:0 20px 38px -14px rgba(37,211,102,.9)}
+/* the filled message, shown after submit */
+.msgbox{grid-column:1/-1;background:#fff;border:1px solid var(--line);border-top:3px solid var(--red);border-radius:14px;padding:18px 20px}
+.msgbox h4{margin:0 0 10px;font-family:var(--display);font-size:14px;font-weight:600;color:var(--navy)}
+.msgbox pre{margin:0;font-family:var(--body);font-size:14.5px;line-height:1.7;color:#28344F;white-space:pre-wrap;word-break:break-word}
+.msgbox .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.msgbox .acts button{border:1px solid var(--line);background:#fff;color:var(--navy);font-family:var(--display);font-size:13px;font-weight:600;padding:9px 18px;border-radius:var(--r-btn);transition:all .2s}
+.msgbox .acts button:hover{border-color:var(--navy)}
+
+.map{margin-top:clamp(40px,5vw,60px);position:relative;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--mist)}
+.map iframe{display:block;width:100%;height:clamp(320px,40vw,440px);border:0}
+.map .pin{position:absolute;top:20px;inset-inline-start:20px;background:#fff;padding:18px 20px;max-width:300px;border-radius:14px;box-shadow:0 20px 40px -18px rgba(10,23,51,.45);border-top:3px solid var(--red)}
+.map .pin b{font-family:var(--display);color:var(--navy);display:block;margin-bottom:4px}
+.map .pin p{font-size:14px;color:var(--muted);line-height:1.6}
+.map .pin a{display:inline-flex;gap:6px;align-items:center;margin-top:10px;font-family:var(--display);font-size:14px;font-weight:600;color:var(--red)}
+
+/* footer */
+footer{background:linear-gradient(180deg,#061B45,#0A2454);color:#AEBBD6;padding-block:60px 26px;font-size:15px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px}
+.foot h4{font-family:var(--display);color:#fff;font-size:15px;margin:0 0 18px;font-weight:600}
+.foot ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.foot a:hover{color:#fff}
+.foot .brand .wm b{color:#fff}
+.foot .about{margin-top:18px;max-width:36ch;line-height:1.75}
+.legal{margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13.5px}
+
+.toast{position:fixed;left:50%;bottom:36px;translate:-50% 0;background:var(--navy);color:#fff;padding:12px 20px;font-family:var(--display);font-size:14px;z-index:120}
+
+/* reveal */
+.rv{transition:transform .9s var(--ease),opacity .9s var(--ease)}
+.js .rv.pre{transform:translateY(22px);opacity:.001}
+
+/* ---------- blue headings, lit from one side ---------- */
+@supports (-webkit-background-clip:text) or (background-clip:text){
+  .hero h1,.sec-head h2,.about-copy h2{
+    background-image:linear-gradient(118deg,var(--navy) 0%,#1A56D0 54%,var(--blue-bright) 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .hero h1 em{-webkit-text-fill-color:var(--red)}
+  .process .sec-head h2{background-image:linear-gradient(118deg,#fff 0%,#D4E4FF 58%,#95BFFF 100%)}
+  .band h2{background-image:linear-gradient(118deg,#fff,#CFE1FF);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1240px){
+  :root{--rail:52px}
+  .rail{inset-inline-start:10px}
+}
+@media (max-width:1100px){
+  .stands{grid-template-columns:repeat(2,1fr)}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:960px){
+  :root{--rail:44px}
+  .rail{inset-inline-start:9px}
+  .rail a{height:24px;width:10px}
+  .rail .lbl{inset-inline-start:20px;font-size:12.5px;padding:4px 11px}
+  .rail .dot{width:10px;height:10px}
+  .rail-track{inset-inline-start:4px;top:12px;bottom:12px}
+  .rail .util{margin-inline-start:-11px}
+  .rail .fab{width:32px;height:32px;font-size:11px}
+  .rail .fab svg{width:15px;height:15px}
+  .hero-grid,.about-grid,.contact-grid,.sec-head{grid-template-columns:1fr}
+  .hero-visual,.about-media{max-width:560px}
+  .services{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr;row-gap:28px}
+  .step:nth-child(3){border-inline-start:none;padding-inline-start:0}
+  .why{grid-template-columns:1fr 1fr}
+  .why div:nth-child(2){border-inline-end:none}
+  .why div:nth-child(3){padding-inline-start:0}
+  .work{grid-column:span 6}.work.wide{grid-column:span 12}
+  .work.wide .slot{aspect-ratio:16/9}
+}
+@media (max-width:1040px){ .topbar .tb-addr{display:none} }
+@media (max-width:780px){ .topbar .tb-2nd{display:none} }
+@media (max-width:430px){ .topbar{font-size:12px} .topbar .tb-i svg{width:13px;height:13px} }
+@media (max-width:640px){
+  .nav{min-height:66px;gap:10px}
+  /* on a phone the quote button lives in the floating rail instead */
+  .nav .btn{display:none}
+  .rail .lbl{display:none}
+  .brand .logo-fallback svg{height:36px}
+  .brand .wm b{font-size:15.5px;letter-spacing:.12em}
+  .brand .wm small{font-size:7px;letter-spacing:.3em}
+  .services,.stands,.steps,.why,.foot,.pillars{grid-template-columns:1fr}
+  .step{border-inline-start:none;padding-inline-start:0;border-top:1px solid rgba(255,255,255,.14)}
+  .why div{border-inline-end:none;border-bottom:1px solid var(--line);padding-inline:0 !important}
+  .work,.work.wide{grid-column:span 12}
+  .work .cap{opacity:1;transform:none}
+  form.quote{grid-template-columns:1fr}
+  .hero-badge{inset-inline-start:0;bottom:-24px;max-width:220px}
+  .about-media .slot.a2{inset-inline-end:0}
+  .map .pin{position:static;max-width:none;box-shadow:none}
+
+  /* contact cards: give the text the full width, shrink the copy button to an icon */
+  .citem{padding:18px;gap:14px;align-items:center}
+  .citem .ic{width:42px;height:42px;border-radius:12px}
+  .citem .ic svg{width:20px;height:20px}
+  .citem > div{min-width:0;flex:1}
+  .citem .v{font-size:16.5px;margin-top:3px}
+  .citem .v a[href^="tel"]{white-space:nowrap}
+  .citem .v a[href^="mailto"]{font-size:14.5px !important;white-space:normal;overflow-wrap:break-word}
+  .copy{width:38px;height:38px;padding:0;display:grid;place-items:center;border-radius:50%;flex:none}
+  .copy .ci{display:block}
+  .copy span{display:none}
+
+  /* send buttons: one per line, full width, no wrapped labels */
+  form.quote .send{flex-direction:column;align-items:stretch;gap:10px}
+  form.quote .send .btn{width:100%;justify-content:center;padding:15px 18px}
+  .hero .ctas .btn,.band .ctas .btn{padding:14px 24px}
+}
+@media (max-width:420px){
+  .rail{inset-inline-start:11px}
+  :root{--rail:40px}
+  .rail .fab{width:28px;height:28px;font-size:10px}
+  .rail .fab svg{width:14px;height:14px}
+  .rail .util{margin-inline-start:-9px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .js .rv.pre{transform:none;opacity:1}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-booth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20V8l9-4 9 4v12"/><path d="M3 8h18M7 20v-6h10v6M9 11h6"/></symbol>
+  <symbol id="i-sofa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 11V8a2 2 0 012-2h12a2 2 0 012 2v3"/><path d="M2 13a2 2 0 014 0v2h12v-2a2 2 0 014 0v5H2z"/><path d="M5 18v2M19 18v2"/></symbol>
+  <symbol id="i-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></symbol>
+  <symbol id="i-stage" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 17h20M4 17V6h16v11M8 10h8M8 13h5"/><path d="M6 21l2-4M18 21l-2-4"/></symbol>
+  <symbol id="i-saw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l11-11 4 4-11 11H3z"/><path d="M14 6l2-2 4 4-2 2M7 13l1 1M10 10l1 1"/></symbol>
+  <symbol id="i-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9V16h7v-2.1A6 6 0 0012 3z"/></symbol>
+  <symbol id="i-ruler" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 16L16 3l5 5L8 21z"/><path d="M7 12l2 2M10 9l2 2M13 6l2 2"/></symbol>
+  <symbol id="i-team" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0112 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.2A5 5 0 0121 19"/></symbol>
+  <symbol id="i-time" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="5"/><path d="M12 10v2l1.5 1"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="9" y="9" width="12" height="12" rx="1.5"/><path d="M15 6V4.5A1.5 1.5 0 0013.5 3H4.5A1.5 1.5 0 003 4.5v9A1.5 1.5 0 004.5 15H6"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.3c0-.1-.2-.2-.4-.3z"/></symbol>
+  <symbol id="logo-mark" viewBox="0 0 120 100">
+    <path d="M8 92 L46 8 L58 8 L96 92 L78 92 L52 32 L26 92 Z" fill="#0D2556"/>
+    <path d="M86 20 L100 8 L100 92 L86 92 Z" fill="#D71A28"/>
+    <path d="M14 84 C44 58 80 46 118 40 C84 52 52 66 30 86 Z" fill="#D71A28"/>
+    <path d="M26 90 C54 68 86 56 118 46 C90 60 64 74 44 92 Z" fill="#0D2556" opacity=".9"/>
+  </symbol>
+</svg>
+
+<div class="topbar">
+  <div class="wrap pad-rail">
+    <div class="tb-left">
+      <a class="tb-i" href="tel:+96555776301"><svg><use href="#i-phone"/></svg><span class="ltr">+965 5577 6301</span></a>
+      <a class="tb-i tb-2nd" href="tel:+96550443637"><svg><use href="#i-phone"/></svg><span class="ltr">+965 5044 3637</span></a>
+      <a class="tb-i tb-mail" href="mailto:amazoninternational527@gmail.com"><svg><use href="#i-mail"/></svg><span>amazoninternational527@gmail.com</span></a>
+    </div>
+    <div class="tb-addr tb-i"><svg><use href="#i-pin"/></svg><span data-i18n="topbar_addr">حولي، شارع ابن خلدون، مجمع الفوز، الكويت</span></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap pad-rail nav">
+    <a href="#home" class="brand" aria-label="Amazon International">
+      <!-- Your logo: save it as images/logo.png -->
+      <img class="logo-img" src="images/logo.png" alt="Amazon International" hidden onload="this.hidden=false;this.nextElementSibling.hidden=true" onerror="this.remove()">
+      <span class="logo-fallback">
+        <svg viewBox="0 0 120 100"><use href="#logo-mark"/></svg>
+        <span class="wm"><b>AMAZON</b><small>INTERNATIONAL</small></span>
+      </span>
+    </a>
+    <div class="nav-actions">
+      <button class="lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
+      <a href="#contact" class="btn btn-red" data-i18n="cta_quote">اطلب عرض سعر</a>
+    </div>
+  </div>
+</header>
+
+<!-- floating side navigation -->
+<nav class="rail" id="rail" aria-label="Sections">
+  <ul>
+    <span class="rail-track"><span class="rail-fill" id="railFill"></span></span>
+    <li><a href="#home"     data-sec="home"><span class="dot"></span><span class="lbl" data-i18n="nav_home">الرئيسية</span></a></li>
+    <li><a href="#about"    data-sec="about"><span class="dot"></span><span class="lbl" data-i18n="nav_about">من نحن</span></a></li>
+    <li><a href="#services" data-sec="services"><span class="dot"></span><span class="lbl" data-i18n="nav_services">خدماتنا</span></a></li>
+    <li><a href="#stands"   data-sec="stands"><span class="dot"></span><span class="lbl" data-i18n="nav_stands">أنواع الأجنحة</span></a></li>
+    <li><a href="#process"  data-sec="process"><span class="dot"></span><span class="lbl" data-i18n="nav_process">مراحل العمل</span></a></li>
+    <li><a href="#work"     data-sec="work"><span class="dot"></span><span class="lbl" data-i18n="nav_work">أعمالنا</span></a></li>
+    <li><a href="#contact"  data-sec="contact"><span class="dot"></span><span class="lbl" data-i18n="nav_contact">تواصل معنا</span></a></li>
+  </ul>
+  <div class="sep"></div>
+  <div class="util">
+    <button class="fab" id="railLang" type="button" aria-label="Switch language">EN</button>
+    <a class="fab wa" href="https://wa.me/96555776301" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+    <a class="fab red" href="#contact" aria-label="Quote" data-i18n-title="cta_quote"><svg><use href="#i-mail"/></svg></a>
+  </div>
+</nav>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="wrap pad-rail hero-grid">
+    <div>
+      <span class="eyebrow" data-i18n="hero_eyebrow">تصميم وتنفيذ · الكويت</span>
+      <h1 data-i18n-html="hero_title">إبداع في التصميم<em>وإتقان في التنفيذ</em></h1>
+      <p class="lead" data-i18n="hero_lead">نصمم وننفذ أجنحة المعارض (البوثات) وأعمال الديكور الداخلي، من الفكرة والتصميم ثلاثي الأبعاد إلى التصنيع والتركيب والتسليم، بمعايير عالية في الجودة والاحترافية.</p>
+      <div class="ctas">
+        <a href="#work" class="btn btn-red"><span data-i18n="cta_work">شاهد أعمالنا</span><svg class="flip"><use href="#i-arrow"/></svg></a>
+        <a href="#contact" class="btn btn-line" data-i18n="cta_talk">ناقش مشروعك معنا</a>
+      </div>
+      <div class="caps">
+        <span data-i18n="cap1">أجنحة المعارض</span>
+        <span data-i18n="cap2">الديكور الداخلي</span>
+        <span data-i18n="cap3">التصميم ثلاثي الأبعاد</span>
+        <span data-i18n="cap4">التصنيع والتركيب</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="slot" data-src="images/hero.jpg"></div>
+      <svg class="dim" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+      <div class="hero-badge">
+        <b data-i18n="badge_t">من الفكرة إلى التسليم</b>
+        <span data-i18n="badge_s">فريق واحد يتولى التصميم والتصنيع والتركيب في موقع المعرض.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="sec tint" id="about">
+  <div class="wrap pad-rail about-grid">
+    <div class="about-media rv">
+      <div class="slot a1" data-src="images/about-1.jpg"></div>
+      <div class="slot a2" data-src="images/about-2.jpg"></div>
+    </div>
+    <div class="about-copy rv">
+      <span class="eyebrow" data-i18n="about_eyebrow">من نحن</span>
+      <h2 data-i18n="about_title">نحوّل الأفكار إلى مساحات تعكس هوية عملائنا</h2>
+      <p data-i18n="about_p1">نحن شركة متخصصة في تصميم وتنفيذ أعمال الديكور الداخلي وأجنحة المعارض (البوثات). نقدم حلولاً إبداعية متكاملة تجمع بين الابتكار والفخامة والجودة، لتحويل الأفكار إلى واقع يعكس هوية عملائنا ويلبي تطلعاتهم.</p>
+      <p data-i18n="about_p2">نحرص على تقديم تصاميم عصرية ومميزة مع الاهتمام بأدق التفاصيل في جميع مراحل العمل، بدءاً من الفكرة والتصميم ثلاثي الأبعاد وصولاً إلى التنفيذ والتسليم، وفق أعلى معايير الجودة والاحترافية.</p>
+      <div class="pillars">
+        <div>
+          <h3 data-i18n="vision_h">رؤيتنا</h3>
+          <p data-i18n="vision_p">أن نكون الخيار المفضل في عالم التصميم والديكور وتجهيز أجنحة المعارض، من خلال تقديم أعمال استثنائية تجمع بين الجمال والوظيفة والإبداع.</p>
+        </div>
+        <div>
+          <h3 data-i18n="mission_h">طريقتنا</h3>
+          <p data-i18n="mission_p">فريق تصميم وتنفيذ واحد، ومتابعة لكل تفصيلة من أول رسمة حتى آخر مسمار في الموقع، والتزام بمواعيد افتتاح المعارض.</p>
+        </div>
+        <div class="slogan">
+          <h3 data-i18n="slogan_h">شعارنا</h3>
+          <p data-i18n="slogan_p">إبداع في التصميم وإتقان في التنفيذ</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="sec" id="services">
+  <div class="wrap pad-rail">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow" data-i18n="svc_eyebrow">خدماتنا</span>
+        <h2 data-i18n="svc_title">كل ما يحتاجه جناحك أو مساحتك، تحت سقف واحد</h2>
+      </div>
+      <p data-i18n="svc_lead">نغطي المشروع بالكامل: الفكرة، والتصميم ثلاثي الأبعاد، والتصنيع في ورشتنا، والتركيب في الموقع، ثم الفك والتخزين بعد انتهاء المعرض.</p>
+    </div>
+    <div class="services" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- ================= STAND TYPES ================= -->
+<section class="sec tint" id="stands">
+  <div class="wrap pad-rail">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow" data-i18n="st_eyebrow">أنواع الأجنحة</span>
+        <h2 data-i18n="st_title">نصمم لكل موقع في قاعة المعرض</h2>
+      </div>
+      <p data-i18n="st_lead">يتحدد شكل الجناح بعدد الجهات المفتوحة على الممرات. نختار التصميم والمداخل وأماكن الشاشات والإضاءة بحسب موقع مساحتك.</p>
+    </div>
+    <div class="stands" id="standsGrid"></div>
+    <div class="stand-legend">
+      <span><i style="background:var(--navy)"></i><span data-i18n="lg_wall">جدار أو جناح مجاور</span></span>
+      <span><i style="background:var(--red)"></i><span data-i18n="lg_open">جهة مفتوحة على الممر</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="sec process" id="process">
+  <div class="wrap pad-rail" style="position:relative">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow" data-i18n="pr_eyebrow">مراحل العمل</span>
+        <h2 data-i18n="pr_title">من أول رسمة حتى يوم الافتتاح</h2>
+      </div>
+      <p data-i18n="pr_lead">أربع مراحل واضحة، وفريق واحد يتابع مشروعك في كل مرحلة منها.</p>
+    </div>
+    <ol class="steps" id="stepsList"></ol>
+  </div>
+</section>
+
+<!-- ================= PORTFOLIO ================= -->
+<section class="sec" id="work">
+  <div class="wrap pad-rail">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow" data-i18n="wk_eyebrow">أعمالنا</span>
+        <h2 data-i18n="wk_title">مشاريع صممناها ونفذناها</h2>
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<!-- ================= WHY ================= -->
+<section class="sec tint" style="padding-top:clamp(60px,7vw,92px)">
+  <div class="wrap pad-rail">
+    <div class="sec-head rv" style="margin-bottom:0">
+      <div>
+        <span class="eyebrow" data-i18n="why_eyebrow">لماذا نحن</span>
+        <h2 data-i18n="why_title">ما يميز العمل معنا</h2>
+      </div>
+      <p data-i18n="why_lead">أربع نقاط تختصر طريقتنا: فريق واحد يتولى كل شيء، وتصميم تراه وتعتمده قبل التنفيذ، وتفاصيل مضبوطة، وتسليم في الموعد.</p>
+    </div>
+    <div class="why rv" id="whyGrid" style="margin-top:38px"></div>
+  </div>
+</section>
+
+<!-- ================= CTA BAND ================= -->
+<section class="band">
+  <div class="wrap pad-rail">
+    <svg class="swoosh" viewBox="0 0 120 100" aria-hidden="true"><use href="#logo-mark"/></svg>
+    <div style="position:relative">
+      <h2 data-i18n="band_title">عندك معرض قادم أو مساحة تحتاج تجديد؟</h2>
+      <p data-i18n="band_p">أرسل لنا مساحة الجناح وتاريخ المعرض أو صور موقعك، ونرجع لك بفكرة تصميم وعرض سعر.</p>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-white" href="https://wa.me/96555776301" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span data-i18n="cta_wa">راسلنا على واتساب</span></a>
+      <a class="btn btn-red" href="#contact" data-i18n="cta_quote">اطلب عرض سعر</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="sec" id="contact">
+  <div class="wrap pad-rail">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow" data-i18n="ct_eyebrow">تواصل معنا</span>
+        <h2 data-i18n="ct_title">لنبدأ مشروعك القادم</h2>
+      </div>
+      <p data-i18n="ct_lead">زورونا في مكتبنا في حولي، أو تواصلوا معنا بالهاتف أو واتساب أو البريد الإلكتروني.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="cinfo rv">
+        <div class="citem">
+          <div class="ic"><svg><use href="#i-phone"/></svg></div>
+          <div>
+            <small data-i18n="ct_phone">الهاتف وواتساب</small>
+            <div class="v">
+              <a href="tel:+96555776301" class="ltr">+965 5577 6301</a>
+              <a href="tel:+96550443637" class="ltr">+965 5044 3637</a>
+            </div>
+          </div>
+          <button class="copy" type="button" data-copy="+965 5577 6301 / +965 5044 3637"><svg class="ci"><use href="#i-copy"/></svg><span data-i18n="copy">نسخ</span></button>
+        </div>
+        <div class="citem">
+          <div class="ic"><svg><use href="#i-mail"/></svg></div>
+          <div style="min-width:0">
+            <small data-i18n="ct_email">البريد الإلكتروني</small>
+            <div class="v"><a href="mailto:amazoninternational527@gmail.com" class="ltr" style="overflow-wrap:break-word;font-size:15.5px">amazoninternational527<wbr>@gmail.com</a></div>
+          </div>
+          <button class="copy" type="button" data-copy="amazoninternational527@gmail.com"><svg class="ci"><use href="#i-copy"/></svg><span data-i18n="copy">نسخ</span></button>
+        </div>
+        <div class="citem">
+          <div class="ic"><svg><use href="#i-pin"/></svg></div>
+          <div>
+            <small data-i18n="ct_addr">العنوان</small>
+            <div class="v" style="font-size:16px;line-height:1.6" data-i18n-html="addr_full">حولي، شارع ابن خلدون<br>مجمع الفوز، الدور الثاني، مكتب 10<br>الكويت</div>
+          </div>
+        </div>
+        <div class="citem">
+          <div class="ic"><svg><use href="#i-clock"/></svg></div>
+          <div>
+            <small data-i18n="ct_hours">ساعات العمل</small>
+            <div class="v" style="font-size:16px" data-i18n="hours">السبت – الخميس، 9:00 ص – 6:00 م</div>
+          </div>
+        </div>
+      </div>
+
+      <form class="quote rv" id="quoteForm" novalidate>
+        <h3 data-i18n="f_title">اطلب عرض سعر</h3>
+        <label for="f-name"><span data-i18n="f_name">الاسم</span>
+          <input id="f-name" name="name" required autocomplete="name"></label>
+        <label for="f-phone"><span data-i18n="f_phone">رقم الهاتف</span>
+          <input id="f-phone" name="phone" type="tel" required autocomplete="tel" dir="ltr"></label>
+        <label for="f-type"><span data-i18n="f_type">نوع المشروع</span>
+          <select id="f-type" name="type">
+            <option data-i18n="o1">جناح معرض (بوث)</option>
+            <option data-i18n="o2">ديكور داخلي</option>
+            <option data-i18n="o3">تصميم ثلاثي الأبعاد فقط</option>
+            <option data-i18n="o4">مسرح أو خلفية فعالية</option>
+            <option data-i18n="o5">أخرى</option>
+          </select></label>
+        <label for="f-size"><span data-i18n="f_size">المساحة التقريبية (م²)</span>
+          <input id="f-size" name="size" inputmode="decimal" dir="ltr" placeholder="36"></label>
+        <label for="f-msg" class="full"><span data-i18n="f_msg">تفاصيل المشروع</span>
+          <textarea id="f-msg" name="msg" data-i18n-ph="f_msg_ph" placeholder="اسم المعرض، التاريخ، الموقع، وأي أفكار لديك"></textarea></label>
+        <div class="send">
+          <button class="btn wa-btn" type="submit" value="wa" name="via"><svg><use href="#i-wa"/></svg><span data-i18n="f_send_wa">أرسل عبر واتساب</span></button>
+          <button class="btn btn-line" type="submit" value="mail" name="via"><svg><use href="#i-mail"/></svg><span data-i18n="f_send_mail">أرسل بالبريد الإلكتروني</span></button>
+        </div>
+        <p class="note" id="formNote" data-i18n="f_note">اختر واتساب أو البريد الإلكتروني، وسيُرسل الطلب بكل التفاصيل كما كتبتها.</p>
+        <div class="msgbox" id="msgBox" hidden>
+          <h4 data-i18n="f_ready">هذا نص الطلب كما سيُرسل:</h4>
+          <pre id="msgText"></pre>
+          <div class="acts">
+            <button type="button" id="copyMsg" data-i18n="f_copy">انسخ النص</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="map rv" id="mapWrap">
+      <iframe id="mapFrame" title="Amazon International location" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3477.931726762882!2d48.010120375527215!3d29.342996575284268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjnCsDIwJzM0LjgiTiA0OMKwMDAnNDUuNyJF!5e0!3m2!1sen!2skw!4v1790294586626!5m2!1sen!2skw" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div class="map-fb" id="mapFallback" hidden>
+        <div class="art">
+          <svg viewBox="0 0 420 260" role="img" aria-label="Map of the office location">
+            <rect width="420" height="260" fill="#E9F0FC"/>
+            <g stroke="#fff" stroke-width="12">
+              <path d="M0 78h420M0 186h420M96 0v260M268 0v260"/>
+            </g>
+            <g stroke="#DCE2EC" stroke-width="4">
+              <path d="M0 132h420M182 0v260M348 0v260"/>
+            </g>
+            <rect x="110" y="92" width="62" height="34" fill="#DFE5EF"/>
+            <rect x="196" y="92" width="58" height="34" fill="#DFE5EF"/>
+            <rect x="110" y="146" width="58" height="28" fill="#DFE5EF"/>
+            <rect x="288" y="146" width="44" height="28" fill="#DFE5EF"/>
+            <circle cx="182" cy="132" r="26" fill="#D71A28" opacity=".12"/>
+            <path d="M182 108a13 13 0 00-13 13c0 9.5 13 22 13 22s13-12.5 13-22a13 13 0 00-13-13z" fill="#D71A28"/>
+            <circle cx="182" cy="121" r="4.6" fill="#fff"/>
+            <text x="286" y="70" font-family="Manrope, sans-serif" font-size="11" font-weight="700" fill="#8A95AB" letter-spacing="1">IBN KHALDOUN ST</text>
+          </svg>
+        </div>
+        <div>
+          <h3 data-i18n="map_t">مكتب أمازون إنترناشيونال</h3>
+          <p data-i18n-html="addr_full">حولي، شارع ابن خلدون<br>مجمع الفوز، الدور الثاني، مكتب 10<br>الكويت</p>
+          <a class="btn btn-red" href="https://www.google.com/maps/search/?api=1&query=29.342996,48.012694" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg><span data-i18n="map_open">افتح في خرائط Google</span></a>
+        </div>
+      </div>
+      <div class="pin">
+        <b data-i18n="map_t">مكتب أمازون إنترناشيونال</b>
+        <p data-i18n="map_p">مجمع الفوز، الدور الثاني، مكتب 10، شارع ابن خلدون، حولي</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=29.342996,48.012694" target="_blank" rel="noopener"><span data-i18n="map_open">افتح في خرائط Google</span><svg class="flip" width="14" height="14"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap pad-rail">
+    <div class="foot">
+      <div>
+        <a href="#home" class="brand">
+          <span class="logo-fallback">
+            <svg viewBox="0 0 120 100" style="height:38px;width:auto;filter:brightness(0) invert(1)"><use href="#logo-mark"/></svg>
+            <span class="wm"><b>AMAZON</b><small>INTERNATIONAL</small></span>
+          </span>
+        </a>
+        <p class="about" data-i18n="ft_about">شركة متخصصة في تصميم وتنفيذ أجنحة المعارض وأعمال الديكور الداخلي في الكويت.</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft_links">روابط</h4>
+        <ul>
+          <li><a href="#about" data-i18n="nav_about">من نحن</a></li>
+          <li><a href="#services" data-i18n="nav_services">خدماتنا</a></li>
+          <li><a href="#work" data-i18n="nav_work">أعمالنا</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ft_svc">الخدمات</h4>
+        <ul>
+          <li data-i18n="cap1">أجنحة المعارض</li>
+          <li data-i18n="cap2">الديكور الداخلي</li>
+          <li data-i18n="cap3">التصميم ثلاثي الأبعاد</li>
+          <li data-i18n="cap4">التصنيع والتركيب</li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="nav_contact">تواصل معنا</h4>
+        <ul>
+          <li><a href="tel:+96555776301" class="ltr">+965 5577 6301</a></li>
+          <li><a href="tel:+96550443637" class="ltr">+965 5044 3637</a></li>
+          <li><a href="mailto:amazoninternational527@gmail.com" style="overflow-wrap:break-word">amazoninternational527<wbr>@gmail.com</a></li>
+          <li data-i18n="topbar_addr">حولي، شارع ابن خلدون، مجمع الفوز، الكويت</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="yr">2026</span> Amazon International. <span data-i18n="rights">جميع الحقوق محفوظة.</span></span>
+      <span data-i18n="slogan_p">إبداع في التصميم وإتقان في التنفيذ</span>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Project image">
+  <div class="slot" id="lbSlot"></div>
+  <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close"><svg><use href="#i-close"/></svg></button>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous"><svg style="transform:scaleX(-1)"><use href="#i-arrow"/></svg></button>
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next"><svg><use href="#i-arrow"/></svg></button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+/* =====================================================================
+   COMPANY DETAILS — change these if a number or email ever changes
+   ===================================================================== */
+var WHATSAPP = "96555776301";                            /* WhatsApp number, no + or spaces */
+var EMAIL    = "amazoninternational527@gmail.com";       /* quote requests arrive here */
+
+/* =====================================================================
+   PROJECTS — put your photos in the images/ folder using these names,
+   or change "src" to match your own file names.
+   cat: "booths" (built booths), "3d" (3D designs), "interior" (interior decor)
+   wide: true makes the tile twice as wide.
+   ===================================================================== */
+var PROJECTS = [
+  { src:"images/booths/booth-01.jpg", cat:"booths", wide:true, en:"Conference stage & exhibition wall", ar:"مسرح مؤتمر وجدار عرض" },
+  { src:"images/booths/booth-02.jpg", cat:"booths", en:"Corporate booth, hotel ballroom",   ar:"جناح شركة في قاعة فندق" },
+  { src:"images/booths/booth-03.jpg", cat:"booths", en:"Illuminated chevron booth",        ar:"جناح بإضاءة مدمجة" },
+  { src:"images/3d/design-01.jpg",    cat:"3d",     en:"Island stand — 3D concept",        ar:"جناح جزيرة — تصميم ثلاثي الأبعاد" },
+  { src:"images/3d/design-02.jpg",    cat:"3d",     wide:true, en:"Curved canopy pavilion — render", ar:"جناح بمظلة منحنية — تصميم ثلاثي الأبعاد" },
+  { src:"images/booths/booth-04.jpg", cat:"booths", en:"Brand counter booth",              ar:"جناح بكاونتر للعلامة التجارية" },
+  { src:"images/interior/interior-01.jpg", cat:"interior", wide:true, en:"Office reception", ar:"استقبال مكتب" },
+  { src:"images/3d/design-03.jpg",    cat:"3d",     en:"Stand floor plan — top view",      ar:"مخطط الجناح — منظر علوي" },
+  { src:"images/interior/interior-02.jpg", cat:"interior", en:"Meeting room",              ar:"غرفة اجتماعات" },
+  { src:"images/booths/booth-05.jpg", cat:"booths", en:"Exhibition booth",                 ar:"جناح معرض" },
+  { src:"images/3d/design-04.jpg",    cat:"3d",     en:"Lounge & meeting area — render",   ar:"منطقة جلوس واجتماعات — تصميم" },
+  { src:"images/interior/interior-03.jpg", cat:"interior", en:"Retail interior",           ar:"ديكور محل تجاري" }
+];
+
+var SERVICES = [
+  { ic:"i-booth", img:"images/services/booths.jpg",
+    ar:["تصميم وتنفيذ أجنحة المعارض","أجنحة مخصصة بالكامل للمعارض والمؤتمرات، مصممة لتجذب الزوار وتبرز علامتك التجارية.",["جزيرة","ركنية","شبه جزيرة","خطية"]],
+    en:["Exhibition booth design & build","Fully custom stands for exhibitions and conferences, designed to pull visitors in and put your brand first.",["Island","Corner","Peninsula","Inline"]] },
+  { ic:"i-sofa", img:"images/services/interior.jpg",
+    ar:["الديكور الداخلي","تصميم وتنفيذ ديكور المكاتب والمحلات والمساحات التجارية والسكنية.",["مكاتب","محلات","صالات عرض","فلل"]],
+    en:["Interior decor & fit-out","Design and fit-out for offices, shops, showrooms and homes.",["Offices","Retail","Showrooms","Villas"]] },
+  { ic:"i-cube", img:"images/services/3d.jpg",
+    ar:["التصميم ثلاثي الأبعاد","تصاميم واقعية ومخططات قبل التنفيذ، لترى مشروعك كاملاً وتعتمده قبل البدء.",["تصاميم واقعية","مخططات","رسومات تنفيذية"]],
+    en:["3D design & visualisation","Photoreal renders and plans before anything is built, so you see and approve the whole project first.",["Renders","Floor plans","Shop drawings"]] },
+  { ic:"i-stage", img:"images/services/stages.jpg",
+    ar:["المسارح وخلفيات الفعاليات","مسارح المؤتمرات، وجدران الشاشات، والخلفيات المطبوعة للفعاليات والحفلات.",["مؤتمرات","إطلاق منتجات","حفلات"]],
+    en:["Stages & event backdrops","Conference stages, LED walls and printed backdrops for events and launches.",["Conferences","Launches","Ceremonies"]] },
+  { ic:"i-saw", img:"images/services/fabrication.jpg",
+    ar:["التصنيع والنجارة","تصنيع الهياكل والكاونترات والوحدات الخشبية والمعدنية حسب التصميم.",["خشب","ألمنيوم","أكريليك"]],
+    en:["Fabrication & joinery","Structures, counters and custom units in wood and metal, built to the design.",["Wood","Aluminium","Acrylic"]] },
+  { ic:"i-light", img:"images/services/branding.jpg",
+    ar:["الإضاءة والطباعة والهوية","إضاءة مدمجة، ولوحات مضيئة، وطباعة وجرافيك بهوية علامتك التجارية.",["إضاءة LED","لوحات","طباعة"]],
+    en:["Lighting, print & branding","Integrated lighting, light boxes, signage and large-format graphics in your brand identity.",["LED lighting","Signage","Print"]] }
+];
+
+var STANDS = [
+  { open:[0,0,1,0], ar:["جناح خطي","جهة واحدة مفتوحة","ضمن صف من الأجنحة، الواجهة هي كل شيء. نركز على جدار خلفي قوي وكاونتر واضح."], en:["Inline","1 side open","One in a row of stands, so the front face does all the work: a strong back wall and a clear counter."] },
+  { open:[0,1,1,0], ar:["جناح ركني","جهتان مفتوحتان","يقع على تقاطع ممرين، فيراه الزوار من اتجاهين. مناسب لمداخل مفتوحة وشاشات جانبية."], en:["Corner","2 sides open","Sits where two aisles meet, seen from two directions. Suits open entrances and side screens."] },
+  { open:[1,1,1,0], ar:["شبه جزيرة","ثلاث جهات مفتوحة","جدار خلفي واحد وثلاث واجهات. مساحة للاستقبال والعرض وركن اجتماعات."], en:["Peninsula","3 sides open","One back wall and three faces. Room for a reception, displays and a meeting corner."] },
+  { open:[1,1,1,1], ar:["جناح جزيرة","أربع جهات مفتوحة","مكشوف من كل الجهات، ويسمح بأسقف معلقة وتصاميم منحنية وطابق علوي."], en:["Island","4 sides open","Open on every side. Allows hanging rigs, curved structures and double-decker builds."] }
+];
+
+var STEPS = [
+  { ar:["الفكرة والمعاينة","نستمع لأهدافك، ونراجع مساحة الجناح أو الموقع، ونحدد الميزانية وتاريخ التسليم."], en:["Brief & site survey","We listen to your goals, review the stand space or site, and agree budget and deadline."] },
+  { ar:["التصميم ثلاثي الأبعاد","نقدم تصاميم واقعية ومخططات، ونعدلها معك حتى الاعتماد النهائي."], en:["3D design","Photoreal renders and plans, revised with you until final sign-off."] },
+  { ar:["التصنيع","ننفذ الهياكل والنجارة والطباعة والإضاءة في الورشة مع مراقبة الجودة."], en:["Fabrication","Structures, joinery, print and lighting built in the workshop with quality checks."] },
+  { ar:["التركيب والتسليم","نركب في الموقع ونسلّم قبل الافتتاح، ثم نتولى الفك بعد انتهاء المعرض."], en:["Install & handover","We install on site and hand over before opening, then dismantle after the show."] }
+];
+
+var WHY = [
+  { ic:"i-team",  ar:["فريق واحد من البداية للنهاية","التصميم والتنفيذ عندنا، فلا تضيع التفاصيل بين أكثر من جهة."], en:["One team, start to finish","Design and build under one roof, so no detail gets lost between suppliers."] },
+  { ic:"i-cube",  ar:["ترى مشروعك قبل تنفيذه","تصاميم ثلاثية الأبعاد واقعية تعتمدها قبل بدء التصنيع."], en:["See it before it's built","Realistic 3D renders you approve before fabrication starts."] },
+  { ic:"i-ruler", ar:["دقة في التفاصيل","تشطيبات نظيفة ومقاسات مضبوطة ومواد مختارة بعناية."], en:["Precise detailing","Clean finishes, exact dimensions and carefully chosen materials."] },
+  { ic:"i-time",  ar:["التزام بموعد الافتتاح","نسلم الجناح جاهزاً قبل افتتاح المعرض، في كل مرة."], en:["On time for opening day","Your stand is ready before the doors open, every time."] }
+];
+
+/* ===================================================================== */
+var T = {
+  ar:{
+    topbar_addr:"حولي، شارع ابن خلدون، مجمع الفوز، الكويت",
+    nav_home:"الرئيسية",nav_about:"من نحن",nav_services:"خدماتنا",nav_stands:"أنواع الأجنحة",nav_process:"مراحل العمل",nav_work:"أعمالنا",nav_contact:"تواصل معنا",
+    cta_quote:"اطلب عرض سعر",cta_work:"شاهد أعمالنا",cta_talk:"ناقش مشروعك معنا",cta_wa:"راسلنا على واتساب",
+    hero_eyebrow:"تصميم وتنفيذ · الكويت",
+    hero_title:"إبداع في التصميم<em>وإتقان في التنفيذ</em>",
+    hero_lead:"نصمم وننفذ أجنحة المعارض (البوثات) وأعمال الديكور الداخلي، من الفكرة والتصميم ثلاثي الأبعاد إلى التصنيع والتركيب والتسليم، بمعايير عالية في الجودة والاحترافية.",
+    cap1:"أجنحة المعارض",cap2:"الديكور الداخلي",cap3:"التصميم ثلاثي الأبعاد",cap4:"التصنيع والتركيب",
+    badge_t:"من الفكرة إلى التسليم",badge_s:"فريق واحد يتولى التصميم والتصنيع والتركيب في موقع المعرض.",
+    about_eyebrow:"من نحن",about_title:"نحوّل الأفكار إلى مساحات تعكس هوية عملائنا",
+    about_p1:"نحن شركة متخصصة في تصميم وتنفيذ أعمال الديكور الداخلي وأجنحة المعارض (البوثات). نقدم حلولاً إبداعية متكاملة تجمع بين الابتكار والفخامة والجودة، لتحويل الأفكار إلى واقع يعكس هوية عملائنا ويلبي تطلعاتهم.",
+    about_p2:"نحرص على تقديم تصاميم عصرية ومميزة مع الاهتمام بأدق التفاصيل في جميع مراحل العمل، بدءاً من الفكرة والتصميم ثلاثي الأبعاد وصولاً إلى التنفيذ والتسليم، وفق أعلى معايير الجودة والاحترافية.",
+    vision_h:"رؤيتنا",vision_p:"أن نكون الخيار المفضل في عالم التصميم والديكور وتجهيز أجنحة المعارض، من خلال تقديم أعمال استثنائية تجمع بين الجمال والوظيفة والإبداع.",
+    mission_h:"طريقتنا",mission_p:"فريق تصميم وتنفيذ واحد، ومتابعة لكل تفصيلة من أول رسمة حتى آخر مسمار في الموقع، والتزام بمواعيد افتتاح المعارض.",
+    slogan_h:"شعارنا",slogan_p:"إبداع في التصميم وإتقان في التنفيذ",
+    svc_eyebrow:"خدماتنا",svc_title:"كل ما يحتاجه جناحك أو مساحتك، تحت سقف واحد",
+    svc_lead:"نغطي المشروع بالكامل: الفكرة، والتصميم ثلاثي الأبعاد، والتصنيع في ورشتنا، والتركيب في الموقع، ثم الفك والتخزين بعد انتهاء المعرض.",
+    st_eyebrow:"أنواع الأجنحة",st_title:"نصمم لكل موقع في قاعة المعرض",
+    st_lead:"يتحدد شكل الجناح بعدد الجهات المفتوحة على الممرات. نختار التصميم والمداخل وأماكن الشاشات والإضاءة بحسب موقع مساحتك.",
+    lg_wall:"جدار أو جناح مجاور",lg_open:"جهة مفتوحة على الممر",aisle:"ممر",
+    pr_eyebrow:"مراحل العمل",pr_title:"من أول رسمة حتى يوم الافتتاح",pr_lead:"أربع مراحل واضحة، وفريق واحد يتابع مشروعك في كل مرحلة منها.",step:"المرحلة",
+    wk_eyebrow:"أعمالنا",wk_title:"مشاريع صممناها ونفذناها",
+    f_all:"الكل",f_booths:"أجنحة منفذة",f_3d:"تصاميم ثلاثية الأبعاد",f_interior:"ديكور داخلي",
+    why_eyebrow:"لماذا نحن",why_title:"ما يميز العمل معنا",
+    why_lead:"أربع نقاط تختصر طريقتنا: فريق واحد يتولى كل شيء، وتصميم تراه وتعتمده قبل التنفيذ، وتفاصيل مضبوطة، وتسليم في الموعد.",
+    band_title:"عندك معرض قادم أو مساحة تحتاج تجديد؟",band_p:"أرسل لنا مساحة الجناح وتاريخ المعرض أو صور موقعك، ونرجع لك بفكرة تصميم وعرض سعر.",
+    ct_eyebrow:"تواصل معنا",ct_title:"لنبدأ مشروعك القادم",ct_lead:"زورونا في مكتبنا في حولي، أو تواصلوا معنا بالهاتف أو واتساب أو البريد الإلكتروني.",
+    ct_phone:"الهاتف وواتساب",ct_email:"البريد الإلكتروني",ct_addr:"العنوان",ct_hours:"ساعات العمل",
+    addr_full:"حولي، شارع ابن خلدون<br>مجمع الفوز، الدور الثاني، مكتب 10<br>الكويت",
+    hours:"السبت – الخميس، 9:00 ص – 6:00 م",copy:"نسخ",copied:"تم النسخ",
+    f_title:"اطلب عرض سعر",f_name:"الاسم",f_phone:"رقم الهاتف",f_type:"نوع المشروع",f_size:"المساحة التقريبية (م²)",f_msg:"تفاصيل المشروع",
+    f_msg_ph:"اسم المعرض، التاريخ، الموقع، وأي أفكار لديك",
+    f_send_wa:"أرسل عبر واتساب",f_send_mail:"أرسل بالبريد الإلكتروني",
+    f_note:"اختر واتساب أو البريد الإلكتروني، وسيُرسل الطلب بكل التفاصيل كما كتبتها.",
+    f_ready:"هذا نص الطلب كما سيُرسل:",f_copy:"انسخ النص",
+    f_err:"اكتب الاسم ورقم الهاتف لنتمكن من التواصل معك.",
+    f_sent_wa:"تم فتح واتساب بالطلب كاملاً.",f_sent_mail:"تم فتح بريدك الإلكتروني بالطلب كاملاً.",
+    f_blocked:"لم يفتح التطبيق. انسخ النص وأرسله لنا.",
+    o1:"جناح معرض (بوث)",o2:"ديكور داخلي",o3:"تصميم ثلاثي الأبعاد فقط",o4:"مسرح أو خلفية فعالية",o5:"أخرى",
+    map_t:"مكتب أمازون إنترناشيونال",map_p:"مجمع الفوز، الدور الثاني، مكتب 10، شارع ابن خلدون، حولي",map_open:"افتح في خرائط Google",
+    ft_about:"شركة متخصصة في تصميم وتنفيذ أجنحة المعارض وأعمال الديكور الداخلي في الكويت.",ft_links:"روابط",ft_svc:"الخدمات",rights:"جميع الحقوق محفوظة.",
+    ph_add:"أضف الصورة هنا",
+    wa_subject:"طلب عرض سعر",
+    wa_msg:"مرحباً أمازون إنترناشيونال، أرغب في عرض سعر.",
+    wa_name:"الاسم",wa_phone:"الهاتف",wa_type:"نوع المشروع",wa_size:"المساحة",wa_det:"التفاصيل",wa_src:"أُرسل من الموقع"
+  },
+  en:{
+    topbar_addr:"Ibn Khaldoun St, Al-Fouz Complex, Hawalli, Kuwait",
+    nav_home:"Home",nav_about:"About",nav_services:"Services",nav_stands:"Stand types",nav_process:"Process",nav_work:"Our work",nav_contact:"Contact",
+    cta_quote:"Request a quote",cta_work:"View our work",cta_talk:"Discuss your project",cta_wa:"Message us on WhatsApp",
+    hero_eyebrow:"Design & build · Kuwait",
+    hero_title:"Creative design.<em>Precise execution.</em>",
+    hero_lead:"We design and build exhibition booths and interior spaces, from the first idea and 3D design through fabrication, installation and handover, to the highest standards of quality.",
+    cap1:"Exhibition booths",cap2:"Interior decor",cap3:"3D design",cap4:"Fabrication & install",
+    badge_t:"From idea to handover",badge_s:"One team handles design, fabrication and on-site installation.",
+    about_eyebrow:"About us",about_title:"We turn ideas into spaces that carry our clients' identity",
+    about_p1:"We are a company specialised in designing and building interior decor and exhibition booths. We deliver complete creative solutions that combine innovation, luxury and quality, turning ideas into spaces that reflect our clients' identity and meet their ambitions.",
+    about_p2:"We create modern, distinctive designs and care about every detail at every stage, from the idea and 3D design through to execution and handover, to the highest standards of quality and professionalism.",
+    vision_h:"Our vision",vision_p:"To be the preferred choice in design, decor and exhibition stands by delivering exceptional work that brings together beauty, function and creativity.",
+    mission_h:"How we work",mission_p:"One design and build team, attention to every detail from the first sketch to the last screw on site, and a firm commitment to opening dates.",
+    slogan_h:"Our motto",slogan_p:"Creative design. Precise execution.",
+    svc_eyebrow:"Services",svc_title:"Everything your stand or space needs, under one roof",
+    svc_lead:"We cover the whole project: concept, 3D design, fabrication in our workshop, installation on site, then dismantling and storage after the show.",
+    st_eyebrow:"Stand types",st_title:"We design for every spot on the show floor",
+    st_lead:"A stand's layout depends on how many sides face an aisle. We plan entrances, screens and lighting around where your space sits.",
+    lg_wall:"Wall or neighbouring stand",lg_open:"Side open to the aisle",aisle:"AISLE",
+    pr_eyebrow:"Our process",pr_title:"From the first sketch to opening day",pr_lead:"Four clear stages, with one team following your project through each of them.",step:"Stage",
+    wk_eyebrow:"Our work",wk_title:"Projects we designed and built",
+    f_all:"All",f_booths:"Built booths",f_3d:"3D designs",f_interior:"Interior decor",
+    why_eyebrow:"Why us",why_title:"What sets working with us apart",
+    why_lead:"Four things that sum up how we work: one team handling everything, a design you see and approve before it is built, exact detailing, and delivery on schedule.",
+    band_title:"Have an exhibition coming up, or a space to transform?",band_p:"Send us your stand size and show date, or photos of your space, and we'll come back with a design idea and a quote.",
+    ct_eyebrow:"Contact",ct_title:"Let's start your next project",ct_lead:"Visit our office in Hawalli, or reach us by phone, WhatsApp or email.",
+    ct_phone:"Phone & WhatsApp",ct_email:"Email",ct_addr:"Address",ct_hours:"Working hours",
+    addr_full:"Ibn Khaldoun St, Hawalli<br>Al-Fouz Complex, 2nd floor, Office 10<br>Kuwait",
+    hours:"Sat – Thu, 9:00 AM – 6:00 PM",copy:"Copy",copied:"Copied",
+    f_title:"Request a quote",f_name:"Name",f_phone:"Phone number",f_type:"Project type",f_size:"Approx. area (m²)",f_msg:"Project details",
+    f_msg_ph:"Exhibition name, dates, venue and any ideas you have",
+    f_send_wa:"Send on WhatsApp",f_send_mail:"Send by email",
+    f_note:"Choose WhatsApp or email — your request is sent with every detail exactly as you wrote it.",
+    f_ready:"Your request, exactly as it will be sent:",f_copy:"Copy the text",
+    f_err:"Enter your name and phone number so we can reach you.",
+    f_sent_wa:"WhatsApp opened with your full request.",f_sent_mail:"Your email app opened with your full request.",
+    f_blocked:"The app didn't open. Copy the text and send it to us.",
+    o1:"Exhibition booth",o2:"Interior decor",o3:"3D design only",o4:"Stage or event backdrop",o5:"Other",
+    map_t:"Amazon International office",map_p:"Al-Fouz Complex, 2nd floor, Office 10, Ibn Khaldoun St, Hawalli",map_open:"Open in Google Maps",
+    ft_about:"Exhibition booth design & build and interior decor, based in Kuwait.",ft_links:"Links",ft_svc:"Services",rights:"All rights reserved.",
+    ph_add:"Add image here",
+    wa_subject:"Quote request",
+    wa_msg:"Hello Amazon International, I'd like a quote.",
+    wa_name:"Name",wa_phone:"Phone",wa_type:"Project type",wa_size:"Area",wa_det:"Details",wa_src:"Sent from the website"
+  }
+};
+
+document.documentElement.classList.add("js");
+var lang = "ar";
+try{ var saved = localStorage.getItem("ai-lang"); if(saved==="en"||saved==="ar") lang = saved; }catch(e){}
+var filter = "all";
+
+function t(k){ return (T[lang] && T[lang][k]) || k; }
+function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+
+function fillSlot(el, src, big){
+  el.innerHTML = '<div class="ph"><svg><use href="#i-img"/></svg><b>'+esc(t("ph_add"))+'</b><code>'+esc(src)+'</code></div>';
+  var img = new Image();
+  img.alt = "";
+  img.loading = big ? "eager" : "lazy";
+  img.onload = function(){ el.appendChild(img); };
+  img.src = src;
+}
+function fillStaticSlots(){
+  document.querySelectorAll(".slot[data-src]").forEach(function(el){ fillSlot(el, el.dataset.src, true); });
+}
+
+function renderServices(){
+  document.getElementById("servicesGrid").innerHTML = SERVICES.map(function(s){
+    var d = s[lang];
+    return '<article class="svc rv"><div class="slot" data-svc="'+esc(s.img)+'"></div><div class="svc-body">'+
+      '<div class="svc-top"><div class="svc-ic"><svg><use href="#'+s.ic+'"/></svg></div><h3>'+esc(d[0])+'</h3></div>'+
+      '<p>'+esc(d[1])+'</p><ul>'+d[2].map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ul></div></article>';
+  }).join("");
+  document.querySelectorAll("[data-svc]").forEach(function(el){ fillSlot(el, el.dataset.svc); });
+}
+
+/* plan-view drawing of a stand: open = [top,right,bottom,left] */
+function standSVG(open){
+  var x=40,y=24,w=160,h=112, navy="#0B2A66", red="#D71A28";
+  var sides=[[x,y,x+w,y],[x+w,y,x+w,y+h],[x,y+h,x+w,y+h],[x,y,x,y+h]];
+  var s='<svg viewBox="0 0 240 168" role="img" aria-hidden="true">';
+  s+='<rect x="0" y="0" width="240" height="168" fill="#EEF4FE"/>';
+  var nb=[[x,0,w,y-6],[x+w+6,y,240-(x+w+6),h],[x,y+h+6,w,168-(y+h+6)],[0,y,x-6,h]];
+  s+='<defs><pattern id="hp" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="#E7EBF2"/><line x1="0" y1="0" x2="0" y2="7" stroke="#CBD3E0" stroke-width="2"/></pattern></defs>';
+  for(var i=0;i<4;i++){
+    var r=nb[i];
+    if(!open[i]) s+='<rect x="'+r[0]+'" y="'+r[1]+'" width="'+r[2]+'" height="'+r[3]+'" fill="url(#hp)"/>';
+    else {
+      var cx=r[0]+r[2]/2, cy=r[1]+r[3]/2;
+      s+='<text x="'+cx+'" y="'+(cy+4)+'" text-anchor="middle" font-family="Manrope, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#8A95AB"'+(i%2? ' transform="rotate(90 '+cx+' '+cy+')"':'')+'>'+esc(t("aisle"))+'</text>';
+    }
+  }
+  s+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="#fff"/>';
+  s+='<rect x="'+(x+w/2-28)+'" y="'+(y+h-34)+'" width="56" height="14" fill="#DDE3ED"/>';
+  s+='<circle cx="'+(x+36)+'" cy="'+(y+40)+'" r="13" fill="none" stroke="#C3CCDA" stroke-width="1.5"/>';
+  s+='<rect x="'+(x+w-56)+'" y="'+(y+26)+'" width="30" height="30" fill="none" stroke="#C3CCDA" stroke-width="1.5"/>';
+  for(var j=0;j<4;j++){
+    var L=sides[j];
+    s+='<line x1="'+L[0]+'" y1="'+L[1]+'" x2="'+L[2]+'" y2="'+L[3]+'" stroke="'+(open[j]?red:navy)+'" stroke-width="'+(open[j]?3:6)+'"'+(open[j]?' stroke-dasharray="10 6"':'')+' stroke-linecap="square"/>';
+  }
+  s+='</svg>';
+  return s;
+}
+function renderStands(){
+  document.getElementById("standsGrid").innerHTML = STANDS.map(function(st){
+    var d=st[lang];
+    return '<article class="stand rv">'+standSVG(st.open)+'<div class="k"><h3>'+esc(d[0])+'</h3><span class="open">'+esc(d[1])+'</span></div><p>'+esc(d[2])+'</p></article>';
+  }).join("");
+}
+
+function renderSteps(){
+  document.getElementById("stepsList").innerHTML = STEPS.map(function(s,i){
+    var d=s[lang];
+    return '<li class="step rv"><span class="n">'+esc(t("step"))+' 0'+(i+1)+'</span><h3>'+esc(d[0])+'</h3><p>'+esc(d[1])+'</p><div class="bar" style="--p:'+((i+1)/4)+'"></div></li>';
+  }).join("");
+}
+
+function renderWhy(){
+  document.getElementById("whyGrid").innerHTML = WHY.map(function(w){
+    var d=w[lang];
+    return '<div><svg><use href="#'+w.ic+'"/></svg><h3>'+esc(d[0])+'</h3><p>'+esc(d[1])+'</p></div>';
+  }).join("");
+}
+
+function renderFilters(){
+  var cats=["all","booths","3d","interior"];
+  document.getElementById("filters").innerHTML = cats.map(function(c){
+    var n = c==="all" ? PROJECTS.length : PROJECTS.filter(function(p){return p.cat===c;}).length;
+    return '<button type="button" data-f="'+c+'" aria-pressed="'+(filter===c)+'">'+esc(t("f_"+c))+'<span>'+n+'</span></button>';
+  }).join("");
+}
+function visibleProjects(){ return PROJECTS.map(function(p,i){return i;}).filter(function(i){ return filter==="all" || PROJECTS[i].cat===filter; }); }
+function renderGallery(){
+  var g=document.getElementById("gallery");
+  g.innerHTML = PROJECTS.map(function(p,i){
+    var show = filter==="all" || p.cat===filter;
+    return '<button type="button" class="work'+(p.wide?' wide':'')+'" data-i="'+i+'"'+(show?'':' hidden')+'>'+
+      '<div class="slot" data-w="'+esc(p.src)+'"></div>'+
+      '<span class="tag">'+esc(t("f_"+p.cat))+'</span>'+
+      '<span class="cap"><span><b>'+esc(p[lang])+'</b><small>'+esc(t("f_"+p.cat))+'</small></span><i><svg><use href="#i-plus"/></svg></i></span></button>';
+  }).join("");
+  g.querySelectorAll("[data-w]").forEach(function(el){ fillSlot(el, el.dataset.w); });
+}
+
+/* lightbox */
+var lbList=[], lbPos=0, lastFocus=null;
+function openLB(i){
+  lbList = visibleProjects(); lbPos = lbList.indexOf(i); lastFocus=document.activeElement;
+  showLB(); document.getElementById("lb").hidden=false; document.body.style.overflow="hidden";
+  document.getElementById("lbClose").focus();
+}
+function showLB(){
+  var p=PROJECTS[lbList[lbPos]];
+  fillSlot(document.getElementById("lbSlot"), p.src, true);
+  document.getElementById("lbCap").innerHTML = esc(p[lang])+'<small>'+(lbPos+1)+' / '+lbList.length+'</small>';
+}
+function closeLB(){ document.getElementById("lb").hidden=true; document.body.style.overflow=""; if(lastFocus) lastFocus.focus(); }
+function stepLB(d){ lbPos=(lbPos+d+lbList.length)%lbList.length; showLB(); }
+
+/* hero dimension drawing */
+function drawDims(){
+  var host=document.querySelector(".hero-visual");
+  if(!host) return;
+  var svg=host.querySelector(".dim"), slot=host.querySelector(".slot");
+  var W=host.clientWidth, H=host.clientHeight, sw=slot.offsetWidth, sh=slot.offsetHeight;
+  var rtl = document.documentElement.dir==="rtl";
+  var sx = slot.offsetLeft, sy = slot.offsetTop;
+  svg.setAttribute("viewBox","0 0 "+W+" "+H);
+  var ly = sy-18, lx = rtl ? sx+sw+18 : sx-18, t1=4;
+  var s='';
+  s+='<line class="draw" x1="'+sx+'" y1="'+ly+'" x2="'+(sx+sw)+'" y2="'+ly+'"/>';
+  s+='<line x1="'+sx+'" y1="'+(ly-8)+'" x2="'+sx+'" y2="'+(sy-4)+'"/><line x1="'+(sx+sw)+'" y1="'+(ly-8)+'" x2="'+(sx+sw)+'" y2="'+(sy-4)+'"/>';
+  s+='<line x1="'+(sx-t1)+'" y1="'+(ly+t1)+'" x2="'+(sx+t1)+'" y2="'+(ly-t1)+'" stroke-width="2"/><line x1="'+(sx+sw-t1)+'" y1="'+(ly+t1)+'" x2="'+(sx+sw+t1)+'" y2="'+(ly-t1)+'" stroke-width="2"/>';
+  s+='<rect x="'+(sx+sw/2-34)+'" y="'+(ly-9)+'" width="68" height="18" fill="#fff"/><text x="'+(sx+sw/2)+'" y="'+(ly+4)+'" text-anchor="middle">9.00 m</text>';
+  s+='<line class="draw" x1="'+lx+'" y1="'+sy+'" x2="'+lx+'" y2="'+(sy+sh)+'"/>';
+  var tickOut = rtl ? lx+8 : lx-8;
+  s+='<line x1="'+tickOut+'" y1="'+sy+'" x2="'+(rtl?sx+sw+4:sx-4)+'" y2="'+sy+'"/><line x1="'+tickOut+'" y1="'+(sy+sh)+'" x2="'+(rtl?sx+sw+4:sx-4)+'" y2="'+(sy+sh)+'"/>';
+  s+='<line x1="'+(lx-t1)+'" y1="'+(sy+t1)+'" x2="'+(lx+t1)+'" y2="'+(sy-t1)+'" stroke-width="2"/><line x1="'+(lx-t1)+'" y1="'+(sy+sh+t1)+'" x2="'+(lx+t1)+'" y2="'+(sy+sh-t1)+'" stroke-width="2"/>';
+  var my=sy+sh/2;
+  s+='<rect x="'+(lx-9)+'" y="'+(my-34)+'" width="18" height="68" fill="#fff"/><text x="'+lx+'" y="'+(my+4)+'" text-anchor="middle" transform="rotate(-90 '+lx+' '+my+')">6.00 m</text>';
+  svg.innerHTML=s;
+}
+
+function applyLang(){
+  var html=document.documentElement;
+  html.lang=lang; html.dir = lang==="ar" ? "rtl" : "ltr";
+  document.querySelectorAll("[data-i18n]").forEach(function(el){ el.textContent=t(el.dataset.i18n); });
+  document.querySelectorAll("[data-i18n-html]").forEach(function(el){ el.innerHTML=t(el.dataset.i18nHtml); });
+  document.querySelectorAll("[data-i18n-ph]").forEach(function(el){ el.placeholder=t(el.dataset.i18nPh); });
+  document.querySelectorAll("[data-i18n-title]").forEach(function(el){ el.title=t(el.dataset.i18nTitle); });
+  var label = lang==="ar" ? "EN" : "عربي";
+  document.getElementById("langBtn").textContent = label;
+  document.getElementById("railLang").textContent = label;
+  document.title = lang==="ar" ? "أمازون إنترناشيونال | تصميم وتنفيذ أجنحة المعارض والديكور" : "Amazon International | Exhibition Booths & Interior Decor";
+  renderServices(); renderStands(); renderSteps(); renderWhy(); renderFilters(); renderGallery(); fillStaticSlots();
+  requestAnimationFrame(drawDims);
+  observeReveal();
+  onScroll();
+}
+
+var io = ("IntersectionObserver" in window) ? new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.remove("pre"); io.unobserve(e.target);} });
+},{rootMargin:"0px 0px -8% 0px"}) : null;
+function observeReveal(){
+  if(!io) return;
+  document.querySelectorAll(".rv").forEach(function(el){
+    var r=el.getBoundingClientRect();
+    if(r.top > window.innerHeight*0.95 && !el.dataset.seen){ el.classList.add("pre"); el.dataset.seen="1"; io.observe(el); }
+  });
+}
+
+function switchLang(){
+  lang = lang==="ar" ? "en" : "ar";
+  try{ localStorage.setItem("ai-lang",lang); }catch(e){}
+  applyLang();
+}
+document.getElementById("langBtn").addEventListener("click",switchLang);
+document.getElementById("railLang").addEventListener("click",switchLang);
+
+document.getElementById("filters").addEventListener("click",function(e){
+  var b=e.target.closest("button[data-f]"); if(!b) return;
+  filter=b.dataset.f;
+  this.querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", x===b); });
+  document.querySelectorAll("#gallery .work").forEach(function(w){
+    var p=PROJECTS[+w.dataset.i]; w.hidden = !(filter==="all"||p.cat===filter);
+  });
+});
+document.getElementById("gallery").addEventListener("click",function(e){
+  var w=e.target.closest(".work"); if(w) openLB(+w.dataset.i);
+});
+document.getElementById("lbClose").addEventListener("click",closeLB);
+document.getElementById("lbPrev").addEventListener("click",function(){ stepLB(-1); });
+document.getElementById("lbNext").addEventListener("click",function(){ stepLB(1); });
+document.getElementById("lb").addEventListener("click",function(e){ if(e.target===this) closeLB(); });
+document.addEventListener("keydown",function(e){
+  if(document.getElementById("lb").hidden) return;
+  if(e.key==="Escape") closeLB();
+  if(e.key==="ArrowRight") stepLB(1);
+  if(e.key==="ArrowLeft") stepLB(-1);
+});
+
+/* active section + scroll progress on the floating rail */
+var railLinks = [].slice.call(document.querySelectorAll(".rail a[data-sec]"));
+function onScroll(){
+  var y=window.scrollY, max=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById("railFill").style.height = (max>0 ? Math.max(0,Math.min(100, y/max*100)) : 0)+"%";
+  var cur=railLinks[0].dataset.sec, mark=window.innerHeight*0.32;
+  railLinks.forEach(function(a){
+    var el=document.getElementById(a.dataset.sec);
+    if(el && el.getBoundingClientRect().top <= mark) cur=a.dataset.sec;
+  });
+  railLinks.forEach(function(a){ a.classList.toggle("on", a.dataset.sec===cur); });
+}
+window.addEventListener("scroll",onScroll,{passive:true});
+window.addEventListener("resize",function(){ requestAnimationFrame(drawDims); onScroll(); });
+
+function toast(msg){ var el=document.getElementById("toast"); el.textContent=msg; el.hidden=false; clearTimeout(toast.t); toast.t=setTimeout(function(){el.hidden=true;},2600); }
+function copyText(txt, ok){
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(function(){ toast(ok); }, function(){});
+  }
+}
+document.querySelectorAll(".copy").forEach(function(b){
+  b.addEventListener("click",function(){
+    var txt=b.dataset.copy;
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(function(){ toast(t("copied")); }, select);
+    } else select();
+    function select(){
+      var v=b.parentElement.querySelector(".v"); if(!v) return;
+      var r=document.createRange(); r.selectNodeContents(v);
+      var s=getSelection(); s.removeAllRanges(); s.addRange(r);
+    }
+  });
+});
+
+/* ---------- quote form: sends the filled request on WhatsApp or by email ---------- */
+var qf = document.getElementById("quoteForm"), sendVia = "wa";
+qf.querySelectorAll('button[type="submit"]').forEach(function(b){
+  b.addEventListener("click", function(){ sendVia = b.value; });
+});
+qf.addEventListener("submit", function(e){
+  e.preventDefault();
+  var fName=document.getElementById("f-name"), fPhone=document.getElementById("f-phone"),
+      fType=document.getElementById("f-type"), fSize=document.getElementById("f-size"),
+      fMsg=document.getElementById("f-msg"), note=document.getElementById("formNote");
+  var name=fName.value.trim(), phone=fPhone.value.trim();
+  if(!name || !phone){
+    note.textContent=t("f_err"); note.style.color="var(--red)";
+    (name ? fPhone : fName).focus();
+    return;
+  }
+  note.textContent=t("f_note"); note.style.color="";
+
+  var lines=[ t("wa_msg"), "",
+    t("wa_name")+": "+name,
+    t("wa_phone")+": "+phone,
+    t("wa_type")+": "+fType.value ];
+  if(fSize.value.trim()) lines.push(t("wa_size")+": "+fSize.value.trim()+" m²");
+  if(fMsg.value.trim())  lines.push(t("wa_det")+": "+fMsg.value.trim());
+  if(location.hostname) lines.push("", t("wa_src")+": "+location.hostname);
+  var body = lines.join("\n");
+
+  /* show the exact text that gets sent, with a copy button as a fallback */
+  document.getElementById("msgText").textContent = body;
+  document.getElementById("msgBox").hidden = false;
+
+  var url = sendVia === "mail"
+    ? "mailto:"+EMAIL+"?subject="+encodeURIComponent(t("wa_subject")+" — "+name)+"&body="+encodeURIComponent(body)
+    : "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(body);
+
+  var opened=null;
+  try{ opened = window.open(url, sendVia==="mail" ? "_self" : "_blank", "noopener"); }catch(err){}
+  if(!opened){
+    var a=document.createElement("a"); a.href=url;
+    if(sendVia!=="mail"){ a.target="_blank"; a.rel="noopener"; }
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+  toast(sendVia==="mail" ? t("f_sent_mail") : t("f_sent_wa"));
+});
+document.getElementById("copyMsg").addEventListener("click", function(){
+  copyText(document.getElementById("msgText").textContent, t("copied"));
+});
+
+/* ---------- map: swap in the fallback panel if the embedded map is blocked ----------
+   Some viewers (and this site's preview) refuse third-party frames. The live Google
+   map works on the real site; everywhere else visitors get the panel below. */
+(function(){
+  var frame=document.getElementById("mapFrame"), wrap=document.getElementById("mapWrap"),
+      fb=document.getElementById("mapFallback"), loaded=false, done=false;
+  if(!frame) return;
+  function useFallback(){
+    if(done) return; done=true;
+    frame.hidden=true; fb.hidden=false; wrap.classList.add("blocked");
+  }
+  /* a real Google map is cross-origin, so reading its location throws.
+     A blocked frame is still about:blank, which reads back without error. */
+  function isBlocked(){
+    try{
+      var w=frame.contentWindow;
+      if(!w) return true;
+      var href=w.location.href;
+      return !href || href==="about:blank";
+    }catch(e){ return false; }
+  }
+  frame.addEventListener("load", function(){
+    loaded=true;
+    setTimeout(function(){ if(isBlocked()) useFallback(); },150);
+  });
+  frame.addEventListener("error", useFallback);
+  document.addEventListener("securitypolicyviolation", function(e){
+    if((e.blockedURI||"").indexOf("google.com") > -1) useFallback();
+  });
+  /* the frame loads lazily, so only start waiting once the map is near the screen */
+  function watch(){
+    setTimeout(function(){ if(!loaded) useFallback(); }, 6000);
+  }
+  if("IntersectionObserver" in window){
+    var mo=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ mo.disconnect(); watch(); } });
+    },{rootMargin:"400px"});
+    mo.observe(wrap);
+  } else watch();
+})();
+
+document.getElementById("yr").textContent = new Date().getFullYear();
+applyLang();
+</script>
+
+</body>
+</html>
