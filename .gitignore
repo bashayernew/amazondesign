@@ -12,3 +12,6 @@ Desktop.ini
 *.psd
 *.ai
 *.zip
+
+# raw hand-off files, not part of the site
+_incoming/
