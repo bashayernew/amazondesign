@@ -255,12 +255,10 @@ html[dir="rtl"] .step .bar::after{transform-origin:right}
 .filters button:hover{border-color:var(--line-2);color:#fff}
 .filters button[aria-pressed="true"]{background:#fff;border-color:#fff;color:#0A1731}
 .filters button span{opacity:.55;margin-inline-start:7px;font-variant-numeric:tabular-nums}
-.gallery{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-flow:dense;gap:14px;margin-top:40px}
-.work{grid-column:span 4;position:relative;border:none;border-radius:2px;overflow:hidden;padding:0;background:none;text-align:start;display:block;color:inherit;
+.gallery{columns:3;column-gap:14px;margin-top:40px}
+.work{break-inside:avoid;margin:0 0 14px;width:100%;position:relative;border:none;border-radius:2px;overflow:hidden;padding:0;background:none;text-align:start;display:block;color:inherit;
   box-shadow:0 0 0 1px var(--line)}
-.work.wide{grid-column:span 8}
-.work .slot{aspect-ratio:4/3;height:100%}
-.work.wide .slot{aspect-ratio:auto}
+.work .slot{aspect-ratio:4/3}
 .work .cap{position:absolute;inset-inline:0;bottom:0;padding:56px 22px 20px;color:#fff;
   background:linear-gradient(to top,rgba(3,9,19,.94),rgba(3,9,19,.5) 50%,transparent);
   display:flex;justify-content:space-between;align-items:flex-end;gap:12px;opacity:0;transform:translateY(10px);transition:all .5s var(--ease)}
@@ -271,7 +269,7 @@ html[dir="rtl"] .step .bar::after{transform-origin:right}
 .work .cap i{width:40px;height:40px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(255,255,255,.35);flex:none}
 .work .cap i svg{width:16px;height:16px}
 .work .tag{position:absolute;top:16px;inset-inline-start:16px;background:rgba(3,9,19,.72);backdrop-filter:blur(8px);color:#fff;font-size:11.5px;font-weight:400;padding:7px 15px;border-radius:999px;font-family:var(--display);border:1px solid var(--line)}
-.work[hidden]{display:none}
+.work[hidden],.work.missing{display:none}
 
 /* ---------- materials: a showroom stage with a swatch strip ---------- */
 .mat{display:flex;flex-direction:column;gap:clamp(20px,2.8vw,32px)}
@@ -435,8 +433,7 @@ html[lang="ar"] .foot h4{letter-spacing:.04em;font-size:15px;text-transform:none
   .why{grid-template-columns:1fr 1fr}
   .why div:nth-child(2){border-inline-end:none}
   .why div:nth-child(3){padding-inline-start:0}
-  .work{grid-column:span 6}.work.wide{grid-column:span 12}
-  .work.wide .slot{aspect-ratio:16/9}
+  .gallery{columns:2}
   .map-fb{grid-template-columns:1fr}
 }
 @media (max-width:780px){ .topbar .tb-2nd{display:none} }
@@ -450,7 +447,7 @@ html[lang="ar"] .foot h4{letter-spacing:.04em;font-size:15px;text-transform:none
   .step{border-inline-start:none;padding-inline-start:0;border-top:1px solid var(--line);padding-top:30px}
   .step:first-child{border-top:none;padding-top:0}
   .why div{border-inline-end:none;border-bottom:1px solid var(--line);padding-inline:0 !important}
-  .work,.work.wide{grid-column:span 12}
+  .gallery{columns:1}
   .work .cap{opacity:1;transform:none}
   form.quote{grid-template-columns:1fr}
   .hero-badge{inset-inline-start:0;bottom:-26px;max-width:230px;padding:20px 22px}
@@ -929,20 +926,25 @@ var EMAIL    = "amazoninternational527@gmail.com";       /* quote requests arriv
    PROJECTS — put your photos in the images/ folder using these names,
    or change "src" to match your own file names.
    cat: "booths" (built booths), "3d" (3D designs), "interior" (interior decor)
-   wide: true makes the tile twice as wide.
+   Each tile keeps its own photo's proportions, so portrait and landscape
+   shots can sit side by side without being cropped.
    ===================================================================== */
 var PROJECTS = [
-  { src:"images/booths/booth-01.jpg", cat:"booths", wide:true, en:"Conference stage & exhibition wall", ar:"مسرح مؤتمر وجدار عرض" },
-  { src:"images/booths/booth-02.jpg", cat:"booths", en:"Corporate booth, hotel ballroom",   ar:"جناح شركة في قاعة فندق" },
-  { src:"images/booths/booth-03.jpg", cat:"booths", en:"Illuminated chevron booth",        ar:"جناح بإضاءة مدمجة" },
-  { src:"images/3d/design-01.jpg",    cat:"3d",     en:"Island stand — 3D concept",        ar:"جناح جزيرة — تصميم ثلاثي الأبعاد" },
-  { src:"images/3d/design-02.jpg",    cat:"3d",     wide:true, en:"Curved canopy pavilion — render", ar:"جناح بمظلة منحنية — تصميم ثلاثي الأبعاد" },
-  { src:"images/booths/booth-04.jpg", cat:"booths", en:"Brand counter booth",              ar:"جناح بكاونتر للعلامة التجارية" },
-  { src:"images/3d/design-03.jpg",    cat:"3d",     en:"Stand floor plan — top view",      ar:"مخطط الجناح — منظر علوي" },
-  { src:"images/interior/interior-02.jpg", cat:"interior", wide:true, en:"Meeting room",    ar:"غرفة اجتماعات" },
-  { src:"images/booths/booth-05.jpg", cat:"booths", en:"Exhibition booth",                 ar:"جناح معرض" },
-  { src:"images/3d/design-04.jpg",    cat:"3d",     en:"Lounge & meeting area — render",   ar:"منطقة جلوس واجتماعات — تصميم" },
-  { src:"images/interior/interior-03.jpg", cat:"interior", en:"Retail interior",           ar:"ديكور محل تجاري" }
+  { src:"images/interior/interior-01.jpg", cat:"interior", ar:"مجلس بجدار رخام مضيء وأعمدة مضلعة",        en:"Majlis — backlit marble wall, fluted columns" },
+  { src:"images/interior/interior-02.jpg", cat:"interior", ar:"استقبال بجداريات منحوتة وإضاءة مخفية",     en:"Reception — sculpted relief walls, concealed lighting" },
+  { src:"images/interior/interior-03.jpg", cat:"interior", ar:"ممر رخامي بجدارية منحوتة وشرائح نحاسية",   en:"Marble corridor — carved feature panel, brass inlays" },
+  { src:"images/interior/interior-04.jpg", cat:"interior", ar:"بهو رخامي بأقواس ذهبية وعمود مضيء",        en:"Marble foyer — gilded arches, backlit column" },
+  { src:"images/interior/interior-05.jpg", cat:"interior", ar:"صالة بكوّة مقوّسة مضيئة",                  en:"Sitting room — lit arched niche" },
+  { src:"images/interior/interior-06.jpg", cat:"interior", ar:"مدخل بخزائن منحنية ومقعد رخامي",           en:"Entry — curved joinery, marble bench" },
+  { src:"images/booths/booth-01.jpg", cat:"booths", ar:"مسرح مؤتمر وجدار عرض",            en:"Conference stage & exhibition wall" },
+  { src:"images/booths/booth-02.jpg", cat:"booths", ar:"جناح شركة في قاعة فندق",          en:"Corporate booth, hotel ballroom" },
+  { src:"images/booths/booth-03.jpg", cat:"booths", ar:"جناح بإضاءة مدمجة",               en:"Illuminated chevron booth" },
+  { src:"images/booths/booth-04.jpg", cat:"booths", ar:"جناح بكاونتر للعلامة التجارية",   en:"Brand counter booth" },
+  { src:"images/booths/booth-05.jpg", cat:"booths", ar:"جناح معرض",                       en:"Exhibition booth" },
+  { src:"images/3d/design-01.jpg",    cat:"3d",     ar:"جناح جزيرة — تصميم ثلاثي الأبعاد", en:"Island stand — 3D concept" },
+  { src:"images/3d/design-02.jpg",    cat:"3d",     ar:"جناح بمظلة منحنية — تصميم",        en:"Curved canopy pavilion — render" },
+  { src:"images/3d/design-03.jpg",    cat:"3d",     ar:"مخطط الجناح — منظر علوي",          en:"Stand floor plan — top view" },
+  { src:"images/3d/design-04.jpg",    cat:"3d",     ar:"منطقة جلوس واجتماعات — تصميم",     en:"Lounge & meeting area — render" }
 ];
 
 /* =====================================================================
@@ -1123,7 +1125,7 @@ var filter = "all";
 function t(k){ return (T[lang] && T[lang][k]) || k; }
 function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
 
-function fillSlot(el, src, big){
+function fillSlot(el, src, big, onfail){
   el.innerHTML = '<div class="ph"><svg><use href="#i-img"/></svg><b>'+esc(t("ph_add"))+'</b><code>'+esc(src)+'</code></div>';
   var img = document.createElement("img");
   img.alt = "";
@@ -1131,7 +1133,10 @@ function fillSlot(el, src, big){
   if(!big) img.loading = "lazy";
   /* the image goes into the page BEFORE its src is set: a detached image
      marked lazy never starts loading, which leaves the slot empty forever. */
-  img.addEventListener("error", function(){ if(img.parentNode) img.parentNode.removeChild(img); });
+  img.addEventListener("error", function(){
+    if(img.parentNode) img.parentNode.removeChild(img);
+    if(onfail) onfail();
+  });
   /* data-natural: the slot takes the photo's own proportions instead of
      cropping it to a fixed box */
   if("natural" in el.dataset){
@@ -1234,17 +1239,41 @@ function renderFilters(){
     return '<button type="button" data-f="'+c+'" aria-pressed="'+(filter===c)+'">'+esc(t("f_"+c))+'<span>'+n+'</span></button>';
   }).join("");
 }
-function visibleProjects(){ return PROJECTS.map(function(p,i){return i;}).filter(function(i){ return filter==="all" || PROJECTS[i].cat===filter; }); }
+function present(i){
+  var tile=document.querySelector('#gallery .work[data-i="'+i+'"]');
+  return !tile || !tile.classList.contains("missing");
+}
+function visibleProjects(){
+  return PROJECTS.map(function(p,i){return i;})
+    .filter(function(i){ return (filter==="all" || PROJECTS[i].cat===filter) && present(i); });
+}
+function refreshCounts(){
+  document.querySelectorAll("#filters button[data-f]").forEach(function(b){
+    var c=b.dataset.f, span=b.querySelector("span");
+    if(!span) return;
+    var n = PROJECTS.filter(function(p,i){
+      return (c==="all" || p.cat===c) && present(i);
+    }).length;
+    span.textContent = n;
+    /* a category with nothing in it yet is not worth offering */
+    b.hidden = (n===0 && c!=="all");
+  });
+}
 function renderGallery(){
   var g=document.getElementById("gallery");
   g.innerHTML = PROJECTS.map(function(p,i){
     var show = filter==="all" || p.cat===filter;
-    return '<button type="button" class="work'+(p.wide?' wide':'')+'" data-i="'+i+'"'+(show?'':' hidden')+'>'+
-      '<div class="slot" data-w="'+esc(p.src)+'"></div>'+
+    return '<button type="button" class="work" data-i="'+i+'"'+(show?'':' hidden')+'>'+
+      '<div class="slot" data-natural data-w="'+esc(p.src)+'"></div>'+
       '<span class="tag">'+esc(t("f_"+p.cat))+'</span>'+
       '<span class="cap"><span><b>'+esc(p[lang])+'</b><small>'+esc(t("f_"+p.cat))+'</small></span><i><svg><use href="#i-plus"/></svg></i></span></button>';
   }).join("");
-  g.querySelectorAll("[data-w]").forEach(function(el){ fillSlot(el, el.dataset.w); });
+  g.querySelectorAll("[data-w]").forEach(function(el){
+    fillSlot(el, el.dataset.w, false, function(){
+      var tile=el.closest(".work");
+      if(tile){ tile.classList.add("missing"); refreshCounts(); }
+    });
+  });
 }
 
 /* lightbox */
@@ -1298,6 +1327,7 @@ function applyLang(){
   document.getElementById("railLang").textContent = label;
   document.title = lang==="ar" ? "أمازون إنترناشيونال | تصميم وتنفيذ أجنحة المعارض والديكور" : "Amazon International | Exhibition Booths & Interior Decor";
   renderServices(); renderStands(); renderSteps(); renderWhy(); renderFilters(); renderGallery(); renderPanels(); fillStaticSlots();
+  setTimeout(refreshCounts, 1200);
   requestAnimationFrame(drawDims);
   observeReveal();
   onScroll();
