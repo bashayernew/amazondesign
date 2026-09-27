@@ -5,476 +5,410 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" href="images/logo.png">
 <title>Amazon International</title>
-<meta name="description" content="Amazon International — exhibition booth design & build and interior decor, Kuwait.">
+<meta name="description" content="Amazon International General Trading — interior decor, fit-out and exhibition stands in Kuwait.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..800&family=Noto+Sans+Arabic:wght@300..700&family=Readex+Pro:wght@200..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap">
 <style>
 :root{
-  color-scheme: dark;
-  /* surfaces, darkest to lightest */
-  --bg:#050D1F;
-  --bg-2:#0A1731;
-  --card:#0E1F40;
-  --card-2:#12294F;
-  --line:rgba(180,203,255,.13);
-  --line-2:rgba(180,203,255,.22);
-  /* ink */
-  --text:#E9EFFB;
-  --muted:#9AACC9;
-  --dim:#7386A6;
-  /* brand */
-  --navy:#0B2A66;
-  --blue:#2E7BF6;
-  --blue-soft:#7FB0FF;
-  --red:#E2313F;
-  --red-deep:#B3121F;
-  --display:"Readex Pro","Manrope","Helvetica Neue",Arial,sans-serif;
-  --body:"Manrope","Helvetica Neue",Arial,sans-serif;
-  --gutter:clamp(18px, 4.5vw, 60px);
-  --max:1240px;
-  --r-btn:999px;
-  --r-field:14px;
-  --r-card:18px;
-  --rail:62px;
-  --ease:cubic-bezier(.16,.84,.26,1);
-}
-html[lang="ar"]{
-  --display:"Readex Pro","Noto Sans Arabic",Tahoma,sans-serif;
-  --body:"Noto Sans Arabic","Readex Pro",Tahoma,sans-serif;
+  color-scheme: light;
+  --paper:#FFFFFF;
+  --mist:#F4F6FA;
+  --mist-2:#EAEEF5;
+  --line:#E2E7EF;
+  --ink:#16213A;
+  --navy:#0B2050;
+  --navy-2:#102C6B;
+  --navy-deep:#061537;
+  --red:#E1262F;
+  --red-deep:#B8141C;
+  --muted:#5D6A85;
+  --dim:#8794AB;
+  --display:"Cairo","Manrope",Tahoma,sans-serif;
+  --body:"Cairo","Manrope",Tahoma,sans-serif;
+  --gutter:clamp(16px,4vw,54px);
+  --max:1280px;
+  --r:6px;
+  --ease:cubic-bezier(.2,.75,.25,1);
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-html{scroll-behavior:smooth;scroll-padding-top:28px}
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:104px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer}
-::selection{background:rgba(46,123,246,.35)}
-:focus-visible{outline:2px solid var(--blue-soft);outline-offset:3px}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
-.pad-rail{padding-inline-start:var(--rail)}
-h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;font-weight:400;color:#fff}
-html[lang="en"] h1,html[lang="en"] h2{letter-spacing:-.025em;line-height:1.08}
-html[lang="en"] h3{letter-spacing:-.015em;line-height:1.2}
-html[lang="ar"] h1,html[lang="ar"] h2{letter-spacing:0;line-height:1.38}
-html[lang="ar"] h3{letter-spacing:0;line-height:1.5}
+h1,h2,h3,h4{font-family:var(--display);margin:0;font-weight:800;line-height:1.35;text-wrap:balance}
 p{margin:0}
-
-/* light on the headings: white falling into blue */
-@supports (-webkit-background-clip:text) or (background-clip:text){
-  .hero h1,.sec-head h2,.about-copy h2,.band h2{
-    background-image:linear-gradient(112deg,#FFFFFF 0%,#DCE8FF 46%,#77A8FF 100%);
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .hero h1 em{-webkit-text-fill-color:var(--red)}
-}
-
-.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--display);font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--blue-soft)}
-html[lang="ar"] .eyebrow{letter-spacing:.04em;font-size:14px;text-transform:none}
-.eyebrow::before{content:"";width:34px;height:1px;background:linear-gradient(90deg,transparent,var(--red))}
-html[dir="rtl"] .eyebrow::before{background:linear-gradient(-90deg,transparent,var(--red))}
-
-/* ---------- buttons ---------- */
-.btn{display:inline-flex;align-items:center;gap:11px;padding:16px 32px;border-radius:var(--r-btn);font-family:var(--display);font-weight:500;font-size:15px;border:1px solid transparent;
-  transition:background .45s var(--ease),color .45s var(--ease),border-color .45s var(--ease),transform .45s var(--ease),box-shadow .45s var(--ease)}
-.btn svg{width:18px;height:18px;flex:none}
-.btn-red{background:linear-gradient(135deg,#F0404E,var(--red) 50%,var(--red-deep));color:#fff;box-shadow:0 16px 40px -16px rgba(226,49,63,.85)}
-.btn-red:hover{transform:translateY(-3px);box-shadow:0 24px 50px -16px rgba(226,49,63,.95)}
-.btn-line{border-color:var(--line-2);color:#fff;background:rgba(255,255,255,.03)}
-.btn-line:hover{background:rgba(255,255,255,.1);border-color:rgba(180,203,255,.45);transform:translateY(-3px)}
-.btn-white{background:#fff;color:#0A1731;box-shadow:0 16px 40px -16px rgba(0,0,0,.8)}
-.btn-white:hover{transform:translateY(-3px);box-shadow:0 24px 50px -16px rgba(0,0,0,.9)}
-.wa-btn{background:linear-gradient(135deg,#2FE07C,#25D366 55%,#1DB755);color:#062412;box-shadow:0 16px 40px -16px rgba(37,211,102,.9)}
-.wa-btn:hover{transform:translateY(-3px);box-shadow:0 24px 50px -16px rgba(37,211,102,1)}
-html[dir="rtl"] .flip{transform:scaleX(-1)}
-
-/* ---------- page top ---------- */
-.topbar{background:#030913;color:var(--dim);font-size:13px;border-bottom:1px solid rgba(180,203,255,.07)}
-.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:6px 22px;padding-block:9px;flex-wrap:wrap}
-.topbar a:hover{color:#fff}
-.topbar .tb-left{display:flex;gap:6px 22px;flex-wrap:wrap}
-.topbar .tb-i{display:inline-flex;align-items:center;gap:8px;min-width:0}
-.topbar .tb-i svg{width:14px;height:14px;flex:none;opacity:.6}
-.topbar .tb-i span{overflow-wrap:anywhere}
-.topbar .tb-addr{display:inline-flex}
 .ltr{direction:ltr;unicode-bidi:isolate}
 
-header.site{background:rgba(5,13,31,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:96px}
-.brand{display:flex;align-items:center;gap:14px;flex:none}
-.brand .logo-img{height:58px;width:auto}
-.brand .logo-fallback{display:flex;align-items:center;gap:14px}
-.brand .logo-fallback svg{height:48px;width:auto}
-.brand .wm{display:flex;flex-direction:column;line-height:1;direction:ltr}
-.brand .wm b{font-family:"Readex Pro",sans-serif;font-weight:500;font-size:20px;letter-spacing:.2em;color:#fff}
-.brand .wm small{font-family:"Readex Pro",sans-serif;font-weight:300;font-size:8.6px;letter-spacing:.44em;color:var(--red);margin-top:7px}
-.nav-actions{display:flex;align-items:center;gap:12px}
-.lang{border:1px solid var(--line-2);background:transparent;color:#fff;border-radius:var(--r-btn);padding:11px 18px;font-family:var(--display);font-weight:500;font-size:14px;transition:background .35s var(--ease),border-color .35s var(--ease)}
-.lang:hover{background:rgba(255,255,255,.08);border-color:rgba(180,203,255,.4)}
-.nav .btn{padding:13px 26px}
+/* ---------- shared bits ---------- */
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--display);font-size:14px;font-weight:700;color:var(--red)}
+.eyebrow::before,.eyebrow::after{content:"";width:26px;height:2px;background:var(--red)}
+.sec-title{font-size:clamp(26px,3.3vw,40px);color:var(--navy);margin-top:14px}
+.sec-sub{color:var(--muted);font-size:16.5px;margin-top:12px;max-width:62ch;margin-inline:auto}
+.center{text-align:center}
+.center .sec-sub{margin-inline:auto}
+.sec{padding-block:clamp(56px,6.5vw,96px)}
 
-/* ---------- floating side rail ---------- */
-.rail{position:fixed;inset-inline-start:16px;top:50%;translate:0 -50%;z-index:60;display:flex;flex-direction:column;align-items:flex-start;gap:5px}
-.rail ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px;position:relative}
-.rail-track{position:absolute;inset-inline-start:5px;top:14px;bottom:14px;width:1px;background:rgba(180,203,255,.22);overflow:hidden}
-.rail-fill{display:block;width:100%;height:0;background:var(--red);transition:height .15s linear}
-.rail a{display:flex;align-items:center;height:28px;width:12px;position:relative}
-.rail .dot{width:11px;height:11px;flex:none;border-radius:50%;background:var(--bg);border:1px solid rgba(180,203,255,.5);position:relative;z-index:1;
-  transition:border-color .45s var(--ease),background .45s var(--ease),scale .45s var(--ease)}
-.rail .lbl{position:absolute;inset-inline-start:24px;top:50%;translate:0 -50%;z-index:2;
-  font-family:var(--display);font-size:13px;font-weight:500;color:#fff;white-space:nowrap;
-  background:rgba(14,31,64,.96);border:1px solid var(--line-2);border-radius:999px;padding:6px 15px;
-  box-shadow:0 14px 34px -14px rgba(0,0,0,.9);backdrop-filter:blur(8px);
-  opacity:0;visibility:hidden;pointer-events:none;transition:opacity .35s var(--ease),visibility .35s var(--ease)}
-.rail a:hover .dot{border-color:#fff;scale:1.2}
-.rail a:hover .lbl,.rail a:focus-visible .lbl{opacity:1;visibility:visible}
-.rail a.on .dot{border-color:var(--red);background:var(--red);scale:1.25;box-shadow:0 0 0 6px rgba(226,49,63,.16),0 0 14px rgba(226,49,63,.6)}
-.rail a.on .lbl{opacity:1;visibility:visible;color:#FF97A0;border-color:rgba(226,49,63,.4)}
-.rail .sep{height:16px}
-.rail .util{display:flex;flex-direction:column;gap:8px;margin-inline-start:-13px}
-.rail .fab{width:38px;height:38px;flex:none;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line-2);background:rgba(14,31,64,.9);color:#fff;font-family:var(--display);font-weight:500;font-size:11.5px;backdrop-filter:blur(8px);transition:all .35s var(--ease)}
-.rail .fab:hover{border-color:rgba(180,203,255,.5);transform:scale(1.08)}
-.rail .fab svg{width:17px;height:17px}
-.rail .fab.red{background:linear-gradient(135deg,#F0404E,var(--red-deep));border-color:transparent;box-shadow:0 10px 24px -10px rgba(226,49,63,.9)}
-.rail .fab.wa{background:linear-gradient(135deg,#2FE07C,#1DB755);border-color:transparent;color:#062412;box-shadow:0 10px 24px -10px rgba(37,211,102,.9)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 34px;border-radius:var(--r);
+  font-family:var(--display);font-weight:700;font-size:15.5px;border:2px solid transparent;
+  transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease)}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 12px 26px -12px rgba(225,38,47,.7)}
+.btn-red:hover{background:var(--red-deep);transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:#fff;border-color:#fff;color:var(--navy)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2);transform:translateY(-2px)}
+html[dir="rtl"] .flip{transform:scaleX(-1)}
 
-/* ---------- image slots ---------- */
-.slot{position:relative;overflow:hidden;background:#0B1A38;isolation:isolate;max-width:100%}
+/* image slots */
+.slot{position:relative;overflow:hidden;background:var(--mist-2);isolation:isolate}
 .slot::before{content:"";position:absolute;inset:0;z-index:-1;
-  background-image:repeating-linear-gradient(135deg,transparent 0 16px,rgba(180,203,255,.05) 16px 17px)}
-.slot .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;text-align:center;padding:18px;color:var(--dim);z-index:-1}
-.slot .ph svg{width:32px;height:32px;color:var(--blue);opacity:.5}
-.slot .ph b{font-family:var(--display);font-size:13px;font-weight:500;color:var(--muted)}
-.slot .ph code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;direction:ltr;background:rgba(255,255,255,.05);border:1px solid var(--line);padding:4px 9px;border-radius:4px;max-width:100%;overflow-wrap:anywhere}
-.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#0B1A38;transition:transform 1.1s var(--ease)}
+  background-image:repeating-linear-gradient(135deg,transparent 0 14px,rgba(11,32,80,.05) 14px 15px)}
+.slot .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;text-align:center;padding:16px;color:var(--dim);z-index:-1}
+.slot .ph svg{width:30px;height:30px;color:var(--navy);opacity:.35}
+.slot .ph b{font-family:var(--display);font-size:13px;font-weight:700;color:var(--muted)}
+.slot .ph code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10.5px;direction:ltr;background:#fff;border:1px solid var(--line);padding:3px 7px;border-radius:3px;max-width:100%;overflow-wrap:anywhere}
+.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+
+/* ---------- header ---------- */
+header.site{position:sticky;top:0;z-index:70;background:var(--navy);color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:78px}
+.brand{display:flex;align-items:center;gap:12px;flex:none;order:3}
+.brand .logo-img{height:50px;width:auto}
+.brand .logo-fallback{display:flex;align-items:center;gap:11px}
+.brand .logo-fallback svg{height:44px;width:auto}
+.brand .wm{display:flex;flex-direction:column;line-height:1;direction:ltr}
+.brand .wm b{font-family:"Manrope",sans-serif;font-weight:800;font-size:19px;letter-spacing:.16em;color:#fff}
+.brand .wm small{font-family:"Manrope",sans-serif;font-weight:600;font-size:8px;letter-spacing:.34em;color:#fff;opacity:.75;margin-top:5px}
+.menu{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0;order:2}
+.menu a{display:block;padding:10px 15px;font-family:var(--display);font-weight:600;font-size:15px;color:#fff;position:relative}
+.menu a::after{content:"";position:absolute;inset-inline:15px;bottom:2px;height:3px;background:var(--red);transform:scaleX(0);transition:transform .3s var(--ease)}
+.menu a:hover::after,.menu a.on::after{transform:scaleX(1)}
+.hd-left{display:flex;align-items:center;gap:14px;order:1}
+.socials{display:flex;gap:10px}
+.socials a{width:30px;height:30px;display:grid;place-items:center;color:#fff;opacity:.8;transition:opacity .25s,transform .25s}
+.socials a:hover{opacity:1;transform:translateY(-2px)}
+.socials svg{width:17px;height:17px}
+.lang{border:1.5px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:var(--r);padding:7px 12px;font-family:var(--display);font-weight:700;font-size:13px;transition:background .25s}
+.lang:hover{background:rgba(255,255,255,.14)}
+.burger{display:none;width:44px;height:44px;border:1.5px solid rgba(255,255,255,.3);border-radius:var(--r);background:none;align-items:center;justify-content:center;order:1}
+.burger span{display:block;width:19px;height:2px;background:#fff;position:relative}
+.burger span::before,.burger span::after{content:"";position:absolute;inset-inline:0;height:2px;background:#fff;transition:transform .3s}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+body.nav-open .burger span{background:transparent}
+body.nav-open .burger span::before{transform:translateY(6px) rotate(45deg)}
+body.nav-open .burger span::after{transform:translateY(-6px) rotate(-45deg)}
 
 /* ---------- hero ---------- */
-.hero{position:relative;padding-block:clamp(56px,8vw,116px) clamp(72px,9vw,132px);overflow:hidden}
-.hero::after{content:"";position:absolute;inset-inline-end:-18%;top:-40%;width:75%;height:150%;pointer-events:none;z-index:-1;
-  background:radial-gradient(closest-side,rgba(46,123,246,.28),rgba(46,123,246,0) 70%)}
-.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(38px,6vw,84px);align-items:center}
-.hero h1{font-size:clamp(42px,6.4vw,88px);font-weight:300;margin-block:26px 28px}
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-media .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.1s var(--ease)}
+.hero-media .slide.on{opacity:1}
+.hero-media .slide img{width:100%;height:100%;object-fit:cover}
+.hero-panel{position:absolute;top:-6%;bottom:-6%;inset-inline-start:-14%;width:66%;background:var(--navy);z-index:-1;transform:skewX(9deg)}
+html[dir="ltr"] .hero-panel{transform:skewX(-9deg)}
+.hero-fade{position:absolute;inset:0;z-index:-1}
+html[dir="rtl"] .hero-fade{background:linear-gradient(to left,var(--navy) 30%,rgba(11,32,80,.55) 55%,rgba(11,32,80,.15) 80%)}
+html[dir="ltr"] .hero-fade{background:linear-gradient(to right,var(--navy) 30%,rgba(11,32,80,.55) 55%,rgba(11,32,80,.15) 80%)}
+.hero .wrap{position:relative;padding-block:clamp(54px,7vw,104px);min-height:clamp(440px,52vw,620px);display:flex;flex-direction:column;justify-content:center}
+.hero-copy{max-width:min(600px,54%)}
+.hero .eyebrow{color:#fff;font-size:13.5px;letter-spacing:.04em}
+.hero .eyebrow::before,.hero .eyebrow::after{background:var(--red);width:22px}
+.hero h1{font-size:clamp(28px,4.4vw,52px);font-weight:900;margin-block:20px 18px;line-height:1.28}
 .hero h1 em{font-style:normal;color:var(--red);display:block}
-html[lang="ar"] .hero h1{font-size:clamp(36px,5.4vw,74px);font-weight:300}
-.hero .lead{font-size:clamp(16.5px,1.45vw,19px);color:var(--muted);max-width:52ch;font-weight:300}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:16px;margin-top:38px}
-.hero .caps{display:flex;flex-wrap:wrap;gap:12px 30px;margin-top:52px;padding-top:30px;border-top:1px solid var(--line);font-family:var(--display);font-size:13.5px;font-weight:400;color:var(--muted)}
-.hero .caps span{display:inline-flex;align-items:center;gap:10px}
-.hero .caps span::before{content:"";width:5px;height:5px;background:var(--red);transform:rotate(45deg)}
+.hero p.lead{color:rgba(255,255,255,.86);font-size:clamp(15px,1.25vw,17px);line-height:1.95;max-width:52ch}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.hero-count{position:absolute;inset-inline-end:var(--gutter);bottom:clamp(20px,3vw,38px);display:flex;align-items:center;gap:16px;font-family:"Manrope",sans-serif;font-size:14px;font-weight:600;color:#fff}
+.hero-count button{width:38px;height:38px;border:1.5px solid rgba(255,255,255,.4);border-radius:50%;background:none;color:#fff;display:grid;place-items:center;transition:all .25s}
+.hero-count button:hover{background:#fff;color:var(--navy);border-color:#fff}
+.hero-count svg{width:15px;height:15px}
 
-.hero-visual{position:relative;padding:38px 0 0 38px}
-html[dir="rtl"] .hero-visual{padding:38px 38px 0 0}
-.hero-visual .slot{aspect-ratio:4/4.4;border-radius:2px;box-shadow:0 60px 110px -50px rgba(0,0,0,.95),0 0 0 1px var(--line)}
-.hero-visual .dim{position:absolute;inset:0;pointer-events:none;overflow:visible}
-.dim line,.dim path{stroke:rgba(180,203,255,.4);stroke-width:1;fill:none}
-.dim .draw{stroke-dasharray:600;stroke-dashoffset:0;animation:draw 2s var(--ease) both .3s}
-@keyframes draw{from{stroke-dashoffset:600}to{stroke-dashoffset:0}}
-.dim text{font-family:"Manrope",sans-serif;font-size:11px;font-weight:500;fill:var(--muted);letter-spacing:.08em}
-.hero-badge{position:absolute;inset-inline-start:-20px;bottom:40px;background:rgba(10,23,49,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-  color:#fff;padding:24px 28px;max-width:262px;border:1px solid var(--line-2);border-radius:var(--r-card);
-  border-inline-start:2px solid var(--red);box-shadow:0 34px 70px -28px rgba(0,0,0,.95)}
-.hero-badge b{display:block;font-family:var(--display);font-size:16px;font-weight:500;margin-bottom:7px}
-.hero-badge span{font-size:13.5px;color:var(--muted);line-height:1.65;display:block;font-weight:300}
+/* ---------- services strip ---------- */
+.svc-strip{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;margin-top:clamp(32px,4vw,52px)}
+.svc-strip > div{padding:32px 20px 30px;text-align:center;border-inline-start:1px solid var(--line);transition:background .35s var(--ease)}
+.svc-strip > div:first-child{border-inline-start:none}
+.svc-strip > div:hover{background:var(--mist)}
+.svc-ic{height:54px;display:grid;place-items:center;margin-bottom:18px}
+.svc-ic svg{width:48px;height:48px;color:var(--navy)}
+.svc-strip h3{font-size:16.5px;color:var(--navy);margin-bottom:10px}
+.svc-strip p{font-size:13.5px;color:var(--muted);line-height:1.75}
 
-/* ---------- section rhythm ---------- */
-section{position:relative}
-.sec{padding-block:clamp(84px,10.5vw,164px)}
-.tint{background:var(--bg-2)}
-.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:26px 72px;align-items:end;margin-bottom:clamp(48px,6vw,80px)}
-.sec-head h2{font-size:clamp(32px,4.4vw,60px);margin-top:20px;font-weight:300}
-.sec-head p{color:var(--muted);font-size:16.5px;max-width:54ch;font-weight:300}
+/* ---------- about (angled navy band) ---------- */
+.about{background:var(--navy);color:#fff;position:relative;
+  clip-path:polygon(0 0,100% 2.4vw,100% 100%,0 calc(100% - 2.4vw));
+  padding-block:calc(2.4vw + clamp(48px,5.5vw,84px)) calc(2.4vw + clamp(48px,5.5vw,84px));margin-block:-1px}
+.about-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(30px,4.5vw,64px);align-items:center}
+.about-media{position:relative;border-radius:8px;overflow:hidden;box-shadow:0 36px 70px -34px rgba(0,0,0,.7)}
+.about-media .slot{aspect-ratio:16/11}
+.play{position:absolute;inset:0;display:flex;align-items:flex-end;gap:14px;padding:22px;background:linear-gradient(to top,rgba(6,21,55,.82),transparent 62%);
+  color:#fff;font-family:var(--display);font-weight:700;font-size:15px;border:none;width:100%;text-align:start}
+.play i{width:44px;height:44px;flex:none;border-radius:50%;background:var(--red);display:grid;place-items:center;transition:transform .3s var(--ease)}
+.play:hover i{transform:scale(1.1)}
+.play i svg{width:15px;height:15px;color:#fff}
+.about h2{color:#fff;font-size:clamp(24px,3.1vw,38px);margin-block:14px 18px}
+.about .eyebrow{color:#fff}
+.about p{color:rgba(255,255,255,.84);font-size:16px;line-height:1.95}
+.feats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:clamp(26px,3vw,38px);padding-top:26px;border-top:1px solid rgba(255,255,255,.16)}
+.feats div{text-align:center}
+.feats svg{width:30px;height:30px;color:var(--red);margin-bottom:10px}
+.feats b{display:block;font-family:var(--display);font-size:13.5px;font-weight:700;line-height:1.6}
 
-/* ---------- about ---------- */
-.about-grid{display:grid;grid-template-columns:1fr 1.06fr;gap:clamp(40px,6.5vw,96px);align-items:center}
-.about-media{position:relative}
-.about-media .slot.a1{aspect-ratio:4/5;border-radius:2px;box-shadow:0 50px 90px -46px rgba(0,0,0,.95),0 0 0 1px var(--line)}
-.about-media .slot.a2{position:absolute;width:46%;aspect-ratio:1;inset-inline-end:-8%;bottom:-9%;border-radius:2px;
-  box-shadow:0 34px 64px -30px rgba(0,0,0,.95),0 0 0 6px var(--bg-2),0 0 0 7px var(--line)}
-.about-media .slot.a2 .ph code{display:none}
-.about-copy h2{font-size:clamp(30px,3.9vw,52px);margin-block:20px 28px;font-weight:300}
-.about-copy > p{font-size:17px;color:var(--text);max-width:60ch;font-weight:300}
-.about-copy > p + p{margin-top:18px;color:var(--muted);font-size:16px}
-.pillars{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;margin-top:40px}
-.pillars div{background:var(--card);padding:28px}
-.pillars h3{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-soft);margin-bottom:12px;font-weight:500}
-html[lang="ar"] .pillars h3{letter-spacing:.04em;font-size:14px;text-transform:none}
-.pillars p{font-size:15.5px;color:var(--muted);line-height:1.7;font-weight:300}
-.pillars .slogan{grid-column:1/-1;background:linear-gradient(120deg,#0C2A63,#1A4FA8 70%,#2E7BF6)}
-.pillars .slogan p{font-family:var(--display);font-size:clamp(19px,2.2vw,26px);font-weight:300;color:#fff}
-.pillars .slogan h3{color:#FFC2C7}
+/* ---------- services gallery ---------- */
+.svc-cards{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:clamp(30px,4vw,48px)}
+.svc-card{position:relative;border-radius:8px;overflow:hidden;background:var(--navy);display:block;color:#fff;
+  box-shadow:0 18px 38px -22px rgba(11,32,80,.55);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.svc-card:hover{transform:translateY(-6px);box-shadow:0 26px 48px -22px rgba(11,32,80,.7)}
+.svc-card .slot{aspect-ratio:3/4;background:linear-gradient(160deg,var(--navy-2),var(--navy-deep))}
+.svc-card .slot::before{background-image:repeating-linear-gradient(135deg,transparent 0 16px,rgba(255,255,255,.05) 16px 17px)}
+.svc-card .slot .ph{color:rgba(255,255,255,.5)}
+.svc-card .slot .ph svg{color:#fff;opacity:.5;width:40px;height:40px}
+.svc-card .slot .ph b,.svc-card .slot .ph code{display:none}
+.svc-card:hover .slot img{transform:scale(1.06)}
+.svc-card .bar{position:absolute;inset-inline:0;bottom:0;background:rgba(6,21,55,.9);backdrop-filter:blur(6px);
+  display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px}
+.svc-card .bar b{font-family:var(--display);font-size:14px;font-weight:700}
+.svc-card .bar i{width:26px;height:26px;flex:none;display:grid;place-items:center;color:var(--red);transition:transform .3s var(--ease)}
+.svc-card:hover .bar i{transform:translateX(-4px)}
+html[dir="ltr"] .svc-card:hover .bar i{transform:translateX(4px)}
+.svc-card .bar i svg{width:16px;height:16px}
 
-/* ---------- services ---------- */
-.services{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden}
-.svc{background:var(--card);padding:38px 32px 40px;display:flex;flex-direction:column;gap:16px;position:relative;
-  transition:background .5s var(--ease)}
-.svc::after{content:"";position:absolute;inset-inline-start:0;top:0;width:2px;height:100%;background:var(--red);transform:scaleY(0);transform-origin:top;transition:transform .5s var(--ease)}
-.svc:hover{background:var(--card-2)}
-.svc:hover::after{transform:scaleY(1)}
-.svc-ic{width:52px;height:52px;flex:none;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line-2);color:var(--blue-soft);transition:all .5s var(--ease)}
-.svc:hover .svc-ic{border-color:var(--red);color:var(--red);transform:translateY(-2px)}
-.svc-ic svg{width:24px;height:24px}
-.svc h3{font-size:20px;font-weight:400}
-.svc p{color:var(--muted);font-size:15.5px;font-weight:300;flex:1}
-.svc ul{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.svc li{font-family:var(--display);font-size:12px;font-weight:400;color:var(--muted);border:1px solid var(--line);padding:6px 14px;border-radius:999px}
-
-/* ---------- stand types ---------- */
-.stands{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.stand{background:var(--card);border:1px solid var(--line);border-radius:var(--r-card);padding:26px;display:flex;flex-direction:column;gap:16px;transition:border-color .5s var(--ease),transform .5s var(--ease)}
-.stand:hover{border-color:var(--line-2);transform:translateY(-4px)}
-.stand svg{width:100%;height:auto;max-width:100%;border-radius:8px}
-.stand .k{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-.stand h3{font-size:18.5px;font-weight:400}
-.stand .open{font-family:var(--display);font-size:12px;font-weight:400;color:var(--red);white-space:nowrap}
-.stand p{font-size:14.5px;color:var(--muted);line-height:1.7;font-weight:300}
-.stand-legend{display:flex;gap:30px;flex-wrap:wrap;margin-top:30px;font-size:13.5px;color:var(--dim)}
-.stand-legend span{display:inline-flex;align-items:center;gap:11px}
-.stand-legend i{display:inline-block;width:26px;height:3px}
-
-/* ---------- process ---------- */
-.process{background:linear-gradient(170deg,#050D1F 0%,#0B2050 50%,#123A7D 100%);overflow:hidden}
-.process::before{content:"";position:absolute;inset:0;pointer-events:none;
-  background-image:linear-gradient(rgba(180,203,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(180,203,255,.05) 1px,transparent 1px);background-size:64px 64px}
-.process::after{content:"";position:absolute;inset-inline-end:-12%;top:-25%;width:60%;height:130%;pointer-events:none;z-index:0;
-  background:radial-gradient(closest-side,rgba(90,160,255,.3),rgba(90,160,255,0) 72%)}
-.process .wrap{position:relative;z-index:1}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;list-style:none;margin:0;padding:0}
-.step{padding:38px 30px 12px;border-inline-start:1px solid var(--line);position:relative}
-.step:first-child{border-inline-start:none;padding-inline-start:0}
-.step .n{font-family:var(--display);font-size:12px;font-weight:500;color:var(--red);letter-spacing:.16em}
-html[lang="ar"] .step .n{letter-spacing:.04em;font-size:13.5px}
-.step h3{font-size:22px;margin-block:20px 14px;font-weight:400}
-.step p{color:var(--muted);font-size:15px;font-weight:300}
-.step .bar{height:1px;background:var(--line);margin-top:26px;position:relative;overflow:hidden}
-.step .bar::after{content:"";position:absolute;inset:0;background:var(--red);transform-origin:left;transform:scaleX(var(--p))}
-html[dir="rtl"] .step .bar::after{transform-origin:right}
-
-/* ---------- portfolio ---------- */
-.filters{display:flex;flex-wrap:wrap;gap:8px}
-.filters button{border:1px solid var(--line);background:transparent;color:var(--muted);padding:11px 20px;border-radius:40px;font-family:var(--display);font-weight:400;font-size:13.5px;transition:all .4s var(--ease)}
-.filters button:hover{border-color:var(--line-2);color:#fff}
-.filters button[aria-pressed="true"]{background:#fff;border-color:#fff;color:#0A1731}
-.filters button span{opacity:.55;margin-inline-start:7px;font-variant-numeric:tabular-nums}
-.gallery{columns:3;column-gap:14px;margin-top:40px}
-.work{break-inside:avoid;margin:0 0 14px;width:100%;position:relative;border:none;border-radius:2px;overflow:hidden;padding:0;background:none;text-align:start;display:block;color:inherit;
-  box-shadow:0 0 0 1px var(--line)}
-.work .slot{aspect-ratio:4/3}
-.work .cap{position:absolute;inset-inline:0;bottom:0;padding:56px 22px 20px;color:#fff;
-  background:linear-gradient(to top,rgba(3,9,19,.94),rgba(3,9,19,.5) 50%,transparent);
-  display:flex;justify-content:space-between;align-items:flex-end;gap:12px;opacity:0;transform:translateY(10px);transition:all .5s var(--ease)}
-.work:hover .cap,.work:focus-visible .cap{opacity:1;transform:none}
-.work:hover .slot img{transform:scale(1.06)}
-.work .cap b{font-family:var(--display);font-size:16px;font-weight:400;display:block}
-.work .cap small{font-size:12.5px;color:var(--muted)}
-.work .cap i{width:40px;height:40px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(255,255,255,.35);flex:none}
-.work .cap i svg{width:16px;height:16px}
-.work .tag{position:absolute;top:16px;inset-inline-start:16px;background:rgba(3,9,19,.72);backdrop-filter:blur(8px);color:#fff;font-size:11.5px;font-weight:400;padding:7px 15px;border-radius:999px;font-family:var(--display);border:1px solid var(--line)}
-.work[hidden],.work.missing{display:none}
-
-/* ---------- materials: a showroom stage with a swatch strip ---------- */
-.mat{display:flex;flex-direction:column;gap:clamp(20px,2.8vw,32px)}
-.mat-stage{display:grid;grid-template-columns:minmax(0,640px) minmax(300px,1fr);gap:clamp(16px,2.4vw,28px);align-items:start}
-.mat-room{position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card)}
+/* ---------- materials ---------- */
+.mat{display:flex;flex-direction:column;gap:clamp(18px,2.6vw,28px);margin-top:clamp(28px,3.6vw,44px)}
+.mat-stage{display:grid;grid-template-columns:minmax(0,600px) minmax(280px,1fr);gap:clamp(16px,2.4vw,26px);align-items:start}
+.mat-room{position:relative;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--mist)}
 .mat-room .slot{aspect-ratio:1/1}
-.mat-room .zoom{position:absolute;bottom:14px;inset-inline-end:14px;width:40px;height:40px;display:grid;place-items:center;
-  border-radius:50%;background:rgba(3,9,19,.72);border:1px solid var(--line-2);backdrop-filter:blur(8px);color:#fff;
-  opacity:0;transform:scale(.85);transition:all .45s var(--ease)}
+.mat-room .zoom{position:absolute;bottom:14px;inset-inline-end:14px;width:40px;height:40px;border-radius:50%;border:none;
+  background:rgba(6,21,55,.78);color:#fff;display:grid;place-items:center;opacity:0;transform:scale(.88);transition:all .4s var(--ease)}
 .mat-room:hover .zoom{opacity:1;transform:scale(1)}
 .mat-room .zoom svg{width:16px;height:16px}
-.mat-info{display:flex;gap:22px;align-items:center;border:1px solid var(--line);border-radius:14px;background:var(--card);padding:22px}
-.mat-swatch{width:152px;flex:none;align-self:center;aspect-ratio:1/2.3;border-radius:8px;box-shadow:0 18px 36px -18px rgba(0,0,0,.95)}
-.mat-text{min-width:0;align-self:center}
-.mat-text .code{display:block;font-family:"Manrope",sans-serif;font-size:12px;font-weight:500;letter-spacing:.2em;color:var(--blue-soft);direction:ltr}
-.mat-text h3{font-size:19.5px;margin-top:10px;font-weight:400;line-height:1.5;text-wrap:pretty}
-.mat-text .kind{display:inline-block;margin-top:14px;font-family:var(--display);font-size:12px;font-weight:400;color:var(--muted);
-  border:1px solid var(--line);border-radius:999px;padding:5px 13px}
-.mat-strip{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x proximity}
+.mat-info{display:flex;gap:20px;align-items:center;border:1px solid var(--line);border-radius:8px;background:var(--mist);padding:22px}
+.mat-swatch{width:140px;flex:none;aspect-ratio:1/2.3;border-radius:6px;box-shadow:0 16px 32px -18px rgba(11,32,80,.55)}
+.mat-text{min-width:0}
+.mat-text .code{display:block;font-family:"Manrope",sans-serif;font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--red);direction:ltr}
+.mat-text h3{font-size:19px;color:var(--navy);margin-top:10px;line-height:1.5}
+.mat-text .kind{display:inline-block;margin-top:14px;font-family:var(--display);font-size:12.5px;font-weight:600;color:var(--muted);
+  border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 14px}
+.mat-strip{display:flex;gap:10px;overflow-x:auto;padding-bottom:8px}
 .mat-strip::-webkit-scrollbar{height:4px}
-.mat-strip::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:4px}
-.chip{flex:none;width:66px;padding:0;background:var(--card);border:1px solid var(--line);border-radius:9px;overflow:hidden;
-  color:inherit;scroll-snap-align:start;transition:border-color .4s var(--ease),transform .4s var(--ease),box-shadow .4s var(--ease)}
+.mat-strip::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+.chip{flex:none;width:66px;padding:0;background:#fff;border:1px solid var(--line);border-radius:7px;overflow:hidden;color:inherit;
+  transition:border-color .35s var(--ease),transform .35s var(--ease),box-shadow .35s var(--ease)}
 .chip .slot{aspect-ratio:1/1.85}
 .chip .slot .ph{display:none}
-.chip .c{display:block;font-family:"Manrope",sans-serif;font-size:9.5px;font-weight:500;letter-spacing:.08em;color:var(--dim);padding:7px 0;text-align:center;direction:ltr}
-.chip:hover{border-color:var(--line-2);transform:translateY(-3px)}
-.chip.on{border-color:var(--red);box-shadow:0 0 0 3px rgba(226,49,63,.14)}
-.chip.on .c{color:#fff}
-.panels-note{margin-top:4px;font-size:14.5px;color:var(--dim);font-weight:300;display:flex;align-items:center;gap:10px}
-.panels-note svg{width:17px;height:17px;color:var(--blue-soft);flex:none}
-@media (max-width:860px){
-  .mat-stage{grid-template-columns:1fr}
-}
-@media (max-width:480px){
-  .mat-info{padding:16px;gap:16px}
-  .mat-swatch{width:112px}
-  .mat-text h3{font-size:17px}
-  .chip{width:58px}
-}
+.chip .c{display:block;font-family:"Manrope",sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.06em;color:var(--dim);padding:6px 0;text-align:center;direction:ltr}
+.chip:hover{border-color:var(--navy);transform:translateY(-3px)}
+.chip.on{border-color:var(--red);box-shadow:0 0 0 3px rgba(225,38,47,.14)}
+.chip.on .c{color:var(--navy)}
 
-/* ---------- lightbox ---------- */
-.lb{position:fixed;inset:0;z-index:100;background:rgba(2,6,14,.97);display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,64px);backdrop-filter:blur(6px)}
-.lb .slot{width:min(1150px,100%);aspect-ratio:16/10;background:#081226;border-radius:2px;box-shadow:0 0 0 1px var(--line)}
-.lb .slot img{object-fit:contain}
-.lb-btn{position:absolute;width:52px;height:52px;border:1px solid var(--line-2);border-radius:50%;background:rgba(14,31,64,.85);color:#fff;display:grid;place-items:center;backdrop-filter:blur(8px);transition:all .3s var(--ease)}
-.lb-btn:hover{background:var(--red);border-color:var(--red);transform:scale(1.07)}
-.lb-btn svg{width:20px;height:20px}
-.lb-close{top:calc(22px + env(safe-area-inset-top,0px));inset-inline-end:22px}
-.lb-prev{inset-inline-start:22px;top:50%;translate:0 -50%}
-.lb-next{inset-inline-end:22px;top:50%;translate:0 -50%}
-.lb-cap{position:absolute;bottom:calc(24px + env(safe-area-inset-bottom,0px));inset-inline:0;text-align:center;color:#fff;font-family:var(--display);font-weight:300}
-.lb-cap small{display:block;color:var(--dim);font-family:var(--body);font-variant-numeric:tabular-nums;margin-top:4px}
+/* ---------- projects (angled navy band) ---------- */
+.projects{background:var(--navy);color:#fff;position:relative;
+  clip-path:polygon(0 2.4vw,100% 0,100% calc(100% - 2.4vw),0 100%);
+  padding-block:calc(2.4vw + clamp(48px,5.5vw,84px));margin-block:-1px}
+.proj-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px,4vw,60px);align-items:center}
+.proj-media{position:relative;border-radius:8px;overflow:hidden;box-shadow:0 36px 70px -34px rgba(0,0,0,.7)}
+.proj-media .slide{display:none}
+.proj-media .slide.on{display:block}
+.proj-media .slot{aspect-ratio:16/10}
+.projects h2{color:#fff;font-size:clamp(24px,3.1vw,38px);margin-block:14px 18px}
+.projects .eyebrow{color:#fff}
+.projects p{color:rgba(255,255,255,.84);font-size:16px;line-height:1.95;max-width:46ch}
+.proj-nav{display:flex;align-items:center;gap:14px;margin-top:30px}
+.proj-dots{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.proj-dots button{border:none;background:none;font-family:"Manrope",sans-serif;font-size:13px;font-weight:700;color:rgba(255,255,255,.5);padding:6px 8px;transition:color .25s}
+.proj-dots button.on{color:#fff;border-bottom:2px solid var(--red)}
+.proj-nav .arw{width:36px;height:36px;border:1.5px solid rgba(255,255,255,.4);border-radius:50%;background:none;color:#fff;display:grid;place-items:center;transition:all .25s}
+.proj-nav .arw:hover{background:#fff;color:var(--navy);border-color:#fff}
+.proj-nav .arw svg{width:14px;height:14px}
+.projects .btn{margin-top:26px}
 
-/* ---------- why ---------- */
-.why{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
-.why div{padding:38px 30px 12px;border-inline-end:1px solid var(--line)}
-.why div:first-child{padding-inline-start:0}
-.why div:last-child{padding-inline-end:0;border-inline-end:none}
-.why svg{width:26px;height:26px;color:var(--red)}
-.why h3{font-size:17.5px;margin-block:20px 12px;font-weight:400}
-.why p{font-size:15px;color:var(--muted);max-width:30ch;font-weight:300}
+/* ---------- process ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:clamp(30px,4vw,48px)}
+.step{background:#fff;border:1px solid var(--line);border-radius:8px;padding:26px 24px;position:relative;
+  display:flex;align-items:flex-start;gap:16px;transition:box-shadow .4s var(--ease),transform .4s var(--ease),border-color .4s}
+.step:hover{transform:translateY(-5px);box-shadow:0 24px 46px -26px rgba(11,32,80,.4);border-color:transparent}
+.step .n{font-family:"Manrope",sans-serif;font-size:20px;font-weight:800;color:var(--mist-2);flex:none;line-height:1}
+.step .ic{width:42px;height:42px;flex:none;display:grid;place-items:center;border-radius:8px;background:var(--mist);color:var(--red);order:3;margin-inline-start:auto}
+.step .ic svg{width:21px;height:21px}
+.step h3{font-size:16px;color:var(--navy)}
+.step p{font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.7}
 
-/* ---------- CTA band ---------- */
-.band{background:linear-gradient(104deg,#071433 0%,#12428F 50%,#2E7BF6 100%);overflow:hidden}
-.band::after{content:"";position:absolute;inset-inline-start:-8%;bottom:-60%;width:56%;height:170%;pointer-events:none;z-index:0;
-  background:radial-gradient(closest-side,rgba(140,190,255,.4),rgba(140,190,255,0) 72%)}
-.band .wrap{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:36px;flex-wrap:wrap;padding-block:clamp(64px,7.5vw,104px)}
-.band h2{font-size:clamp(28px,3.5vw,48px);max-width:22ch;font-weight:300}
-.band p{color:#C6DAFF;margin-top:16px;max-width:52ch;font-weight:300}
-.band .swoosh{position:absolute;inset-inline-end:-90px;top:-50px;width:540px;opacity:.12;pointer-events:none;z-index:0}
-.band .ctas{display:flex;gap:16px;flex-wrap:wrap;position:relative;z-index:1}
+/* ---------- testimonials + clients ---------- */
+.trust{display:grid;grid-template-columns:1.25fr 1fr}
+.tst{background:var(--navy);color:#fff;padding:clamp(44px,5vw,76px) clamp(24px,3.4vw,56px)}
+.tst h2{color:#fff;font-size:clamp(22px,2.7vw,32px);margin-block:14px 0}
+.tst .eyebrow{color:#fff}
+.tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:clamp(26px,3vw,38px)}
+.tst-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:22px 20px;display:flex;flex-direction:column;gap:14px}
+.tst-card .q{font-family:"Manrope",serif;font-size:34px;line-height:.7;color:var(--red);font-weight:800}
+.tst-card p{font-size:14px;color:rgba(255,255,255,.86);line-height:1.8;flex:1}
+.tst-card .who{display:flex;align-items:center;gap:11px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14)}
+.tst-card .who .slot{width:38px;height:38px;flex:none;border-radius:50%;background:rgba(255,255,255,.12)}
+.tst-card .who .slot::before{display:none}
+.tst-card .who .slot .ph{display:none}
+.tst-card .who b{display:block;font-family:var(--display);font-size:13.5px}
+.tst-card .who small{color:rgba(255,255,255,.6);font-size:12px}
+.tst-empty{background:rgba(255,255,255,.05);border:1px dashed rgba(255,255,255,.28);border-radius:8px;padding:26px 22px;
+  font-size:14px;color:rgba(255,255,255,.7);line-height:1.8;margin-top:clamp(26px,3vw,38px)}
+.clients{background:var(--mist);padding:clamp(44px,5vw,76px) clamp(24px,3.4vw,56px);text-align:center}
+.clients h2{font-size:clamp(22px,2.7vw,30px);color:var(--navy);margin-top:14px}
+.logos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:clamp(24px,3vw,34px)}
+.logos .slot{aspect-ratio:16/9;background:#fff;border:1px solid var(--line);border-radius:6px}
+.logos .slot::before{display:none}
+.logos .slot .ph{gap:5px;padding:8px}
+.logos .slot .ph svg{display:none}
+.logos .slot .ph b{font-size:11.5px;color:var(--dim);font-weight:600}
+.logos .slot .ph code{font-size:9px;padding:2px 5px}
+.logos .slot img{object-fit:contain;padding:14px}
 
 /* ---------- contact ---------- */
-.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(36px,5.5vw,76px)}
-.cinfo{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;align-self:start}
-.citem{display:flex;gap:20px;align-items:center;padding:26px;background:var(--card);transition:background .45s var(--ease)}
-.citem:hover{background:var(--card-2)}
-.citem .ic{width:46px;height:46px;flex:none;display:grid;place-items:center;border-radius:50%;border:1px solid var(--line-2);color:var(--red)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,4vw,56px);margin-top:clamp(30px,4vw,46px)}
+.cinfo{display:flex;flex-direction:column;gap:12px}
+.citem{display:flex;gap:16px;align-items:center;padding:20px;border:1px solid var(--line);border-radius:8px;background:#fff;transition:border-color .3s,box-shadow .3s}
+.citem:hover{border-color:var(--navy);box-shadow:0 18px 36px -26px rgba(11,32,80,.6)}
+.citem .ic{width:44px;height:44px;flex:none;display:grid;place-items:center;border-radius:8px;background:var(--mist);color:var(--red)}
 .citem .ic svg{width:20px;height:20px}
 .citem > div{min-width:0}
-.citem small{display:block;font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);font-family:var(--display)}
-html[lang="ar"] .citem small{letter-spacing:.04em;font-size:13.5px;text-transform:none}
-.citem .v{font-family:var(--display);font-size:17px;font-weight:400;color:#fff;margin-top:7px;display:flex;flex-direction:column;gap:3px}
-.citem .v a:hover{color:var(--blue-soft)}
-.citem .v .ltr{text-align:start}
-.copy{margin-inline-start:auto;border:1px solid var(--line);background:transparent;color:var(--dim);font-family:var(--display);font-size:11.5px;padding:8px 16px;align-self:center;border-radius:var(--r-btn);transition:all .35s var(--ease)}
-.copy:hover{color:#fff;border-color:var(--line-2)}
-.copy .ci{display:none;width:16px;height:16px}
-
-form.quote{background:var(--card);border:1px solid var(--line);border-radius:var(--r-card);padding:clamp(26px,3.8vw,44px);display:grid;grid-template-columns:1fr 1fr;gap:18px}
-form.quote h3{grid-column:1/-1;font-size:24px;font-weight:400}
+.citem small{display:block;font-family:var(--display);font-size:13px;font-weight:600;color:var(--muted)}
+.citem .v{font-family:var(--display);font-size:17px;font-weight:700;color:var(--navy);margin-top:4px}
+.citem .v a:hover{color:var(--red)}
+.copy{margin-inline-start:auto;border:1px solid var(--line);background:#fff;color:var(--dim);font-family:var(--display);font-size:12px;
+  font-weight:600;padding:7px 14px;border-radius:999px;transition:all .25s;flex:none}
+.copy:hover{color:var(--navy);border-color:var(--navy)}
+.copy .ci{display:none;width:15px;height:15px}
+form.quote{background:var(--mist);border:1px solid var(--line);border-radius:8px;padding:clamp(22px,3vw,34px);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form.quote h3{grid-column:1/-1;font-size:21px;color:var(--navy)}
 form.quote .full{grid-column:1/-1}
-form.quote label{display:flex;flex-direction:column;gap:9px;font-family:var(--display);font-size:13px;font-weight:400;color:var(--muted)}
-form.quote input,form.quote select,form.quote textarea{font-family:var(--body);font-weight:400;font-size:15px;color:#fff;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:var(--r-field);padding:15px 17px;width:100%;transition:border-color .35s,background .35s,box-shadow .35s}
-form.quote input::placeholder,form.quote textarea::placeholder{color:var(--dim)}
-form.quote input:focus,form.quote select:focus,form.quote textarea:focus{outline:none;border-color:var(--blue);background:rgba(255,255,255,.07);box-shadow:0 0 0 4px rgba(46,123,246,.16)}
-form.quote select option{background:#0E1F40;color:#fff}
-form.quote textarea{min-height:124px;resize:vertical}
-form.quote .send{grid-column:1/-1;display:flex;align-items:center;gap:13px;flex-wrap:wrap}
-form.quote .note{grid-column:1/-1;font-size:13px;color:var(--dim);margin-top:-6px;font-weight:300}
-.msgbox{grid-column:1/-1;background:rgba(255,255,255,.04);border:1px solid var(--line);border-inline-start:2px solid var(--red);border-radius:12px;padding:20px 22px}
-.msgbox h4{margin:0 0 12px;font-family:var(--display);font-size:13px;font-weight:400;color:var(--muted)}
-.msgbox pre{margin:0;font-family:var(--body);font-size:14.5px;line-height:1.8;color:var(--text);white-space:pre-wrap;word-break:break-word;font-weight:300}
-.msgbox .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-.msgbox .acts button{border:1px solid var(--line);background:transparent;color:#fff;font-family:var(--display);font-size:12.5px;font-weight:400;padding:10px 20px;border-radius:var(--r-btn);transition:all .35s var(--ease)}
-.msgbox .acts button:hover{border-color:var(--line-2);background:rgba(255,255,255,.06)}
-
-.map{margin-top:clamp(44px,5.5vw,72px);position:relative;border:1px solid var(--line);border-radius:var(--r-card);overflow:hidden;background:var(--card)}
-.map iframe{display:block;width:100%;height:clamp(320px,40vw,460px);border:0;filter:invert(.92) hue-rotate(185deg) saturate(.65) brightness(.95)}
-.map .pin{position:absolute;top:22px;inset-inline-start:22px;background:rgba(10,23,49,.92);backdrop-filter:blur(14px);padding:22px 24px;max-width:310px;border:1px solid var(--line-2);border-radius:14px;border-top:2px solid var(--red);box-shadow:0 26px 54px -24px rgba(0,0,0,.95)}
-.map .pin b{font-family:var(--display);color:#fff;display:block;margin-bottom:6px;font-weight:400}
-.map .pin p{font-size:14px;color:var(--muted);line-height:1.7;font-weight:300}
-.map .pin a{display:inline-flex;gap:7px;align-items:center;margin-top:14px;font-family:var(--display);font-size:13.5px;font-weight:400;color:var(--red)}
-.map-fb{position:relative;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:clamp(26px,4vw,52px);padding:clamp(28px,4vw,48px)}
-.map-fb .art svg{width:100%;height:auto;display:block;border-radius:10px}
-.map-fb h3{font-size:clamp(20px,2.4vw,27px);font-weight:400}
-.map-fb p{color:var(--muted);margin-top:14px;font-size:16px;line-height:1.75;font-weight:300}
-.map-fb .btn{margin-top:24px}
-.map.blocked .pin{display:none}
+form.quote label{display:flex;flex-direction:column;gap:8px;font-family:var(--display);font-size:13.5px;font-weight:600;color:var(--navy)}
+form.quote input,form.quote select,form.quote textarea{font-family:var(--body);font-size:15px;color:var(--ink);background:#fff;
+  border:1.5px solid var(--line);border-radius:var(--r);padding:13px 15px;width:100%;transition:border-color .25s,box-shadow .25s}
+form.quote input:focus,form.quote select:focus,form.quote textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 4px rgba(11,32,80,.1)}
+form.quote textarea{min-height:110px;resize:vertical}
+form.quote .send{grid-column:1/-1;display:flex;gap:12px;flex-wrap:wrap}
+.wa-btn{background:#25D366;color:#06240F;box-shadow:0 12px 26px -12px rgba(37,211,102,.7)}
+.wa-btn:hover{background:#1DB755;transform:translateY(-2px)}
+form.quote .note{grid-column:1/-1;font-size:13px;color:var(--muted);margin-top:-6px}
+.msgbox{grid-column:1/-1;background:#fff;border:1px solid var(--line);border-inline-start:3px solid var(--red);border-radius:6px;padding:18px 20px}
+.msgbox h4{margin:0 0 10px;font-family:var(--display);font-size:13px;font-weight:700;color:var(--muted)}
+.msgbox pre{margin:0;font-family:var(--body);font-size:14px;line-height:1.85;color:var(--ink);white-space:pre-wrap;word-break:break-word}
+.msgbox button{margin-top:14px;border:1px solid var(--line);background:#fff;color:var(--navy);font-family:var(--display);font-size:12.5px;
+  font-weight:600;padding:9px 18px;border-radius:999px;transition:all .25s}
+.msgbox button:hover{border-color:var(--navy)}
+.map{margin-top:clamp(30px,4vw,48px);border:1px solid var(--line);border-radius:8px;overflow:hidden;position:relative;background:var(--mist)}
+.map iframe{display:block;width:100%;height:clamp(300px,34vw,400px);border:0}
+.map-fb{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);align-items:center;padding:clamp(24px,3.4vw,40px)}
+.map-fb .art svg{width:100%;height:auto;border-radius:6px}
+.map-fb h3{font-size:clamp(19px,2.2vw,24px);color:var(--navy)}
+.map-fb p{color:var(--muted);margin-top:12px}
+.map-fb .btn{margin-top:20px}
 
 /* ---------- footer ---------- */
-footer{background:#030913;color:var(--dim);padding-block:76px 30px;font-size:15px;border-top:1px solid var(--line);font-weight:300}
-.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:44px}
-.foot h4{font-family:var(--display);color:#fff;font-size:13px;margin:0 0 22px;font-weight:400;letter-spacing:.14em;text-transform:uppercase}
-html[lang="ar"] .foot h4{letter-spacing:.04em;font-size:15px;text-transform:none}
-.foot ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+footer{background:var(--navy-deep);color:rgba(255,255,255,.72);font-size:14.5px}
+.foot{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:clamp(28px,4vw,56px);padding-block:clamp(40px,4.6vw,64px)}
+.foot .tag{margin-top:16px;font-family:var(--display);font-size:12.5px;font-weight:600;color:rgba(255,255,255,.55);letter-spacing:.05em;direction:ltr}
+.foot ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:13px}
+.foot li{display:flex;gap:12px;align-items:flex-start}
+.foot li svg{width:16px;height:16px;flex:none;color:var(--red);margin-top:5px}
 .foot a:hover{color:#fff}
-.foot .about{margin-top:22px;max-width:36ch;line-height:1.8}
-.legal{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
+.foot h4{font-family:var(--display);color:#fff;font-size:15px;margin:0 0 8px;font-weight:700}
+.foot .sub{font-size:13.5px;color:rgba(255,255,255,.6);margin-bottom:16px}
+.news{display:flex;gap:8px}
+.news input{flex:1;min-width:0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:var(--r);
+  padding:12px 14px;color:#fff;font-family:var(--body);font-size:14px}
+.news input::placeholder{color:rgba(255,255,255,.45)}
+.news input:focus{outline:none;border-color:rgba(255,255,255,.5)}
+.news button{border:none;background:var(--red);color:#fff;font-family:var(--display);font-weight:700;font-size:14px;padding:12px 22px;border-radius:var(--r);transition:background .25s}
+.news button:hover{background:var(--red-deep)}
+.foot .socials{margin-top:20px}
+.foot .socials a{border:1px solid rgba(255,255,255,.2);border-radius:50%;width:34px;height:34px}
+.legal{border-top:1px solid rgba(255,255,255,.1);padding-block:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
 
-.toast{position:fixed;left:50%;bottom:40px;translate:-50% 0;background:var(--card-2);border:1px solid var(--line-2);color:#fff;padding:14px 24px;border-radius:var(--r-btn);font-family:var(--display);font-size:14px;z-index:120;box-shadow:0 20px 44px -18px rgba(0,0,0,.95)}
+/* floats */
+.wa{position:fixed;inset-inline-end:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:65;width:54px;height:54px;border-radius:50%;
+  background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -12px rgba(0,0,0,.5);transition:transform .25s var(--ease)}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:28px;height:28px}
+.toast{position:fixed;left:50%;bottom:92px;translate:-50% 0;background:var(--navy);color:#fff;padding:13px 22px;border-radius:999px;
+  font-family:var(--display);font-size:14px;z-index:120;box-shadow:0 18px 40px -18px rgba(0,0,0,.6)}
 
-.rv{transition:transform 1.1s var(--ease),opacity 1.1s var(--ease)}
-.js .rv.pre{transform:translateY(26px);opacity:.001}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(6,15,35,.95);display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,56px)}
+.lb .slot{width:min(1100px,100%);aspect-ratio:16/10;background:#0B1A38;border-radius:8px}
+.lb .slot img{object-fit:contain}
+.lb-btn{position:absolute;width:50px;height:50px;border:none;border-radius:50%;background:#fff;color:var(--navy);display:grid;place-items:center;transition:all .25s}
+.lb-btn:hover{background:var(--red);color:#fff;transform:scale(1.06)}
+.lb-btn svg{width:19px;height:19px}
+.lb-close{top:calc(20px + env(safe-area-inset-top,0px));inset-inline-end:20px}
+.lb-prev{inset-inline-start:20px;top:50%;translate:0 -50%}
+.lb-next{inset-inline-end:20px;top:50%;translate:0 -50%}
+.lb-cap{position:absolute;bottom:calc(22px + env(safe-area-inset-bottom,0px));inset-inline:0;text-align:center;color:#fff;font-family:var(--display);font-size:15px}
+.lb-cap small{display:block;color:rgba(255,255,255,.6);font-family:"Manrope",sans-serif;margin-top:4px}
+
+/* reveal */
+.rv{transition:transform .8s var(--ease),opacity .8s var(--ease)}
+.js .rv.pre{transform:translateY(20px);opacity:.001}
 
 /* ---------- responsive ---------- */
-@media (max-width:1240px){
-  :root{--rail:54px}
-  .rail{inset-inline-start:10px}
+@media (max-width:1180px){
+  .menu a{padding:10px 10px;font-size:14px}
+  .svc-strip{grid-template-columns:repeat(3,1fr)}
+  .svc-strip > div:nth-child(3n+1){border-inline-start:none}
+  .svc-strip > div:nth-child(n+4){border-top:1px solid var(--line)}
+  .svc-cards{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .logos{grid-template-columns:repeat(3,1fr)}
 }
-@media (max-width:1100px){
-  .stands{grid-template-columns:repeat(2,1fr)}
-  .foot{grid-template-columns:1fr 1fr}
-  .services{grid-template-columns:repeat(2,1fr)}
+@media (max-width:1000px){
+  .burger{display:inline-flex}
+  .menu{position:fixed;inset:0;height:100dvh;background:var(--navy);flex-direction:column;justify-content:center;align-items:stretch;
+    padding:80px var(--gutter) 40px;gap:0;transform:translateY(-101%);transition:transform .45s var(--ease);z-index:-1}
+  body.nav-open .menu{transform:none}
+  .menu a{font-size:22px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .menu a::after{display:none}
+  .socials{display:none}
+  .hero-copy{max-width:100%}
+  .hero-panel{inset-inline-start:-30%;width:150%;transform:none;opacity:.92}
+  .about-grid,.proj-grid,.contact-grid,.mat-stage,.map-fb{grid-template-columns:1fr}
+  .trust{grid-template-columns:1fr}
+  .about-media,.proj-media{max-width:640px}
+  .tst-grid{grid-template-columns:1fr}
 }
-@media (max-width:1040px){ .topbar .tb-addr{display:none} }
-@media (max-width:960px){
-  :root{--rail:46px}
-  .rail{inset-inline-start:9px}
-  .rail a{height:24px;width:10px}
-  .rail .lbl{inset-inline-start:21px;font-size:12.5px;padding:5px 13px}
-  .rail .dot{width:10px;height:10px}
-  .rail-track{inset-inline-start:4px;top:12px;bottom:12px}
-  .rail .util{margin-inline-start:-12px}
-  .nav{min-height:78px}
-  .hero-grid,.about-grid,.contact-grid,.sec-head{grid-template-columns:1fr}
-  .hero-visual,.about-media{max-width:560px}
-  .steps{grid-template-columns:1fr 1fr;row-gap:32px}
-  .step:nth-child(3){border-inline-start:none;padding-inline-start:0}
-  .why{grid-template-columns:1fr 1fr}
-  .why div:nth-child(2){border-inline-end:none}
-  .why div:nth-child(3){padding-inline-start:0}
-  .gallery{columns:2}
-  .map-fb{grid-template-columns:1fr}
-}
-@media (max-width:780px){ .topbar .tb-2nd{display:none} }
-@media (max-width:640px){
-  .nav .btn{display:none}
-  .rail .lbl{display:none}
-  .brand .logo-fallback svg{height:38px}
-  .brand .wm b{font-size:16px;letter-spacing:.15em}
-  .brand .wm small{font-size:7px;letter-spacing:.32em}
-  .services,.stands,.steps,.why,.foot,.pillars{grid-template-columns:1fr}
-  .step{border-inline-start:none;padding-inline-start:0;border-top:1px solid var(--line);padding-top:30px}
-  .step:first-child{border-top:none;padding-top:0}
-  .why div{border-inline-end:none;border-bottom:1px solid var(--line);padding-inline:0 !important}
-  .gallery{columns:1}
-  .work .cap{opacity:1;transform:none}
+@media (max-width:700px){
+  .nav{min-height:66px}
+  .svc-strip{grid-template-columns:repeat(2,1fr)}
+  .svc-strip > div:nth-child(2n+1){border-inline-start:none}
+  .svc-strip > div:nth-child(3n+1){border-inline-start:1px solid var(--line)}
+  .svc-strip > div:nth-child(n+3){border-top:1px solid var(--line)}
+  .svc-cards{grid-template-columns:repeat(2,1fr)}
+  .feats{grid-template-columns:repeat(2,1fr);gap:22px}
+  .steps,.foot{grid-template-columns:1fr}
+  .logos{grid-template-columns:repeat(2,1fr)}
   form.quote{grid-template-columns:1fr}
-  .hero-badge{inset-inline-start:0;bottom:-26px;max-width:230px;padding:20px 22px}
-  .about-media .slot.a2{inset-inline-end:0}
-  .map .pin{position:static;max-width:none;box-shadow:none;border:none;border-top:2px solid var(--red);border-radius:0}
-  .citem{padding:20px;gap:15px}
-  .citem .ic{width:40px;height:40px}
-  .citem .ic svg{width:18px;height:18px}
-  .citem > div{flex:1}
-  .citem .v{font-size:16px}
+  form.quote .send{flex-direction:column}
+  form.quote .send .btn{width:100%}
+  .citem{padding:16px;gap:13px}
   .citem .v a[href^="tel"]{white-space:nowrap}
-  .citem .v a[href^="mailto"]{font-size:14.5px !important;white-space:normal;overflow-wrap:break-word}
-  .copy{width:38px;height:38px;padding:0;display:grid;place-items:center;flex:none}
+  .citem .v a[href^="mailto"]{font-size:14px}
+  .copy{width:38px;height:38px;padding:0;display:grid;place-items:center;border-radius:50%}
   .copy .ci{display:block}
   .copy span{display:none}
-  form.quote .send{flex-direction:column;align-items:stretch;gap:11px}
-  form.quote .send .btn{width:100%;justify-content:center;padding:16px 18px}
-  .hero .ctas .btn,.band .ctas .btn{padding:15px 26px}
+  .brand .logo-fallback svg{height:36px}
+  .brand .wm b{font-size:15.5px;letter-spacing:.12em}
+  .brand .wm small{font-size:6.6px;letter-spacing:.26em}
+  .hero .ctas .btn{flex:1;min-width:150px;padding:14px 20px}
+  .mat-swatch{width:104px}
+  .news{flex-direction:column}
+  .news button{width:100%}
 }
-@media (max-width:430px){
-  .topbar{font-size:12px}
-  .topbar .tb-i svg{width:13px;height:13px}
-  .rail{inset-inline-start:11px}
-  :root{--rail:40px}
-  .rail .fab{width:30px;height:30px;font-size:10px}
-  .rail .fab svg{width:14px;height:14px}
-  .rail .util{margin-inline-start:-10px}
+@media (max-width:420px){
+  .svc-strip{grid-template-columns:1fr}
+  .svc-strip > div{border-inline-start:none !important;border-top:1px solid var(--line)}
+  .svc-strip > div:first-child{border-top:none}
+  .logos{grid-template-columns:1fr 1fr}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none !important;transition:none !important}
@@ -488,210 +422,145 @@ html[lang="ar"] .foot h4{letter-spacing:.04em;font-size:15px;text-transform:none
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></symbol>
   <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l12 7-12 7z"/></symbol>
   <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
-  <symbol id="i-booth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20V8l9-4 9 4v12"/><path d="M3 8h18M7 20v-6h10v6M9 11h6"/></symbol>
-  <symbol id="i-sofa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 11V8a2 2 0 012-2h12a2 2 0 012 2v3"/><path d="M2 13a2 2 0 014 0v2h12v-2a2 2 0 014 0v5H2z"/><path d="M5 18v2M19 18v2"/></symbol>
-  <symbol id="i-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></symbol>
-  <symbol id="i-stage" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 17h20M4 17V6h16v11M8 10h8M8 13h5"/><path d="M6 21l2-4M18 21l-2-4"/></symbol>
-  <symbol id="i-saw" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l11-11 4 4-11 11H3z"/><path d="M14 6l2-2 4 4-2 2M7 13l1 1M10 10l1 1"/></symbol>
-  <symbol id="i-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9V16h7v-2.1A6 6 0 0012 3z"/></symbol>
-  <symbol id="i-ruler" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 16L16 3l5 5L8 21z"/><path d="M7 12l2 2M10 9l2 2M13 6l2 2"/></symbol>
-  <symbol id="i-team" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0112 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.2A5 5 0 0121 19"/></symbol>
-  <symbol id="i-time" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="5"/><path d="M12 10v2l1.5 1"/></symbol>
   <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="9" y="9" width="12" height="12" rx="1.5"/><path d="M15 6V4.5A1.5 1.5 0 0013.5 3H4.5A1.5 1.5 0 003 4.5v9A1.5 1.5 0 004.5 15H6"/></symbol>
   <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.3c0-.1-.2-.2-.4-.3z"/></symbol>
+  <!-- social -->
+  <symbol id="s-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="s-x" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3.2l-7 8 7.3 10h-5.6l-4.4-6.2L5.6 21H2.4l7.4-8.4L2.8 3h5.7l4.1 5.8z"/></symbol>
+  <symbol id="s-in" viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 3.5a2 2 0 110 4 2 2 0 010-4zM3 9h3v12H3zM9 9h2.9v1.7c.6-1 1.7-1.9 3.5-1.9 2.6 0 4.1 1.6 4.1 4.8V21h-3v-6.6c0-1.6-.6-2.6-2-2.6-1.2 0-1.9.8-2.2 1.6-.1.3-.1.7-.1 1V21H9z"/></symbol>
+  <symbol id="s-yt" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2s-.2-1.4-.8-2c-.7-.8-1.6-.8-2-.9C16.2 4.1 12 4.1 12 4.1s-4.2 0-6.8.2c-.4 0-1.3.1-2 .9-.6.6-.8 2-.8 2S2.2 8.8 2.2 10.5v1.9c0 1.6.2 3.3.2 3.3s.2 1.4.8 2c.7.8 1.7.8 2.1.9 1.6.1 6.7.2 6.7.2s4.2 0 6.8-.2c.4 0 1.3-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.3v-1.9c0-1.7-.2-3.3-.2-3.3zM9.9 14.6V8.9l5.6 2.9z"/></symbol>
+  <!-- services -->
+  <symbol id="v-booth" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 40V16l18-8 18 8v24"/><path d="M6 16h36"/><path d="M14 40V25h9v15M28 25h6v9h-6z"/><path d="M14 20h8" stroke="#E1262F"/></symbol>
+  <symbol id="v-interior" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="7" y="9" width="34" height="30" rx="2"/><path d="M7 32h34"/><path d="M13 32V22h8v10M27 32V17h8v15" stroke="#E1262F"/><path d="M13 14h6"/></symbol>
+  <symbol id="v-gypsum" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 12h32v24H8z"/><path d="M14 12v24M22 12v24M30 12v24" stroke="#E1262F"/><path d="M8 20h32M8 28h32"/></symbol>
+  <symbol id="v-wood" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="7" y="13" width="34" height="9" rx="1.5"/><rect x="7" y="26" width="34" height="9" rx="1.5"/><path d="M13 13v9M25 13v9M33 26v9" stroke="#E1262F"/></symbol>
+  <symbol id="v-parquet" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 14h14v9H8zM26 14h14v9H26zM8 27h14v9H8zM26 27h14v9H26z"/><path d="M15 14v9M33 27v9" stroke="#E1262F"/></symbol>
+  <symbol id="v-decor" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M10 36l14-14 5 5-14 14H10z"/><path d="M26 18l4-4 6 6-4 4" stroke="#E1262F"/><path d="M33 30a5 5 0 105 5"/><path d="M15 29l2 2"/></symbol>
+  <!-- features / process -->
+  <symbol id="f-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
+  <symbol id="f-team" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0112 0"/><circle cx="17.5" cy="9" r="2.4"/><path d="M16 14.2A5 5 0 0121.5 19"/></symbol>
+  <symbol id="f-time" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></symbol>
+  <symbol id="f-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="9" r="6"/><path d="M9 14l-1 8 4-2 4 2-1-8"/><path d="M9.5 9l2 2 3-3.5"/></symbol>
+  <symbol id="p-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 12a8 8 0 01-8 8H8l-4 3v-5.4A8 8 0 1121 12z"/><path d="M9 11h6M9 14.5h3.5"/></symbol>
+  <symbol id="p-bulb" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.5 10.9V16h7v-2.1A6 6 0 0012 3z"/></symbol>
+  <symbol id="p-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2.4M12 18.6V21M3 12h2.4M18.6 12H21M5.6 5.6l1.7 1.7M16.7 16.7l1.7 1.7M18.4 5.6l-1.7 1.7M7.3 16.7l-1.7 1.7"/></symbol>
+  <symbol id="p-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 7L10 17l-5-5"/><path d="M20 13v6a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h8"/></symbol>
   <symbol id="logo-mark" viewBox="0 0 120 100">
     <path d="M8 92 L46 8 L58 8 L96 92 L78 92 L52 32 L26 92 Z" fill="#FFFFFF"/>
-    <path d="M86 20 L100 8 L100 92 L86 92 Z" fill="#E2313F"/>
-    <path d="M14 84 C44 58 80 46 118 40 C84 52 52 66 30 86 Z" fill="#E2313F"/>
+    <path d="M86 20 L100 8 L100 92 L86 92 Z" fill="#E1262F"/>
+    <path d="M14 84 C44 58 80 46 118 40 C84 52 52 66 30 86 Z" fill="#E1262F"/>
     <path d="M26 90 C54 68 86 56 118 46 C90 60 64 74 44 92 Z" fill="#FFFFFF" opacity=".85"/>
   </symbol>
 </svg>
 
-<div class="topbar">
-  <div class="wrap pad-rail">
-    <div class="tb-left">
-      <a class="tb-i" href="tel:+96555776301"><svg><use href="#i-phone"/></svg><span class="ltr">+965 5577 6301</span></a>
-      <a class="tb-i tb-mail" href="mailto:amazoninternational527@gmail.com"><svg><use href="#i-mail"/></svg><span>amazoninternational527@gmail.com</span></a>
-    </div>
-    <div class="tb-addr tb-i"><svg><use href="#i-pin"/></svg><span data-i18n="topbar_addr">حولي - ابن خلدون - مجمع الفوز - الدور الثاني - مكتب 10</span></div>
-  </div>
-</div>
-
 <header class="site">
-  <div class="wrap pad-rail nav">
+  <div class="wrap nav">
+    <div class="hd-left">
+      <button class="burger" id="burger" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span></button>
+      <nav class="socials" aria-label="Social">
+        <a href="#" aria-label="Instagram"><svg><use href="#s-ig"/></svg></a>
+        <a href="#" aria-label="X"><svg><use href="#s-x"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg><use href="#s-in"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg><use href="#s-yt"/></svg></a>
+      </nav>
+      <button class="lang" id="langBtn" type="button">EN</button>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="#home" data-sec="home" data-i18n="nav_home">الرئيسية</a></li>
+      <li><a href="#about" data-sec="about" data-i18n="nav_about">من نحن</a></li>
+      <li><a href="#services" data-sec="services" data-i18n="nav_services">خدماتنا</a></li>
+      <li><a href="#work" data-sec="work" data-i18n="nav_work">معرض الأعمال</a></li>
+      <li><a href="#voices" data-sec="voices" data-i18n="nav_voices">آراء العملاء</a></li>
+      <li><a href="#contact" data-sec="contact" data-i18n="nav_contact">تواصل معنا</a></li>
+    </ul>
     <a href="#home" class="brand" aria-label="Amazon International">
-      <!-- Your logo: save it as images/logo.png -->
       <img class="logo-img" src="images/logo.png" alt="Amazon International" hidden onload="this.hidden=false;this.nextElementSibling.hidden=true" onerror="this.remove()">
       <span class="logo-fallback">
-        <svg viewBox="0 0 120 100"><use href="#logo-mark"/></svg>
         <span class="wm"><b>AMAZON</b><small>INTERNATIONAL</small></span>
+        <svg viewBox="0 0 120 100"><use href="#logo-mark"/></svg>
       </span>
     </a>
-    <div class="nav-actions">
-      <button class="lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
-      <a href="#contact" class="btn btn-red" data-i18n="cta_quote">اطلب عرض سعر</a>
-    </div>
   </div>
 </header>
 
-<!-- floating side navigation -->
-<nav class="rail" id="rail" aria-label="Sections">
-  <ul>
-    <span class="rail-track"><span class="rail-fill" id="railFill"></span></span>
-    <li><a href="#home"     data-sec="home"><span class="dot"></span><span class="lbl" data-i18n="nav_home">الرئيسية</span></a></li>
-    <li><a href="#about"    data-sec="about"><span class="dot"></span><span class="lbl" data-i18n="nav_about">من نحن</span></a></li>
-    <li><a href="#services" data-sec="services"><span class="dot"></span><span class="lbl" data-i18n="nav_services">خدماتنا</span></a></li>
-    <li><a href="#stands"   data-sec="stands"><span class="dot"></span><span class="lbl" data-i18n="nav_stands">أنواع الأجنحة</span></a></li>
-    <li><a href="#process"  data-sec="process"><span class="dot"></span><span class="lbl" data-i18n="nav_process">مراحل العمل</span></a></li>
-    <li><a href="#work"     data-sec="work"><span class="dot"></span><span class="lbl" data-i18n="nav_work">أعمالنا</span></a></li>
-    <li><a href="#panels"   data-sec="panels"><span class="dot"></span><span class="lbl" data-i18n="nav_panels">المواد والتشطيبات</span></a></li>
-    <li><a href="#contact"  data-sec="contact"><span class="dot"></span><span class="lbl" data-i18n="nav_contact">تواصل معنا</span></a></li>
-  </ul>
-  <div class="sep"></div>
-  <div class="util">
-    <button class="fab" id="railLang" type="button" aria-label="Switch language">EN</button>
-    <a class="fab wa" href="https://wa.me/96555776301" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
-    <a class="fab red" href="#contact" aria-label="Quote" data-i18n-title="cta_quote"><svg><use href="#i-mail"/></svg></a>
-  </div>
-</nav>
-
 <main>
-<!-- ================= HERO ================= -->
+<!-- ============ HERO ============ -->
 <section class="hero" id="home">
-  <div class="wrap pad-rail hero-grid">
-    <div>
-      <span class="eyebrow" data-i18n="hero_eyebrow">تصميم وتنفيذ · الكويت</span>
-      <h1 data-i18n-html="hero_title">إبداع في التصميم<em>وإتقان في التنفيذ</em></h1>
-      <p class="lead" data-i18n="hero_lead">نصمم وننفذ أجنحة المعارض (البوثات) وأعمال الديكور الداخلي، من الفكرة والتصميم ثلاثي الأبعاد إلى التصنيع والتركيب والتسليم، بمعايير عالية في الجودة والاحترافية.</p>
+  <div class="hero-media" id="heroMedia"></div>
+  <div class="hero-panel"></div>
+  <div class="hero-fade"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow" data-i18n="hero_eyebrow">التصميم · التنفيذ · الإبداع</span>
+      <h1 data-i18n-html="hero_title">شركة الأمازون انترناشيونال<em>للتجارة العامة</em></h1>
+      <p class="lead" data-i18n="hero_lead">متخصصون في تصميم وتنفيذ جميع أعمال الديكور الداخلي، من التصميم إلى التنفيذ، بما في ذلك أجنحة المعارض وتصميم وتنفيذ المكاتب، وبديل الشيبورد، وبديل الخشب، والباركيه.</p>
       <div class="ctas">
-        <a href="#work" class="btn btn-red"><span data-i18n="cta_work">شاهد أعمالنا</span><svg class="flip"><use href="#i-arrow"/></svg></a>
-        <a href="#contact" class="btn btn-line" data-i18n="cta_talk">ناقش مشروعك معنا</a>
-      </div>
-      <div class="caps">
-        <span data-i18n="cap1">أجنحة المعارض</span>
-        <span data-i18n="cap2">الديكور الداخلي</span>
-        <span data-i18n="cap3">التصميم ثلاثي الأبعاد</span>
-        <span data-i18n="cap4">التصنيع والتركيب</span>
-      </div>
-    </div>
-
-    <div class="hero-visual">
-      <div class="slot" data-src="images/hero.jpg"></div>
-      <svg class="dim" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
-      <div class="hero-badge">
-        <b data-i18n="badge_t">من الفكرة إلى التسليم</b>
-        <span data-i18n="badge_s">فريق واحد يتولى التصميم والتصنيع والتركيب في موقع المعرض.</span>
+        <a href="#contact" class="btn btn-red" data-i18n="cta_contact">تواصل معنا</a>
+        <a href="#services" class="btn btn-ghost" data-i18n="cta_services">تعرّف على خدماتنا</a>
       </div>
     </div>
   </div>
-</section>
-
-<!-- ================= ABOUT ================= -->
-<section class="sec tint" id="about">
-  <div class="wrap pad-rail about-grid">
-    <div class="about-media rv">
-      <div class="slot a1" data-src="images/about-1.jpg"></div>
-      <div class="slot a2" data-src="images/about-2.jpg"></div>
-    </div>
-    <div class="about-copy rv">
-      <span class="eyebrow" data-i18n="about_eyebrow">من نحن</span>
-      <h2 data-i18n="about_title">نحوّل الأفكار إلى مساحات تعكس هوية عملائنا</h2>
-      <p data-i18n="about_p1">نحن شركة متخصصة في تصميم وتنفيذ أعمال الديكور الداخلي وأجنحة المعارض (البوثات). نقدم حلولاً إبداعية متكاملة تجمع بين الابتكار والفخامة والجودة، لتحويل الأفكار إلى واقع يعكس هوية عملائنا ويلبي تطلعاتهم.</p>
-      <p data-i18n="about_p2">نحرص على تقديم تصاميم عصرية ومميزة مع الاهتمام بأدق التفاصيل في جميع مراحل العمل، بدءاً من الفكرة والتصميم ثلاثي الأبعاد وصولاً إلى التنفيذ والتسليم، وفق أعلى معايير الجودة والاحترافية.</p>
-      <div class="pillars">
-        <div>
-          <h3 data-i18n="vision_h">رؤيتنا</h3>
-          <p data-i18n="vision_p">أن نكون الخيار المفضل في عالم التصميم والديكور وتجهيز أجنحة المعارض، من خلال تقديم أعمال استثنائية تجمع بين الجمال والوظيفة والإبداع.</p>
-        </div>
-        <div>
-          <h3 data-i18n="mission_h">طريقتنا</h3>
-          <p data-i18n="mission_p">فريق تصميم وتنفيذ واحد، ومتابعة لكل تفصيلة من أول رسمة حتى آخر مسمار في الموقع، والتزام بمواعيد افتتاح المعارض.</p>
-        </div>
-        <div class="slogan">
-          <h3 data-i18n="slogan_h">شعارنا</h3>
-          <p data-i18n="slogan_p">إبداع في التصميم وإتقان في التنفيذ</p>
-        </div>
-      </div>
-    </div>
+  <div class="hero-count">
+    <button type="button" id="heroPrev" aria-label="Previous"><svg style="transform:scaleX(-1)"><use href="#i-arrow"/></svg></button>
+    <span id="heroNum" class="ltr">01 / 03</span>
+    <button type="button" id="heroNext" aria-label="Next"><svg><use href="#i-arrow"/></svg></button>
   </div>
 </section>
 
-<!-- ================= SERVICES ================= -->
+<!-- ============ SERVICES STRIP ============ -->
 <section class="sec" id="services">
-  <div class="wrap pad-rail">
-    <div class="sec-head rv">
-      <div>
-        <span class="eyebrow" data-i18n="svc_eyebrow">خدماتنا</span>
-        <h2 data-i18n="svc_title">كل ما يحتاجه جناحك أو مساحتك، تحت سقف واحد</h2>
-      </div>
-      <p data-i18n="svc_lead">نغطي المشروع بالكامل: الفكرة، والتصميم ثلاثي الأبعاد، والتصنيع في ورشتنا، والتركيب في الموقع، ثم الفك والتخزين بعد انتهاء المعرض.</p>
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow" data-i18n="sv_eyebrow">خدماتنا</span>
+      <h2 class="sec-title" data-i18n="sv_title">حلول متكاملة لكل احتياجاتك</h2>
+      <p class="sec-sub" data-i18n="sv_sub">من التصميم حتى التسليم، نوفّر لك كل ما تحتاجه في مكان واحد.</p>
     </div>
-    <div class="services" id="servicesGrid"></div>
+    <div class="svc-strip rv" id="svcStrip"></div>
   </div>
 </section>
 
-<!-- ================= STAND TYPES ================= -->
-<section class="sec tint" id="stands">
-  <div class="wrap pad-rail">
-    <div class="sec-head rv">
-      <div>
-        <span class="eyebrow" data-i18n="st_eyebrow">أنواع الأجنحة</span>
-        <h2 data-i18n="st_title">نصمم لكل موقع في قاعة المعرض</h2>
-      </div>
-      <p data-i18n="st_lead">يتحدد شكل الجناح بعدد الجهات المفتوحة على الممرات. نختار التصميم والمداخل وأماكن الشاشات والإضاءة بحسب موقع مساحتك.</p>
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-media rv">
+      <div class="slot" data-src="images/about-1.jpg"></div>
+      <button class="play" type="button" id="playBtn"><i><svg><use href="#i-play"/></svg></i><span data-i18n="ab_video">شاهد فيديو الشركة</span></button>
     </div>
-    <div class="stands" id="standsGrid"></div>
-    <div class="stand-legend">
-      <span><i style="background:var(--navy)"></i><span data-i18n="lg_wall">جدار أو جناح مجاور</span></span>
-      <span><i style="background:var(--red)"></i><span data-i18n="lg_open">جهة مفتوحة على الممر</span></span>
+    <div class="rv">
+      <span class="eyebrow" data-i18n="ab_eyebrow">من نحن</span>
+      <h2 data-i18n="ab_title">شريكك المثالي في عالم الديكور والتصميم</h2>
+      <p data-i18n="ab_p">نحن في شركة الأمازون انترناشيونال للتجارة العامة نختص بتقديم حلول متكاملة في مجال التصميم والتنفيذ، مع فريق عمل متخصص وخبرة واسعة في تنفيذ المشاريع السكنية والتجارية وأجنحة المعارض والمكاتب، بالإضافة إلى كافة أعمال الديكور الداخلي.</p>
+      <div class="feats" id="feats"></div>
     </div>
   </div>
 </section>
 
-<!-- ================= PROCESS ================= -->
-<section class="sec process" id="process">
-  <div class="wrap pad-rail" style="position:relative">
-    <div class="sec-head rv">
-      <div>
-        <span class="eyebrow" data-i18n="pr_eyebrow">مراحل العمل</span>
-        <h2 data-i18n="pr_title">من أول رسمة حتى يوم الافتتاح</h2>
-      </div>
-      <p data-i18n="pr_lead">أربع مراحل واضحة، وفريق واحد يتابع مشروعك في كل مرحلة منها.</p>
+<!-- ============ SERVICE CARDS ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow" data-i18n="sv_eyebrow">خدماتنا</span>
+      <h2 class="sec-title" data-i18n="sc_title">جميع خدماتنا في مكان واحد</h2>
     </div>
-    <ol class="steps" id="stepsList"></ol>
+    <div class="svc-cards rv" id="svcCards"></div>
   </div>
 </section>
 
-<!-- ================= PORTFOLIO ================= -->
-<section class="sec" id="work">
-  <div class="wrap pad-rail">
-    <div class="sec-head rv">
-      <div>
-        <span class="eyebrow" data-i18n="wk_eyebrow">أعمالنا</span>
-        <h2 data-i18n="wk_title">مشاريع صممناها ونفذناها</h2>
-      </div>
-      <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
-    </div>
-    <div class="gallery" id="gallery"></div>
-  </div>
-</section>
-
-<!-- ================= MATERIALS ================= -->
-<section class="sec tint" id="panels">
-  <div class="wrap pad-rail">
-    <div class="sec-head rv">
-      <div>
-        <span class="eyebrow" data-i18n="pn_eyebrow">المواد والتشطيبات</span>
-        <h2 data-i18n="pn_title">ألواح جدارية بتشطيبات لا تنتهي</h2>
-      </div>
-      <p data-i18n="pn_lead">نوفّر ألواحاً جدارية بتشطيبات الرخام والخشب والنقوش البارزة، نركّبها في المكاتب والمحلات والمنازل وأجنحة المعارض. اختر التشطيب الذي يناسب مساحتك.</p>
+<!-- ============ MATERIALS ============ -->
+<section class="sec" id="materials" style="background:var(--mist)">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow" data-i18n="pn_eyebrow">المواد والتشطيبات</span>
+      <h2 class="sec-title" data-i18n="pn_title">تشطيبات بديل الخشب وبديل الشيبورد</h2>
+      <p class="sec-sub" data-i18n="pn_lead">اثنا عشر تشطيباً من الرخام والحجر والخشب والنقوش البارزة، نركّبها في المكاتب والمحلات والمنازل وأجنحة المعارض.</p>
     </div>
     <div class="mat rv">
       <div class="mat-stage">
@@ -710,48 +579,60 @@ html[lang="ar"] .foot h4{letter-spacing:.04em;font-size:15px;text-transform:none
       </div>
       <div class="mat-strip" id="matStrip" role="group" aria-label="Finishes"></div>
     </div>
-    <p class="panels-note"><svg><use href="#i-plus"/></svg><span data-i18n="pn_note">اختر أي تشطيب لتراه مركباً في مساحة حقيقية.</span></p>
   </div>
 </section>
 
-<!-- ================= WHY ================= -->
-<section class="sec tint" style="padding-top:clamp(60px,7vw,92px)">
-  <div class="wrap pad-rail">
-    <div class="sec-head rv" style="margin-bottom:0">
-      <div>
-        <span class="eyebrow" data-i18n="why_eyebrow">لماذا نحن</span>
-        <h2 data-i18n="why_title">ما يميز العمل معنا</h2>
+<!-- ============ PROJECTS ============ -->
+<section class="projects" id="work">
+  <div class="wrap proj-grid">
+    <div class="proj-media rv" id="projMedia"></div>
+    <div class="rv">
+      <span class="eyebrow" data-i18n="pr_eyebrow">أعمالنا</span>
+      <h2 data-i18n="pr_title">معرض من مشاريعنا</h2>
+      <p data-i18n="pr_lead">نفخر بتنفيذ العديد من المشاريع الناجحة في مختلف المجالات، من التصميم الداخلي إلى أجنحة المعارض.</p>
+      <div class="proj-nav">
+        <button class="arw" type="button" id="projPrev" aria-label="Previous"><svg style="transform:scaleX(-1)"><use href="#i-arrow"/></svg></button>
+        <ul class="proj-dots" id="projDots"></ul>
+        <button class="arw" type="button" id="projNext" aria-label="Next"><svg><use href="#i-arrow"/></svg></button>
       </div>
-      <p data-i18n="why_lead">أربع نقاط تختصر طريقتنا: فريق واحد يتولى كل شيء، وتصميم تراه وتعتمده قبل التنفيذ، وتفاصيل مضبوطة، وتسليم في الموعد.</p>
-    </div>
-    <div class="why rv" id="whyGrid" style="margin-top:38px"></div>
-  </div>
-</section>
-
-<!-- ================= CTA BAND ================= -->
-<section class="band">
-  <div class="wrap pad-rail">
-    <svg class="swoosh" viewBox="0 0 120 100" aria-hidden="true"><use href="#logo-mark"/></svg>
-    <div style="position:relative">
-      <h2 data-i18n="band_title">عندك معرض قادم أو مساحة تحتاج تجديد؟</h2>
-      <p data-i18n="band_p">أرسل لنا مساحة الجناح وتاريخ المعرض أو صور موقعك، ونرجع لك بفكرة تصميم وعرض سعر.</p>
-    </div>
-    <div class="ctas">
-      <a class="btn btn-white" href="https://wa.me/96555776301" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span data-i18n="cta_wa">راسلنا على واتساب</span></a>
-      <a class="btn btn-red" href="#contact" data-i18n="cta_quote">اطلب عرض سعر</a>
+      <button class="btn btn-red" type="button" id="projAll"><span data-i18n="pr_all">عرض جميع الأعمال</span><svg class="flip"><use href="#i-arrow"/></svg></button>
     </div>
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
-<section class="sec" id="contact">
-  <div class="wrap pad-rail">
-    <div class="sec-head rv">
-      <div>
-        <span class="eyebrow" data-i18n="ct_eyebrow">تواصل معنا</span>
-        <h2 data-i18n="ct_title">لنبدأ مشروعك القادم</h2>
-      </div>
-      <p data-i18n="ct_lead">زورونا في مكتبنا في حولي، أو تواصلوا معنا بالهاتف أو واتساب أو البريد الإلكتروني.</p>
+<!-- ============ PROCESS ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow" data-i18n="ps_eyebrow">كيف نعمل؟</span>
+      <h2 class="sec-title" data-i18n="ps_title">خطوات بسيطة لنتائج مميزة</h2>
+    </div>
+    <div class="steps rv" id="steps"></div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS + CLIENTS ============ -->
+<section class="trust" id="voices">
+  <div class="tst">
+    <span class="eyebrow" data-i18n="ts_eyebrow">آراء العملاء</span>
+    <h2 data-i18n="ts_title">ثقة عملائنا هي أكبر دافع لنا</h2>
+    <div class="tst-grid" id="tstGrid" hidden></div>
+    <p class="tst-empty" id="tstEmpty" data-i18n="ts_empty">هذا القسم جاهز لثلاث شهادات حقيقية من عملائنا. أرسل لنا نص كل شهادة مع اسم صاحبها وصفته وموافقته على النشر، وسنضيفها هنا.</p>
+  </div>
+  <div class="clients">
+    <span class="eyebrow" data-i18n="cl_eyebrow">عملاؤنا</span>
+    <h2 data-i18n="cl_title">نفخر بثقتهم</h2>
+    <div class="logos" id="logos"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="sec" id="contact" style="background:var(--mist)">
+  <div class="wrap">
+    <div class="center rv">
+      <span class="eyebrow" data-i18n="ct_eyebrow">تواصل معنا</span>
+      <h2 class="sec-title" data-i18n="ct_title">لنبدأ مشروعك القادم</h2>
+      <p class="sec-sub" data-i18n="ct_sub">زورونا في مكتبنا في حولي، أو تواصلوا معنا بالهاتف أو واتساب أو البريد الإلكتروني.</p>
     </div>
     <div class="contact-grid">
       <div class="cinfo rv">
@@ -759,17 +640,15 @@ html[lang="ar"] .foot h4{letter-spacing:.04em;font-size:15px;text-transform:none
           <div class="ic"><svg><use href="#i-phone"/></svg></div>
           <div>
             <small data-i18n="ct_phone">الهاتف وواتساب</small>
-            <div class="v">
-              <a href="tel:+96555776301" class="ltr">+965 5577 6301</a>
-            </div>
+            <div class="v"><a href="tel:+96555776301" class="ltr">+965 5577 6301</a></div>
           </div>
           <button class="copy" type="button" data-copy="+965 5577 6301"><svg class="ci"><use href="#i-copy"/></svg><span data-i18n="copy">نسخ</span></button>
         </div>
         <div class="citem">
           <div class="ic"><svg><use href="#i-mail"/></svg></div>
-          <div style="min-width:0">
+          <div>
             <small data-i18n="ct_email">البريد الإلكتروني</small>
-            <div class="v"><a href="mailto:amazoninternational527@gmail.com" class="ltr" style="overflow-wrap:break-word;font-size:15.5px">amazoninternational527<wbr>@gmail.com</a></div>
+            <div class="v"><a href="mailto:amazoninternational527@gmail.com" class="ltr" style="overflow-wrap:break-word;font-size:15px">amazoninternational527<wbr>@gmail.com</a></div>
           </div>
           <button class="copy" type="button" data-copy="amazoninternational527@gmail.com"><svg class="ci"><use href="#i-copy"/></svg><span data-i18n="copy">نسخ</span></button>
         </div>
@@ -777,47 +656,36 @@ html[lang="ar"] .foot h4{letter-spacing:.04em;font-size:15px;text-transform:none
           <div class="ic"><svg><use href="#i-pin"/></svg></div>
           <div>
             <small data-i18n="ct_addr">العنوان</small>
-            <div class="v" style="font-size:16px;line-height:1.6" data-i18n-html="addr_full">حولي - ابن خلدون - مجمع الفوز<br>الدور الثاني - مكتب 10</div>
+            <div class="v" style="font-size:15.5px;line-height:1.6" data-i18n="addr">حولي - ابن خلدون - مجمع الفوز - الدور الثاني - مكتب 10</div>
           </div>
         </div>
         <div class="citem">
           <div class="ic"><svg><use href="#i-clock"/></svg></div>
           <div>
             <small data-i18n="ct_hours">ساعات العمل</small>
-            <div class="v" style="font-size:16px" data-i18n="hours">السبت – الخميس، 9:00 ص – 6:00 م</div>
+            <div class="v" style="font-size:15.5px" data-i18n="hours">السبت – الخميس، 9:00 ص – 6:00 م</div>
           </div>
         </div>
       </div>
 
       <form class="quote rv" id="quoteForm" novalidate>
         <h3 data-i18n="f_title">اطلب عرض سعر</h3>
-        <label for="f-name"><span data-i18n="f_name">الاسم</span>
-          <input id="f-name" name="name" required autocomplete="name"></label>
-        <label for="f-phone"><span data-i18n="f_phone">رقم الهاتف</span>
-          <input id="f-phone" name="phone" type="tel" required autocomplete="tel" dir="ltr"></label>
+        <label for="f-name"><span data-i18n="f_name">الاسم</span><input id="f-name" required autocomplete="name"></label>
+        <label for="f-phone"><span data-i18n="f_phone">رقم الهاتف</span><input id="f-phone" type="tel" required autocomplete="tel" dir="ltr"></label>
         <label for="f-type"><span data-i18n="f_type">نوع المشروع</span>
-          <select id="f-type" name="type">
-            <option data-i18n="o1">جناح معرض (بوث)</option>
-            <option data-i18n="o2">ديكور داخلي</option>
-            <option data-i18n="o3">تصميم ثلاثي الأبعاد فقط</option>
-            <option data-i18n="o4">مسرح أو خلفية فعالية</option>
-            <option data-i18n="o5">أخرى</option>
-          </select></label>
-        <label for="f-size"><span data-i18n="f_size">المساحة التقريبية (م²)</span>
-          <input id="f-size" name="size" inputmode="decimal" dir="ltr" placeholder="36"></label>
+          <select id="f-type"></select></label>
+        <label for="f-size"><span data-i18n="f_size">المساحة التقريبية (م²)</span><input id="f-size" inputmode="decimal" dir="ltr" placeholder="36"></label>
         <label for="f-msg" class="full"><span data-i18n="f_msg">تفاصيل المشروع</span>
-          <textarea id="f-msg" name="msg" data-i18n-ph="f_msg_ph" placeholder="اسم المعرض، التاريخ، الموقع، وأي أفكار لديك"></textarea></label>
+          <textarea id="f-msg" data-i18n-ph="f_msg_ph" placeholder="اسم المعرض أو الموقع، التاريخ، وأي أفكار لديك"></textarea></label>
         <div class="send">
           <button class="btn wa-btn" type="submit" value="wa" name="via"><svg><use href="#i-wa"/></svg><span data-i18n="f_send_wa">أرسل عبر واتساب</span></button>
-          <button class="btn btn-line" type="submit" value="mail" name="via"><svg><use href="#i-mail"/></svg><span data-i18n="f_send_mail">أرسل بالبريد الإلكتروني</span></button>
+          <button class="btn btn-navy" type="submit" value="mail" name="via"><svg><use href="#i-mail"/></svg><span data-i18n="f_send_mail">أرسل بالبريد الإلكتروني</span></button>
         </div>
         <p class="note" id="formNote" data-i18n="f_note">اختر واتساب أو البريد الإلكتروني، وسيُرسل الطلب بكل التفاصيل كما كتبتها.</p>
         <div class="msgbox" id="msgBox" hidden>
           <h4 data-i18n="f_ready">هذا نص الطلب كما سيُرسل:</h4>
           <pre id="msgText"></pre>
-          <div class="acts">
-            <button type="button" id="copyMsg" data-i18n="f_copy">انسخ النص</button>
-          </div>
+          <button type="button" id="copyMsg" data-i18n="f_copy">انسخ النص</button>
         </div>
       </form>
     </div>
@@ -827,33 +695,23 @@ html[lang="ar"] .foot h4{letter-spacing:.04em;font-size:15px;text-transform:none
       <div class="map-fb" id="mapFallback" hidden>
         <div class="art">
           <svg viewBox="0 0 420 260" role="img" aria-label="Map of the office location">
-            <rect width="420" height="260" fill="#0B1A38"/>
-            <g stroke="#14294F" stroke-width="12">
-              <path d="M0 78h420M0 186h420M96 0v260M268 0v260"/>
-            </g>
-            <g stroke="#101F42" stroke-width="4">
-              <path d="M0 132h420M182 0v260M348 0v260"/>
-            </g>
-            <rect x="110" y="92" width="62" height="34" fill="#132749"/>
-            <rect x="196" y="92" width="58" height="34" fill="#132749"/>
-            <rect x="110" y="146" width="58" height="28" fill="#132749"/>
-            <rect x="288" y="146" width="44" height="28" fill="#132749"/>
-            <circle cx="182" cy="132" r="26" fill="#E2313F" opacity=".2"/>
-            <path d="M182 108a13 13 0 00-13 13c0 9.5 13 22 13 22s13-12.5 13-22a13 13 0 00-13-13z" fill="#E2313F"/>
-            <circle cx="182" cy="121" r="4.6" fill="#0B1A38"/>
-            <text x="286" y="70" font-family="Manrope, sans-serif" font-size="11" font-weight="700" fill="#5E7099" letter-spacing="1">IBN KHALDOUN ST</text>
+            <rect width="420" height="260" fill="#EAEEF5"/>
+            <g stroke="#fff" stroke-width="12"><path d="M0 78h420M0 186h420M96 0v260M268 0v260"/></g>
+            <g stroke="#DCE2EC" stroke-width="4"><path d="M0 132h420M182 0v260M348 0v260"/></g>
+            <rect x="110" y="92" width="62" height="34" fill="#DDE4EF"/>
+            <rect x="196" y="92" width="58" height="34" fill="#DDE4EF"/>
+            <rect x="110" y="146" width="58" height="28" fill="#DDE4EF"/>
+            <circle cx="182" cy="132" r="26" fill="#E1262F" opacity=".14"/>
+            <path d="M182 108a13 13 0 00-13 13c0 9.5 13 22 13 22s13-12.5 13-22a13 13 0 00-13-13z" fill="#E1262F"/>
+            <circle cx="182" cy="121" r="4.6" fill="#fff"/>
+            <text x="286" y="70" font-family="Manrope, sans-serif" font-size="11" font-weight="700" fill="#8794AB" letter-spacing="1">IBN KHALDOUN ST</text>
           </svg>
         </div>
         <div>
           <h3 data-i18n="map_t">مكتب أمازون إنترناشيونال</h3>
-          <p data-i18n-html="addr_full">حولي - ابن خلدون - مجمع الفوز<br>الدور الثاني - مكتب 10</p>
+          <p data-i18n="addr">حولي - ابن خلدون - مجمع الفوز - الدور الثاني - مكتب 10</p>
           <a class="btn btn-red" href="https://www.google.com/maps/search/?api=1&query=29.342996,48.012694" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg><span data-i18n="map_open">افتح في خرائط Google</span></a>
         </div>
-      </div>
-      <div class="pin">
-        <b data-i18n="map_t">مكتب أمازون إنترناشيونال</b>
-        <p data-i18n="map_p">حولي - ابن خلدون - مجمع الفوز - الدور الثاني - مكتب 10</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=29.342996,48.012694" target="_blank" rel="noopener"><span data-i18n="map_open">افتح في خرائط Google</span><svg class="flip" width="14" height="14"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
   </div>
@@ -861,52 +719,47 @@ html[lang="ar"] .foot h4{letter-spacing:.04em;font-size:15px;text-transform:none
 </main>
 
 <footer>
-  <div class="wrap pad-rail">
-    <div class="foot">
-      <div>
-        <a href="#home" class="brand">
-          <span class="logo-fallback">
-            <svg viewBox="0 0 120 100" style="height:38px;width:auto"><use href="#logo-mark"/></svg>
-            <span class="wm"><b>AMAZON</b><small>INTERNATIONAL</small></span>
-          </span>
-        </a>
-        <p class="about" data-i18n="ft_about">شركة متخصصة في تصميم وتنفيذ أجنحة المعارض وأعمال الديكور الداخلي في الكويت.</p>
-      </div>
-      <div>
-        <h4 data-i18n="ft_links">روابط</h4>
-        <ul>
-          <li><a href="#about" data-i18n="nav_about">من نحن</a></li>
-          <li><a href="#services" data-i18n="nav_services">خدماتنا</a></li>
-          <li><a href="#work" data-i18n="nav_work">أعمالنا</a></li>
-          <li><a href="#contact" data-i18n="nav_contact">تواصل معنا</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 data-i18n="ft_svc">الخدمات</h4>
-        <ul>
-          <li data-i18n="cap1">أجنحة المعارض</li>
-          <li data-i18n="cap2">الديكور الداخلي</li>
-          <li data-i18n="cap3">التصميم ثلاثي الأبعاد</li>
-          <li data-i18n="cap4">التصنيع والتركيب</li>
-        </ul>
-      </div>
-      <div>
-        <h4 data-i18n="nav_contact">تواصل معنا</h4>
-        <ul>
-          <li><a href="tel:+96555776301" class="ltr">+965 5577 6301</a></li>
-          <li><a href="mailto:amazoninternational527@gmail.com" style="overflow-wrap:break-word">amazoninternational527<wbr>@gmail.com</a></li>
-          <li data-i18n="topbar_addr">حولي - ابن خلدون - مجمع الفوز - الدور الثاني - مكتب 10</li>
-        </ul>
-      </div>
+  <div class="wrap foot">
+    <div>
+      <a href="#home" class="brand" style="order:0">
+        <span class="logo-fallback">
+          <span class="wm"><b>AMAZON</b><small>INTERNATIONAL</small></span>
+          <svg viewBox="0 0 120 100"><use href="#logo-mark"/></svg>
+        </span>
+      </a>
+      <p class="tag">Design · Fit Out · Exhibition · Interior Solutions</p>
     </div>
-    <div class="legal">
-      <span>© <span id="yr">2026</span> Amazon International. <span data-i18n="rights">جميع الحقوق محفوظة.</span></span>
-      <span data-i18n="slogan_p">إبداع في التصميم وإتقان في التنفيذ</span>
+    <div>
+      <ul>
+        <li><svg><use href="#i-phone"/></svg><a href="tel:+96555776301" class="ltr">+965 5577 6301</a></li>
+        <li><svg><use href="#i-mail"/></svg><a href="mailto:amazoninternational527@gmail.com" style="overflow-wrap:break-word">amazoninternational527<wbr>@gmail.com</a></li>
+        <li><svg><use href="#i-pin"/></svg><span data-i18n="addr">حولي - ابن خلدون - مجمع الفوز - الدور الثاني - مكتب 10</span></li>
+      </ul>
     </div>
+    <div>
+      <h4 data-i18n="nl_title">اشترك في نشرتنا البريدية</h4>
+      <p class="sub" data-i18n="nl_sub">ليصلك كل جديد من أعمالنا وخدماتنا.</p>
+      <form class="news" id="newsForm">
+        <input id="nl-email" type="email" data-i18n-ph="nl_ph" placeholder="أدخل بريدك الإلكتروني" required>
+        <button type="submit" data-i18n="nl_btn">اشترك</button>
+      </form>
+      <nav class="socials" aria-label="Social">
+        <a href="#" aria-label="Instagram"><svg><use href="#s-ig"/></svg></a>
+        <a href="#" aria-label="X"><svg><use href="#s-x"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg><use href="#s-in"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg><use href="#s-yt"/></svg></a>
+      </nav>
+    </div>
+  </div>
+  <div class="wrap legal">
+    <span>© <span id="yr">2026</span> Amazon International. <span data-i18n="rights">جميع الحقوق محفوظة.</span></span>
+    <span data-i18n="slogan">إبداع في التصميم وإتقان في التنفيذ</span>
   </div>
 </footer>
 
-<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Project image">
+<a class="wa" href="https://wa.me/96555776301" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image">
   <div class="slot" id="lbSlot"></div>
   <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close"><svg><use href="#i-close"/></svg></button>
   <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous"><svg style="transform:scaleX(-1)"><use href="#i-arrow"/></svg></button>
@@ -917,299 +770,291 @@ html[lang="ar"] .foot h4{letter-spacing:.04em;font-size:15px;text-transform:none
 
 <script>
 /* =====================================================================
-   COMPANY DETAILS — change these if a number or email ever changes
+   WHERE THINGS GO
+   WHATSAPP / EMAIL      quote requests and newsletter signups land here
+   HERO_SLIDES           the three photos behind the headline
+   PROJECTS              the projects slider + the full gallery lightbox
+   PANELS                the wall finishes in the materials section
+   CLIENTS               client logos: images/clients/<file>
+   TESTIMONIALS          left empty on purpose — see the note in the section
    ===================================================================== */
-var WHATSAPP = "96555776301";                            /* WhatsApp number, no + or spaces */
-var EMAIL    = "amazoninternational527@gmail.com";       /* quote requests arrive here */
+var WHATSAPP = "96555776301";
+var EMAIL    = "amazoninternational527@gmail.com";
+var VIDEO    = "";   /* company video: put a YouTube/Vimeo link here */
 
-/* =====================================================================
-   PROJECTS — put your photos in the images/ folder using these names,
-   or change "src" to match your own file names.
-   cat: "booths" (built booths), "3d" (3D designs), "interior" (interior decor)
-   Each tile keeps its own photo's proportions, so portrait and landscape
-   shots can sit side by side without being cropped.
-   ===================================================================== */
-var PROJECTS = [
-  { src:"images/interior/interior-01.jpg", cat:"interior", ar:"مجلس بجدار رخام مضيء وأعمدة مضلعة",        en:"Majlis — backlit marble wall, fluted columns" },
-  { src:"images/interior/interior-02.jpg", cat:"interior", ar:"استقبال بجداريات منحوتة وإضاءة مخفية",     en:"Reception — sculpted relief walls, concealed lighting" },
-  { src:"images/interior/interior-03.jpg", cat:"interior", ar:"ممر رخامي بجدارية منحوتة وشرائح نحاسية",   en:"Marble corridor — carved feature panel, brass inlays" },
-  { src:"images/interior/interior-04.jpg", cat:"interior", ar:"بهو رخامي بأقواس ذهبية وعمود مضيء",        en:"Marble foyer — gilded arches, backlit column" },
-  { src:"images/interior/interior-05.jpg", cat:"interior", ar:"صالة بكوّة مقوّسة مضيئة",                  en:"Sitting room — lit arched niche" },
-  { src:"images/interior/interior-06.jpg", cat:"interior", ar:"مدخل بخزائن منحنية ومقعد رخامي",           en:"Entry — curved joinery, marble bench" },
-  { src:"images/booths/booth-01.jpg", cat:"booths", ar:"مسرح مؤتمر وجدار عرض",            en:"Conference stage & exhibition wall" },
-  { src:"images/booths/booth-02.jpg", cat:"booths", ar:"جناح شركة في قاعة فندق",          en:"Corporate booth, hotel ballroom" },
-  { src:"images/booths/booth-03.jpg", cat:"booths", ar:"جناح بإضاءة مدمجة",               en:"Illuminated chevron booth" },
-  { src:"images/booths/booth-04.jpg", cat:"booths", ar:"جناح بكاونتر للعلامة التجارية",   en:"Brand counter booth" },
-  { src:"images/booths/booth-05.jpg", cat:"booths", ar:"جناح معرض",                       en:"Exhibition booth" },
-  { src:"images/3d/design-01.jpg",    cat:"3d",     ar:"جناح جزيرة — تصميم ثلاثي الأبعاد", en:"Island stand — 3D concept" },
-  { src:"images/3d/design-02.jpg",    cat:"3d",     ar:"جناح بمظلة منحنية — تصميم",        en:"Curved canopy pavilion — render" },
-  { src:"images/3d/design-03.jpg",    cat:"3d",     ar:"مخطط الجناح — منظر علوي",          en:"Stand floor plan — top view" },
-  { src:"images/3d/design-04.jpg",    cat:"3d",     ar:"منطقة جلوس واجتماعات — تصميم",     en:"Lounge & meeting area — render" }
-];
-
-/* =====================================================================
-   WALL PANELS — the finishes shown in the materials section.
-   Two images per code, both named after it:
-     images/panels/WAL03.jpg        the flat swatch
-     images/panels/rooms/WAL03.jpg  the same panel applied in a room
-   kind: "marble" | "stone" | "wood" | "relief" | "plain"
-   ===================================================================== */
-var PANELS = [
-  { code:"WAL03", kind:"stone",  ar:"حجر بيج ناعم بتدرّج خفيف",        en:"Soft beige stone, faint movement" },
-  { code:"WAL04", kind:"marble", ar:"رخام أبيض بعروق رمادية",          en:"White marble, grey veining" },
-  { code:"WAL11", kind:"stone",  ar:"حجر بنّي بعروق طولية",            en:"Brown stone, vertical grain" },
-  { code:"WAL14", kind:"plain",  ar:"بيج رملي هادئ",                   en:"Calm sand beige" },
-  { code:"WAL15", kind:"marble", ar:"رخام رمادي غائم",                 en:"Clouded grey marble" },
-  { code:"WAL16", kind:"stone",  ar:"حجر رمادي بملمس قديم",            en:"Weathered grey stone" },
-  { code:"WAL17", kind:"marble", ar:"رخام بنّي بعروق بيضاء",           en:"Brown marble, white veining" },
-  { code:"WAL18", kind:"stone",  ar:"حجر رمادي فاتح بملمس خشن",        en:"Pale grey stone, rough grain" },
-  { code:"WAL20", kind:"stone",  ar:"حجر بنّي محمّر",                  en:"Rust-brown stone" },
-  { code:"WAL21", kind:"relief", ar:"نقوش بارزة بيضاء بخطوط متموجة",   en:"White relief, wave lines" },
-  { code:"WAL24", kind:"plain",  ar:"بيج ناعم بحبيبات دقيقة",          en:"Fine-grained beige" },
-  { code:"WAL25", kind:"wood",   ar:"خشب فاتح بعروق طولية",            en:"Pale wood, vertical grain" }
-];
+var HERO_SLIDES = ["images/interior/interior-01.jpg","images/interior/interior-03.jpg","images/interior/interior-02.jpg"];
 
 var SERVICES = [
-  { ic:"i-booth", img:"images/services/booths.jpg",
-    ar:["تصميم وتنفيذ أجنحة المعارض","أجنحة مخصصة بالكامل للمعارض والمؤتمرات، مصممة لتجذب الزوار وتبرز علامتك التجارية.",["جزيرة","ركنية","شبه جزيرة","خطية"]],
-    en:["Exhibition booth design & build","Fully custom stands for exhibitions and conferences, designed to pull visitors in and put your brand first.",["Island","Corner","Peninsula","Inline"]] },
-  { ic:"i-sofa", img:"images/services/interior.jpg",
-    ar:["الديكور الداخلي","تصميم وتنفيذ ديكور المكاتب والمحلات والمساحات التجارية والسكنية.",["مكاتب","محلات","صالات عرض","فلل"]],
-    en:["Interior decor & fit-out","Design and fit-out for offices, shops, showrooms and homes.",["Offices","Retail","Showrooms","Villas"]] },
-  { ic:"i-cube", img:"images/services/3d.jpg",
-    ar:["التصميم ثلاثي الأبعاد","تصاميم واقعية ومخططات قبل التنفيذ، لترى مشروعك كاملاً وتعتمده قبل البدء.",["تصاميم واقعية","مخططات","رسومات تنفيذية"]],
-    en:["3D design & visualisation","Photoreal renders and plans before anything is built, so you see and approve the whole project first.",["Renders","Floor plans","Shop drawings"]] },
-  { ic:"i-stage", img:"images/services/stages.jpg",
-    ar:["المسارح وخلفيات الفعاليات","مسارح المؤتمرات، وجدران الشاشات، والخلفيات المطبوعة للفعاليات والحفلات.",["مؤتمرات","إطلاق منتجات","حفلات"]],
-    en:["Stages & event backdrops","Conference stages, LED walls and printed backdrops for events and launches.",["Conferences","Launches","Ceremonies"]] },
-  { ic:"i-saw", img:"images/services/fabrication.jpg",
-    ar:["التصنيع والنجارة","تصنيع الهياكل والكاونترات والوحدات الخشبية والمعدنية حسب التصميم.",["خشب","ألمنيوم","أكريليك"]],
-    en:["Fabrication & joinery","Structures, counters and custom units in wood and metal, built to the design.",["Wood","Aluminium","Acrylic"]] },
-  { ic:"i-light", img:"images/services/branding.jpg",
-    ar:["الإضاءة والطباعة والهوية","إضاءة مدمجة، ولوحات مضيئة، وطباعة وجرافيك بهوية علامتك التجارية.",["إضاءة LED","لوحات","طباعة"]],
-    en:["Lighting, print & branding","Integrated lighting, light boxes, signage and large-format graphics in your brand identity.",["LED lighting","Signage","Print"]] }
+  { ic:"v-booth",    img:"images/services/booths.jpg",   ar:["أجنحة المعارض","تصميم وتنفيذ أجنحة المعارض بأعلى معايير الجودة"],            en:["Exhibition stands","Stand design and build to the highest standards"] },
+  { ic:"v-interior", img:"images/services/interior.jpg", ar:["التصميم الداخلي","تصميم المساحات الداخلية بأسلوب عصري ومبتكر"],              en:["Interior design","Modern, inventive interior spaces"] },
+  { ic:"v-gypsum",   img:"images/services/gypsum.jpg",   ar:["بديل الشيبورد","تركيب بديل الشيبورد بأجود الخامات"],                         en:["Gypsum-board alternative","Fitted in the finest materials"] },
+  { ic:"v-wood",     img:"images/services/wood.jpg",     ar:["بديل الخشب","تركيب بديل الخشب بمظهر طبيعي وأنيق"],                           en:["Wood alternative","A natural, elegant finish"] },
+  { ic:"v-parquet",  img:"images/services/parquet.jpg",  ar:["الباركيه","تركيب جميع أنواع الباركيه بجودة عالية"],                          en:["Parquet","Every type of parquet, laid to a high standard"] },
+  { ic:"v-decor",    img:"images/services/decor.jpg",    ar:["جميع أعمال الديكور","تصميم وتنفيذ وإشراف على جميع أعمال الديكور الداخلي"],   en:["All decor works","Design, build and supervision across interior decor"] }
 ];
 
-var STANDS = [
-  { open:[0,0,1,0], ar:["جناح خطي","جهة واحدة مفتوحة","ضمن صف من الأجنحة، الواجهة هي كل شيء. نركز على جدار خلفي قوي وكاونتر واضح."], en:["Inline","1 side open","One in a row of stands, so the front face does all the work: a strong back wall and a clear counter."] },
-  { open:[0,1,1,0], ar:["جناح ركني","جهتان مفتوحتان","يقع على تقاطع ممرين، فيراه الزوار من اتجاهين. مناسب لمداخل مفتوحة وشاشات جانبية."], en:["Corner","2 sides open","Sits where two aisles meet, seen from two directions. Suits open entrances and side screens."] },
-  { open:[1,1,1,0], ar:["شبه جزيرة","ثلاث جهات مفتوحة","جدار خلفي واحد وثلاث واجهات. مساحة للاستقبال والعرض وركن اجتماعات."], en:["Peninsula","3 sides open","One back wall and three faces. Room for a reception, displays and a meeting corner."] },
-  { open:[1,1,1,1], ar:["جناح جزيرة","أربع جهات مفتوحة","مكشوف من كل الجهات، ويسمح بأسقف معلقة وتصاميم منحنية وطابق علوي."], en:["Island","4 sides open","Open on every side. Allows hanging rigs, curved structures and double-decker builds."] }
+var FEATURES = [
+  { ic:"f-badge", ar:"خبرة واسعة في المجال", en:"Deep experience in the field" },
+  { ic:"f-team",  ar:"فريق عمل متخصص",       en:"A specialist team" },
+  { ic:"f-time",  ar:"التزام بالمواعيد",      en:"Delivered on schedule" },
+  { ic:"f-star",  ar:"جودة عالية في التنفيذ", en:"High quality execution" }
 ];
 
 var STEPS = [
-  { ar:["الفكرة والمعاينة","نستمع لأهدافك، ونراجع مساحة الجناح أو الموقع، ونحدد الميزانية وتاريخ التسليم."], en:["Brief & site survey","We listen to your goals, review the stand space or site, and agree budget and deadline."] },
-  { ar:["التصميم ثلاثي الأبعاد","نقدم تصاميم واقعية ومخططات، ونعدلها معك حتى الاعتماد النهائي."], en:["3D design","Photoreal renders and plans, revised with you until final sign-off."] },
-  { ar:["التصنيع","ننفذ الهياكل والنجارة والطباعة والإضاءة في الورشة مع مراقبة الجودة."], en:["Fabrication","Structures, joinery, print and lighting built in the workshop with quality checks."] },
-  { ar:["التركيب والتسليم","نركب في الموقع ونسلّم قبل الافتتاح، ثم نتولى الفك بعد انتهاء المعرض."], en:["Install & handover","We install on site and hand over before opening, then dismantle after the show."] }
+  { ic:"p-chat",  ar:["التواصل والاستشارة","نحدد احتياجاتك وميزانيتك"],  en:["Brief & consultation","We agree what you need and the budget"] },
+  { ic:"p-bulb",  ar:["التصميم المقترح","نعرض التصاميم المناسبة لك"],    en:["Proposed design","We present the options that suit you"] },
+  { ic:"p-gear",  ar:["التنفيذ والإنجاز","بأعلى معايير الجودة"],         en:["Build & delivery","To the highest quality standards"] },
+  { ic:"p-check", ar:["التسليم والمتابعة","لضمان رضاك التام"],           en:["Handover & follow-up","So you are completely satisfied"] }
 ];
 
-var WHY = [
-  { ic:"i-team",  ar:["فريق واحد من البداية للنهاية","التصميم والتنفيذ عندنا، فلا تضيع التفاصيل بين أكثر من جهة."], en:["One team, start to finish","Design and build under one roof, so no detail gets lost between suppliers."] },
-  { ic:"i-cube",  ar:["ترى مشروعك قبل تنفيذه","تصاميم ثلاثية الأبعاد واقعية تعتمدها قبل بدء التصنيع."], en:["See it before it's built","Realistic 3D renders you approve before fabrication starts."] },
-  { ic:"i-ruler", ar:["دقة في التفاصيل","تشطيبات نظيفة ومقاسات مضبوطة ومواد مختارة بعناية."], en:["Precise detailing","Clean finishes, exact dimensions and carefully chosen materials."] },
-  { ic:"i-time",  ar:["التزام بموعد الافتتاح","نسلم الجناح جاهزاً قبل افتتاح المعرض، في كل مرة."], en:["On time for opening day","Your stand is ready before the doors open, every time."] }
+/* PROJECTS — the slider shows the first four; all of them open in the lightbox */
+var PROJECTS = [
+  { src:"images/interior/interior-01.jpg", ar:"مجلس بجدار رخام مضيء وأعمدة مضلعة",      en:"Majlis — backlit marble wall, fluted columns" },
+  { src:"images/interior/interior-02.jpg", ar:"استقبال بجداريات منحوتة وإضاءة مخفية",   en:"Reception — sculpted relief walls, concealed lighting" },
+  { src:"images/interior/interior-03.jpg", ar:"ممر رخامي بجدارية منحوتة وشرائح نحاسية", en:"Marble corridor — carved panel, brass inlays" },
+  { src:"images/interior/interior-04.jpg", ar:"بهو رخامي بأقواس ذهبية وعمود مضيء",      en:"Marble foyer — gilded arches, backlit column" },
+  { src:"images/interior/interior-05.jpg", ar:"صالة بكوّة مقوّسة مضيئة",                en:"Sitting room — lit arched niche" },
+  { src:"images/interior/interior-06.jpg", ar:"مدخل بخزائن منحنية ومقعد رخامي",         en:"Entry — curved joinery, marble bench" }
 ];
 
-/* ===================================================================== */
+/* CLIENTS — drop each logo in as images/clients/<file>, ideally a PNG with a
+   transparent background. A slot with no file shows the name instead. */
+var CLIENTS = [
+  { file:"images/clients/nbk.png",     ar:"بنك الكويت الوطني",      en:"NBK" },
+  { file:"images/clients/zain.png",    ar:"زين",                    en:"Zain" },
+  { file:"images/clients/kpc.png",     ar:"مؤسسة البترول الكويتية", en:"KPC" },
+  { file:"images/clients/boubyan.png", ar:"بنك بوبيان",             en:"Boubyan Bank" },
+  { file:"images/clients/kfm.png",     ar:"مطاحن الدقيق الكويتية",  en:"Kuwait Flour Mills" },
+  { file:"images/clients/ahlia.png",   ar:"الأهلية",                en:"Al Ahlia" }
+];
+
+/* TESTIMONIALS — add real ones as
+   { ar:["النص","الاسم","الصفة"], en:["text","name","role"], photo:"images/people/x.jpg" } */
+var TESTIMONIALS = [];
+
+var PANELS = [
+  { code:"WAL03", kind:"stone",  ar:"حجر بيج ناعم بتدرّج خفيف",      en:"Soft beige stone, faint movement" },
+  { code:"WAL04", kind:"marble", ar:"رخام أبيض بعروق رمادية",        en:"White marble, grey veining" },
+  { code:"WAL11", kind:"stone",  ar:"حجر بنّي بعروق طولية",          en:"Brown stone, vertical grain" },
+  { code:"WAL14", kind:"plain",  ar:"بيج رملي هادئ",                 en:"Calm sand beige" },
+  { code:"WAL15", kind:"marble", ar:"رخام رمادي غائم",               en:"Clouded grey marble" },
+  { code:"WAL16", kind:"stone",  ar:"حجر رمادي بملمس قديم",          en:"Weathered grey stone" },
+  { code:"WAL17", kind:"marble", ar:"رخام بنّي بعروق بيضاء",         en:"Brown marble, white veining" },
+  { code:"WAL18", kind:"stone",  ar:"حجر رمادي فاتح بملمس خشن",      en:"Pale grey stone, rough grain" },
+  { code:"WAL20", kind:"stone",  ar:"حجر بنّي محمّر",                en:"Rust-brown stone" },
+  { code:"WAL21", kind:"relief", ar:"نقوش بارزة بيضاء بخطوط متموجة", en:"White relief, wave lines" },
+  { code:"WAL24", kind:"plain",  ar:"بيج ناعم بحبيبات دقيقة",        en:"Fine-grained beige" },
+  { code:"WAL25", kind:"wood",   ar:"خشب فاتح بعروق طولية",          en:"Pale wood, vertical grain" }
+];
+
 var T = {
   ar:{
-    topbar_addr:"حولي - ابن خلدون - مجمع الفوز - الدور الثاني - مكتب 10",
-    nav_home:"الرئيسية",nav_about:"من نحن",nav_services:"خدماتنا",nav_stands:"أنواع الأجنحة",nav_process:"مراحل العمل",nav_work:"أعمالنا",nav_contact:"تواصل معنا",
-    cta_quote:"اطلب عرض سعر",cta_work:"شاهد أعمالنا",cta_talk:"ناقش مشروعك معنا",cta_wa:"راسلنا على واتساب",
-    hero_eyebrow:"تصميم وتنفيذ · الكويت",
-    hero_title:"إبداع في التصميم<em>وإتقان في التنفيذ</em>",
-    hero_lead:"نصمم وننفذ أجنحة المعارض (البوثات) وأعمال الديكور الداخلي، من الفكرة والتصميم ثلاثي الأبعاد إلى التصنيع والتركيب والتسليم، بمعايير عالية في الجودة والاحترافية.",
-    cap1:"أجنحة المعارض",cap2:"الديكور الداخلي",cap3:"التصميم ثلاثي الأبعاد",cap4:"التصنيع والتركيب",
-    badge_t:"من الفكرة إلى التسليم",badge_s:"فريق واحد يتولى التصميم والتصنيع والتركيب في موقع المعرض.",
-    about_eyebrow:"من نحن",about_title:"نحوّل الأفكار إلى مساحات تعكس هوية عملائنا",
-    about_p1:"نحن شركة متخصصة في تصميم وتنفيذ أعمال الديكور الداخلي وأجنحة المعارض (البوثات). نقدم حلولاً إبداعية متكاملة تجمع بين الابتكار والفخامة والجودة، لتحويل الأفكار إلى واقع يعكس هوية عملائنا ويلبي تطلعاتهم.",
-    about_p2:"نحرص على تقديم تصاميم عصرية ومميزة مع الاهتمام بأدق التفاصيل في جميع مراحل العمل، بدءاً من الفكرة والتصميم ثلاثي الأبعاد وصولاً إلى التنفيذ والتسليم، وفق أعلى معايير الجودة والاحترافية.",
-    vision_h:"رؤيتنا",vision_p:"أن نكون الخيار المفضل في عالم التصميم والديكور وتجهيز أجنحة المعارض، من خلال تقديم أعمال استثنائية تجمع بين الجمال والوظيفة والإبداع.",
-    mission_h:"طريقتنا",mission_p:"فريق تصميم وتنفيذ واحد، ومتابعة لكل تفصيلة من أول رسمة حتى آخر مسمار في الموقع، والتزام بمواعيد افتتاح المعارض.",
-    slogan_h:"شعارنا",slogan_p:"إبداع في التصميم وإتقان في التنفيذ",
-    svc_eyebrow:"خدماتنا",svc_title:"كل ما يحتاجه جناحك أو مساحتك، تحت سقف واحد",
-    svc_lead:"نغطي المشروع بالكامل: الفكرة، والتصميم ثلاثي الأبعاد، والتصنيع في ورشتنا، والتركيب في الموقع، ثم الفك والتخزين بعد انتهاء المعرض.",
-    st_eyebrow:"أنواع الأجنحة",st_title:"نصمم لكل موقع في قاعة المعرض",
-    st_lead:"يتحدد شكل الجناح بعدد الجهات المفتوحة على الممرات. نختار التصميم والمداخل وأماكن الشاشات والإضاءة بحسب موقع مساحتك.",
-    lg_wall:"جدار أو جناح مجاور",lg_open:"جهة مفتوحة على الممر",aisle:"ممر",
-    pr_eyebrow:"مراحل العمل",pr_title:"من أول رسمة حتى يوم الافتتاح",pr_lead:"أربع مراحل واضحة، وفريق واحد يتابع مشروعك في كل مرحلة منها.",step:"المرحلة",
-    wk_eyebrow:"أعمالنا",wk_title:"مشاريع صممناها ونفذناها",
-    nav_panels:"المواد والتشطيبات",
-    pn_eyebrow:"المواد والتشطيبات",pn_title:"ألواح جدارية بتشطيبات لا تنتهي",
+    nav_home:"الرئيسية",nav_about:"من نحن",nav_services:"خدماتنا",nav_work:"معرض الأعمال",nav_voices:"آراء العملاء",nav_contact:"تواصل معنا",
+    hero_eyebrow:"التصميم · التنفيذ · الإبداع",
+    hero_title:"شركة الأمازون انترناشيونال<em>للتجارة العامة</em>",
+    hero_lead:"متخصصون في تصميم وتنفيذ جميع أعمال الديكور الداخلي، من التصميم إلى التنفيذ، بما في ذلك أجنحة المعارض وتصميم وتنفيذ المكاتب، وبديل الشيبورد، وبديل الخشب، والباركيه.",
+    cta_contact:"تواصل معنا",cta_services:"تعرّف على خدماتنا",
+    sv_eyebrow:"خدماتنا",sv_title:"حلول متكاملة لكل احتياجاتك",sv_sub:"من التصميم حتى التسليم، نوفّر لك كل ما تحتاجه في مكان واحد.",
+    sc_title:"جميع خدماتنا في مكان واحد",
+    ab_eyebrow:"من نحن",ab_title:"شريكك المثالي في عالم الديكور والتصميم",
+    ab_p:"نحن في شركة الأمازون انترناشيونال للتجارة العامة نختص بتقديم حلول متكاملة في مجال التصميم والتنفيذ، مع فريق عمل متخصص وخبرة واسعة في تنفيذ المشاريع السكنية والتجارية وأجنحة المعارض والمكاتب، بالإضافة إلى كافة أعمال الديكور الداخلي.",
+    ab_video:"شاهد فيديو الشركة",
+    pn_eyebrow:"المواد والتشطيبات",pn_title:"تشطيبات بديل الخشب وبديل الشيبورد",
     pn_lead:"اثنا عشر تشطيباً من الرخام والحجر والخشب والنقوش البارزة، نركّبها في المكاتب والمحلات والمنازل وأجنحة المعارض.",
-    pn_note:"اختر أي تشطيب لتراه مركباً في مساحة حقيقية.",
     kind_marble:"رخام",kind_stone:"حجر",kind_wood:"خشب",kind_relief:"نقوش بارزة",kind_plain:"سادة",
-    f_all:"الكل",f_booths:"أجنحة منفذة",f_3d:"تصاميم ثلاثية الأبعاد",f_interior:"ديكور داخلي",
-    why_eyebrow:"لماذا نحن",why_title:"ما يميز العمل معنا",
-    why_lead:"أربع نقاط تختصر طريقتنا: فريق واحد يتولى كل شيء، وتصميم تراه وتعتمده قبل التنفيذ، وتفاصيل مضبوطة، وتسليم في الموعد.",
-    band_title:"عندك معرض قادم أو مساحة تحتاج تجديد؟",band_p:"أرسل لنا مساحة الجناح وتاريخ المعرض أو صور موقعك، ونرجع لك بفكرة تصميم وعرض سعر.",
-    ct_eyebrow:"تواصل معنا",ct_title:"لنبدأ مشروعك القادم",ct_lead:"زورونا في مكتبنا في حولي، أو تواصلوا معنا بالهاتف أو واتساب أو البريد الإلكتروني.",
+    pr_eyebrow:"أعمالنا",pr_title:"معرض من مشاريعنا",
+    pr_lead:"نفخر بتنفيذ العديد من المشاريع الناجحة في مختلف المجالات، من التصميم الداخلي إلى أجنحة المعارض.",
+    pr_all:"عرض جميع الأعمال",
+    ps_eyebrow:"كيف نعمل؟",ps_title:"خطوات بسيطة لنتائج مميزة",
+    ts_eyebrow:"آراء العملاء",ts_title:"ثقة عملائنا هي أكبر دافع لنا",
+    ts_empty:"هذا القسم جاهز لثلاث شهادات حقيقية من عملائنا. أرسل لنا نص كل شهادة مع اسم صاحبها وصفته وموافقته على النشر، وسنضيفها هنا.",
+    cl_eyebrow:"عملاؤنا",cl_title:"نفخر بثقتهم",
+    ct_eyebrow:"تواصل معنا",ct_title:"لنبدأ مشروعك القادم",
+    ct_sub:"زورونا في مكتبنا في حولي، أو تواصلوا معنا بالهاتف أو واتساب أو البريد الإلكتروني.",
     ct_phone:"الهاتف وواتساب",ct_email:"البريد الإلكتروني",ct_addr:"العنوان",ct_hours:"ساعات العمل",
-    addr_full:"حولي - ابن خلدون - مجمع الفوز<br>الدور الثاني - مكتب 10",
+    addr:"حولي - ابن خلدون - مجمع الفوز - الدور الثاني - مكتب 10",
     hours:"السبت – الخميس، 9:00 ص – 6:00 م",copy:"نسخ",copied:"تم النسخ",
     f_title:"اطلب عرض سعر",f_name:"الاسم",f_phone:"رقم الهاتف",f_type:"نوع المشروع",f_size:"المساحة التقريبية (م²)",f_msg:"تفاصيل المشروع",
-    f_msg_ph:"اسم المعرض، التاريخ، الموقع، وأي أفكار لديك",
+    f_msg_ph:"اسم المعرض أو الموقع، التاريخ، وأي أفكار لديك",
     f_send_wa:"أرسل عبر واتساب",f_send_mail:"أرسل بالبريد الإلكتروني",
     f_note:"اختر واتساب أو البريد الإلكتروني، وسيُرسل الطلب بكل التفاصيل كما كتبتها.",
     f_ready:"هذا نص الطلب كما سيُرسل:",f_copy:"انسخ النص",
     f_err:"اكتب الاسم ورقم الهاتف لنتمكن من التواصل معك.",
     f_sent_wa:"تم فتح واتساب بالطلب كاملاً.",f_sent_mail:"تم فتح بريدك الإلكتروني بالطلب كاملاً.",
-    f_blocked:"لم يفتح التطبيق. انسخ النص وأرسله لنا.",
-    o1:"جناح معرض (بوث)",o2:"ديكور داخلي",o3:"تصميم ثلاثي الأبعاد فقط",o4:"مسرح أو خلفية فعالية",o5:"أخرى",
-    map_t:"مكتب أمازون إنترناشيونال",map_p:"حولي - ابن خلدون - مجمع الفوز - الدور الثاني - مكتب 10",map_open:"افتح في خرائط Google",
-    ft_about:"شركة متخصصة في تصميم وتنفيذ أجنحة المعارض وأعمال الديكور الداخلي في الكويت.",ft_links:"روابط",ft_svc:"الخدمات",rights:"جميع الحقوق محفوظة.",
-    ph_add:"أضف الصورة هنا",
-    wa_subject:"طلب عرض سعر",
-    wa_msg:"مرحباً أمازون إنترناشيونال، أرغب في عرض سعر.",
+    map_t:"مكتب أمازون إنترناشيونال",map_open:"افتح في خرائط Google",
+    nl_title:"اشترك في نشرتنا البريدية",nl_sub:"ليصلك كل جديد من أعمالنا وخدماتنا.",nl_ph:"أدخل بريدك الإلكتروني",nl_btn:"اشترك",
+    nl_err:"اكتب بريداً إلكترونياً صحيحاً.",nl_msg:"أرغب في الاشتراك في نشرتكم البريدية على هذا البريد: ",
+    rights:"جميع الحقوق محفوظة.",slogan:"إبداع في التصميم وإتقان في التنفيذ",
+    ph_add:"أضف الصورة هنا",video_soon:"سيُضاف فيديو الشركة قريباً.",
+    wa_subject:"طلب عرض سعر",wa_msg:"مرحباً أمازون إنترناشيونال، أرغب في عرض سعر.",
     wa_name:"الاسم",wa_phone:"الهاتف",wa_type:"نوع المشروع",wa_size:"المساحة",wa_det:"التفاصيل",wa_src:"أُرسل من الموقع"
   },
   en:{
-    topbar_addr:"Hawalli - Ibn Khaldoun - Al-Fouz Complex - 2nd floor - Office 10",
-    nav_home:"Home",nav_about:"About",nav_services:"Services",nav_stands:"Stand types",nav_process:"Process",nav_work:"Our work",nav_contact:"Contact",
-    cta_quote:"Request a quote",cta_work:"View our work",cta_talk:"Discuss your project",cta_wa:"Message us on WhatsApp",
-    hero_eyebrow:"Design & build · Kuwait",
-    hero_title:"Creative design.<em>Precise execution.</em>",
-    hero_lead:"We design and build exhibition booths and interior spaces, from the first idea and 3D design through fabrication, installation and handover, to the highest standards of quality.",
-    cap1:"Exhibition booths",cap2:"Interior decor",cap3:"3D design",cap4:"Fabrication & install",
-    badge_t:"From idea to handover",badge_s:"One team handles design, fabrication and on-site installation.",
-    about_eyebrow:"About us",about_title:"We turn ideas into spaces that carry our clients' identity",
-    about_p1:"We are a company specialised in designing and building interior decor and exhibition booths. We deliver complete creative solutions that combine innovation, luxury and quality, turning ideas into spaces that reflect our clients' identity and meet their ambitions.",
-    about_p2:"We create modern, distinctive designs and care about every detail at every stage, from the idea and 3D design through to execution and handover, to the highest standards of quality and professionalism.",
-    vision_h:"Our vision",vision_p:"To be the preferred choice in design, decor and exhibition stands by delivering exceptional work that brings together beauty, function and creativity.",
-    mission_h:"How we work",mission_p:"One design and build team, attention to every detail from the first sketch to the last screw on site, and a firm commitment to opening dates.",
-    slogan_h:"Our motto",slogan_p:"Creative design. Precise execution.",
-    svc_eyebrow:"Services",svc_title:"Everything your stand or space needs, under one roof",
-    svc_lead:"We cover the whole project: concept, 3D design, fabrication in our workshop, installation on site, then dismantling and storage after the show.",
-    st_eyebrow:"Stand types",st_title:"We design for every spot on the show floor",
-    st_lead:"A stand's layout depends on how many sides face an aisle. We plan entrances, screens and lighting around where your space sits.",
-    lg_wall:"Wall or neighbouring stand",lg_open:"Side open to the aisle",aisle:"AISLE",
-    pr_eyebrow:"Our process",pr_title:"From the first sketch to opening day",pr_lead:"Four clear stages, with one team following your project through each of them.",step:"Stage",
-    wk_eyebrow:"Our work",wk_title:"Projects we designed and built",
-    nav_panels:"Materials",
-    pn_eyebrow:"Materials & finishes",pn_title:"Wall panels in finishes without end",
+    nav_home:"Home",nav_about:"About",nav_services:"Services",nav_work:"Our work",nav_voices:"Clients",nav_contact:"Contact",
+    hero_eyebrow:"Design · Build · Craft",
+    hero_title:"Amazon International<em>General Trading</em>",
+    hero_lead:"We design and build every kind of interior decor — from concept to completion — including exhibition stands, office fit-out, gypsum-board and wood alternatives, and parquet.",
+    cta_contact:"Contact us",cta_services:"See our services",
+    sv_eyebrow:"Services",sv_title:"Complete solutions for everything you need",sv_sub:"From design through to handover, everything you need in one place.",
+    sc_title:"All our services in one place",
+    ab_eyebrow:"About us",ab_title:"Your ideal partner in decor and design",
+    ab_p:"At Amazon International General Trading we deliver complete design and build solutions, with a specialist team and wide experience across residential and commercial projects, exhibition stands, offices and every kind of interior decor.",
+    ab_video:"Watch the company video",
+    pn_eyebrow:"Materials & finishes",pn_title:"Wood and gypsum-board alternative finishes",
     pn_lead:"Twelve finishes in marble, stone, wood and relief, installed in offices, shops, homes and exhibition stands.",
-    pn_note:"Pick any finish to see it installed in a real space.",
     kind_marble:"Marble",kind_stone:"Stone",kind_wood:"Wood",kind_relief:"Relief",kind_plain:"Plain",
-    f_all:"All",f_booths:"Built booths",f_3d:"3D designs",f_interior:"Interior decor",
-    why_eyebrow:"Why us",why_title:"What sets working with us apart",
-    why_lead:"Four things that sum up how we work: one team handling everything, a design you see and approve before it is built, exact detailing, and delivery on schedule.",
-    band_title:"Have an exhibition coming up, or a space to transform?",band_p:"Send us your stand size and show date, or photos of your space, and we'll come back with a design idea and a quote.",
-    ct_eyebrow:"Contact",ct_title:"Let's start your next project",ct_lead:"Visit our office in Hawalli, or reach us by phone, WhatsApp or email.",
+    pr_eyebrow:"Our work",pr_title:"A look at our projects",
+    pr_lead:"We've delivered many successful projects across the board, from interior design to exhibition stands.",
+    pr_all:"View all work",
+    ps_eyebrow:"How we work",ps_title:"Simple steps, distinctive results",
+    ts_eyebrow:"Client voices",ts_title:"Our clients' trust drives us",
+    ts_empty:"This section is ready for three genuine client testimonials. Send us each quote with the person's name, their role and their permission to publish, and we'll add them here.",
+    cl_eyebrow:"Our clients",cl_title:"Proud of their trust",
+    ct_eyebrow:"Contact",ct_title:"Let's start your next project",
+    ct_sub:"Visit our office in Hawalli, or reach us by phone, WhatsApp or email.",
     ct_phone:"Phone & WhatsApp",ct_email:"Email",ct_addr:"Address",ct_hours:"Working hours",
-    addr_full:"Hawalli - Ibn Khaldoun - Al-Fouz Complex<br>2nd floor - Office 10",
+    addr:"Hawalli - Ibn Khaldoun - Al-Fouz Complex - 2nd floor - Office 10",
     hours:"Sat – Thu, 9:00 AM – 6:00 PM",copy:"Copy",copied:"Copied",
     f_title:"Request a quote",f_name:"Name",f_phone:"Phone number",f_type:"Project type",f_size:"Approx. area (m²)",f_msg:"Project details",
-    f_msg_ph:"Exhibition name, dates, venue and any ideas you have",
+    f_msg_ph:"Exhibition or site, dates, and any ideas you have",
     f_send_wa:"Send on WhatsApp",f_send_mail:"Send by email",
     f_note:"Choose WhatsApp or email — your request is sent with every detail exactly as you wrote it.",
     f_ready:"Your request, exactly as it will be sent:",f_copy:"Copy the text",
     f_err:"Enter your name and phone number so we can reach you.",
     f_sent_wa:"WhatsApp opened with your full request.",f_sent_mail:"Your email app opened with your full request.",
-    f_blocked:"The app didn't open. Copy the text and send it to us.",
-    o1:"Exhibition booth",o2:"Interior decor",o3:"3D design only",o4:"Stage or event backdrop",o5:"Other",
-    map_t:"Amazon International office",map_p:"Hawalli - Ibn Khaldoun - Al-Fouz Complex - 2nd floor - Office 10",map_open:"Open in Google Maps",
-    ft_about:"Exhibition booth design & build and interior decor, based in Kuwait.",ft_links:"Links",ft_svc:"Services",rights:"All rights reserved.",
-    ph_add:"Add image here",
-    wa_subject:"Quote request",
-    wa_msg:"Hello Amazon International, I'd like a quote.",
+    map_t:"Amazon International office",map_open:"Open in Google Maps",
+    nl_title:"Subscribe to our newsletter",nl_sub:"News of our latest work and services.",nl_ph:"Enter your email",nl_btn:"Subscribe",
+    nl_err:"Enter a valid email address.",nl_msg:"I'd like to subscribe to your newsletter with this address: ",
+    rights:"All rights reserved.",slogan:"Creative design. Precise execution.",
+    ph_add:"Add image here",video_soon:"The company video is coming soon.",
+    wa_subject:"Quote request",wa_msg:"Hello Amazon International, I'd like a quote.",
     wa_name:"Name",wa_phone:"Phone",wa_type:"Project type",wa_size:"Area",wa_det:"Details",wa_src:"Sent from the website"
   }
 };
 
 document.documentElement.classList.add("js");
-var lang = "ar";
-try{ var saved = localStorage.getItem("ai-lang"); if(saved==="en"||saved==="ar") lang = saved; }catch(e){}
-var filter = "all";
-
-function t(k){ return (T[lang] && T[lang][k]) || k; }
+var lang="ar";
+try{ var sv=localStorage.getItem("ai-lang"); if(sv==="en"||sv==="ar") lang=sv; }catch(e){}
+function t(k){ return (T[lang]&&T[lang][k])||k; }
 function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
 
 function fillSlot(el, src, big, onfail){
   el.innerHTML = '<div class="ph"><svg><use href="#i-img"/></svg><b>'+esc(t("ph_add"))+'</b><code>'+esc(src)+'</code></div>';
-  var img = document.createElement("img");
-  img.alt = "";
-  img.decoding = "async";
-  if(!big) img.loading = "lazy";
-  /* the image goes into the page BEFORE its src is set: a detached image
-     marked lazy never starts loading, which leaves the slot empty forever. */
-  img.addEventListener("error", function(){
+  var img=document.createElement("img");
+  img.alt=""; img.decoding="async";
+  if(!big) img.loading="lazy";
+  img.addEventListener("error",function(){
     if(img.parentNode) img.parentNode.removeChild(img);
     if(onfail) onfail();
   });
-  /* data-natural: the slot takes the photo's own proportions instead of
-     cropping it to a fixed box */
   if("natural" in el.dataset){
-    img.addEventListener("load", function(){
+    img.addEventListener("load",function(){
       if(img.naturalWidth) el.style.aspectRatio = img.naturalWidth+" / "+img.naturalHeight;
     });
   }
-  el.appendChild(img);
-  img.src = src;
-}
-function fillStaticSlots(){
-  document.querySelectorAll(".slot[data-src]").forEach(function(el){ fillSlot(el, el.dataset.src, true); });
+  el.appendChild(img);      /* in the page first — a detached lazy image never loads */
+  img.src=src;
 }
 
+/* ---------- hero slider ---------- */
+var heroI=0;
+function renderHero(){
+  document.getElementById("heroMedia").innerHTML = HERO_SLIDES.map(function(s,i){
+    return '<div class="slide'+(i===0?' on':'')+'"><img src="'+esc(s)+'" alt="" '+(i?'loading="lazy"':'')+'></div>';
+  }).join("");
+  heroI=0; heroNum();
+}
+function heroNum(){
+  document.getElementById("heroNum").textContent =
+    ("0"+(heroI+1)).slice(-2)+" / "+("0"+HERO_SLIDES.length).slice(-2);
+}
+function heroGo(d){
+  var s=document.querySelectorAll("#heroMedia .slide");
+  if(!s.length) return;
+  s[heroI].classList.remove("on");
+  heroI=(heroI+d+s.length)%s.length;
+  s[heroI].classList.add("on");
+  heroNum();
+}
+
+/* ---------- sections ---------- */
 function renderServices(){
-  document.getElementById("servicesGrid").innerHTML = SERVICES.map(function(s){
-    var d = s[lang];
-    return '<article class="svc rv"><div class="slot" data-svc="'+esc(s.img)+'"></div><div class="svc-body">'+
-      '<div class="svc-top"><div class="svc-ic"><svg><use href="#'+s.ic+'"/></svg></div><h3>'+esc(d[0])+'</h3></div>'+
-      '<p>'+esc(d[1])+'</p><ul>'+d[2].map(function(x){return '<li>'+esc(x)+'</li>';}).join("")+'</ul></div></article>';
-  }).join("");
-  document.querySelectorAll("[data-svc]").forEach(function(el){ fillSlot(el, el.dataset.svc); });
-}
-
-/* plan-view drawing of a stand: open = [top,right,bottom,left] */
-function standSVG(open){
-  var x=40,y=24,w=160,h=112, navy="#7FB0FF", red="#E2313F";
-  var sides=[[x,y,x+w,y],[x+w,y,x+w,y+h],[x,y+h,x+w,y+h],[x,y,x,y+h]];
-  var s='<svg viewBox="0 0 240 168" role="img" aria-hidden="true">';
-  s+='<rect x="0" y="0" width="240" height="168" fill="#081226"/>';
-  var nb=[[x,0,w,y-6],[x+w+6,y,240-(x+w+6),h],[x,y+h+6,w,168-(y+h+6)],[0,y,x-6,h]];
-  s+='<defs><pattern id="hp" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="7" height="7" fill="#0C1B38"/><line x1="0" y1="0" x2="0" y2="7" stroke="#16294F" stroke-width="2"/></pattern></defs>';
-  for(var i=0;i<4;i++){
-    var r=nb[i];
-    if(!open[i]) s+='<rect x="'+r[0]+'" y="'+r[1]+'" width="'+r[2]+'" height="'+r[3]+'" fill="url(#hp)"/>';
-    else {
-      var cx=r[0]+r[2]/2, cy=r[1]+r[3]/2;
-      s+='<text x="'+cx+'" y="'+(cy+4)+'" text-anchor="middle" font-family="Manrope, sans-serif" font-size="9.5" font-weight="700" letter-spacing="1.2" fill="#5E7099"'+(i%2? ' transform="rotate(90 '+cx+' '+cy+')"':'')+'>'+esc(t("aisle"))+'</text>';
-    }
-  }
-  s+='<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" fill="#11254A"/>';
-  s+='<rect x="'+(x+w/2-28)+'" y="'+(y+h-34)+'" width="56" height="14" fill="#1E3A6B"/>';
-  s+='<circle cx="'+(x+36)+'" cy="'+(y+40)+'" r="13" fill="none" stroke="#2A4A85" stroke-width="1.5"/>';
-  s+='<rect x="'+(x+w-56)+'" y="'+(y+26)+'" width="30" height="30" fill="none" stroke="#2A4A85" stroke-width="1.5"/>';
-  for(var j=0;j<4;j++){
-    var L=sides[j];
-    s+='<line x1="'+L[0]+'" y1="'+L[1]+'" x2="'+L[2]+'" y2="'+L[3]+'" stroke="'+(open[j]?red:navy)+'" stroke-width="'+(open[j]?3:6)+'"'+(open[j]?' stroke-dasharray="10 6"':'')+' stroke-linecap="square"/>';
-  }
-  s+='</svg>';
-  return s;
-}
-function renderStands(){
-  document.getElementById("standsGrid").innerHTML = STANDS.map(function(st){
-    var d=st[lang];
-    return '<article class="stand rv">'+standSVG(st.open)+'<div class="k"><h3>'+esc(d[0])+'</h3><span class="open">'+esc(d[1])+'</span></div><p>'+esc(d[2])+'</p></article>';
-  }).join("");
-}
-
-function renderSteps(){
-  document.getElementById("stepsList").innerHTML = STEPS.map(function(s,i){
+  document.getElementById("svcStrip").innerHTML = SERVICES.map(function(s){
     var d=s[lang];
-    return '<li class="step rv"><span class="n">'+esc(t("step"))+' 0'+(i+1)+'</span><h3>'+esc(d[0])+'</h3><p>'+esc(d[1])+'</p><div class="bar" style="--p:'+((i+1)/4)+'"></div></li>';
+    return '<div><div class="svc-ic"><svg><use href="#'+s.ic+'"/></svg></div><h3>'+esc(d[0])+'</h3><p>'+esc(d[1])+'</p></div>';
+  }).join("");
+  document.getElementById("svcCards").innerHTML = SERVICES.map(function(s){
+    var d=s[lang];
+    return '<a class="svc-card" href="#contact">'+
+      '<div class="slot" data-sc="'+esc(s.img)+'"><div class="ph"><svg><use href="#'+s.ic+'"/></svg></div></div>'+
+      '<span class="bar"><b>'+esc(d[0])+'</b><i><svg class="flip"><use href="#i-arrow"/></svg></i></span></a>';
+  }).join("");
+  document.querySelectorAll("[data-sc]").forEach(function(el){
+    var keep=el.innerHTML;
+    fillSlot(el, el.dataset.sc, true, function(){ el.innerHTML=keep; });
+  });
+  var sel=document.getElementById("f-type");
+  sel.innerHTML = SERVICES.map(function(s){ return '<option>'+esc(s[lang][0])+'</option>'; }).join("")+
+    '<option>'+esc(lang==="ar"?"أخرى":"Other")+'</option>';
+}
+function renderFeats(){
+  document.getElementById("feats").innerHTML = FEATURES.map(function(f){
+    return '<div><svg><use href="#'+f.ic+'"/></svg><b>'+esc(f[lang])+'</b></div>';
   }).join("");
 }
-
-function renderWhy(){
-  document.getElementById("whyGrid").innerHTML = WHY.map(function(w){
-    var d=w[lang];
-    return '<div><svg><use href="#'+w.ic+'"/></svg><h3>'+esc(d[0])+'</h3><p>'+esc(d[1])+'</p></div>';
+function renderSteps(){
+  document.getElementById("steps").innerHTML = STEPS.map(function(s,i){
+    var d=s[lang];
+    return '<div class="step"><span class="n">0'+(i+1)+'</span><div><h3>'+esc(d[0])+'</h3><p>'+esc(d[1])+'</p></div>'+
+      '<span class="ic"><svg><use href="#'+s.ic+'"/></svg></span></div>';
   }).join("");
 }
+function renderClients(){
+  document.getElementById("logos").innerHTML = CLIENTS.map(function(c){
+    return '<div class="slot" data-cl="'+esc(c.file)+'" data-name="'+esc(c[lang])+'"></div>';
+  }).join("");
+  document.querySelectorAll("[data-cl]").forEach(function(el){
+    fillSlot(el, el.dataset.cl, false, function(){
+      el.innerHTML='<div class="ph"><b>'+esc(el.dataset.name)+'</b><code>'+esc(el.dataset.cl)+'</code></div>';
+    });
+  });
+}
+function renderTestimonials(){
+  var grid=document.getElementById("tstGrid"), empty=document.getElementById("tstEmpty");
+  if(!TESTIMONIALS.length){ grid.hidden=true; empty.hidden=false; return; }
+  grid.hidden=false; empty.hidden=true;
+  grid.innerHTML = TESTIMONIALS.map(function(x){
+    var d=x[lang];
+    return '<div class="tst-card"><span class="q">”</span><p>'+esc(d[0])+'</p>'+
+      '<span class="who"><span class="slot" data-ts="'+esc(x.photo||"")+'"></span>'+
+      '<span><b>'+esc(d[1])+'</b><small>'+esc(d[2])+'</small></span></span></div>';
+  }).join("");
+  grid.querySelectorAll("[data-ts]").forEach(function(el){ if(el.dataset.ts) fillSlot(el, el.dataset.ts); });
+}
 
-var matSel = 0;
+/* ---------- projects slider ---------- */
+var projI=0, PROJ_SHOWN=4;
+function renderProjects(){
+  var n=Math.min(PROJ_SHOWN, PROJECTS.length);
+  document.getElementById("projMedia").innerHTML = PROJECTS.slice(0,n).map(function(p,i){
+    return '<div class="slide'+(i===0?' on':'')+'"><div class="slot" data-pj="'+esc(p.src)+'"></div></div>';
+  }).join("");
+  document.getElementById("projDots").innerHTML = PROJECTS.slice(0,n).map(function(p,i){
+    return '<li><button type="button" class="'+(i===0?'on':'')+'" data-i="'+i+'">0'+(i+1)+'</button></li>';
+  }).join("");
+  document.querySelectorAll("[data-pj]").forEach(function(el,i){ fillSlot(el, el.dataset.pj, i===0); });
+  projI=0;
+}
+function projGo(i){
+  var s=document.querySelectorAll("#projMedia .slide");
+  if(!s.length) return;
+  projI=(i+s.length)%s.length;
+  s.forEach(function(x,k){ x.classList.toggle("on", k===projI); });
+  document.querySelectorAll("#projDots button").forEach(function(b){ b.classList.toggle("on", +b.dataset.i===projI); });
+}
+
+/* ---------- materials ---------- */
+var matSel=0;
 function renderPanels(){
   document.getElementById("matStrip").innerHTML = PANELS.map(function(pn,i){
     return '<button type="button" class="chip'+(i===matSel?' on':'')+'" data-i="'+i+'" title="'+esc(pn[lang])+'">'+
@@ -1220,63 +1065,17 @@ function renderPanels(){
   showPanel(matSel);
 }
 function showPanel(i){
-  matSel = i;
-  var pn = PANELS[i];
+  matSel=i;
+  var pn=PANELS[i];
   fillSlot(document.getElementById("matRoom"), "images/panels/rooms/"+pn.code+".jpg", true);
   fillSlot(document.getElementById("matSwatch"), "images/panels/"+pn.code+".jpg", true);
-  document.getElementById("matCode").textContent = pn.code;
-  document.getElementById("matDesc").textContent = pn[lang];
-  document.getElementById("matKind").textContent = t("kind_"+pn.kind);
-  document.querySelectorAll("#matStrip .chip").forEach(function(c){
-    c.classList.toggle("on", +c.dataset.i === i);
-  });
+  document.getElementById("matCode").textContent=pn.code;
+  document.getElementById("matDesc").textContent=pn[lang];
+  document.getElementById("matKind").textContent=t("kind_"+pn.kind);
+  document.querySelectorAll("#matStrip .chip").forEach(function(c){ c.classList.toggle("on", +c.dataset.i===i); });
 }
 
-function renderFilters(){
-  var cats=["all","booths","3d","interior"];
-  document.getElementById("filters").innerHTML = cats.map(function(c){
-    var n = c==="all" ? PROJECTS.length : PROJECTS.filter(function(p){return p.cat===c;}).length;
-    return '<button type="button" data-f="'+c+'" aria-pressed="'+(filter===c)+'">'+esc(t("f_"+c))+'<span>'+n+'</span></button>';
-  }).join("");
-}
-function present(i){
-  var tile=document.querySelector('#gallery .work[data-i="'+i+'"]');
-  return !tile || !tile.classList.contains("missing");
-}
-function visibleProjects(){
-  return PROJECTS.map(function(p,i){return i;})
-    .filter(function(i){ return (filter==="all" || PROJECTS[i].cat===filter) && present(i); });
-}
-function refreshCounts(){
-  document.querySelectorAll("#filters button[data-f]").forEach(function(b){
-    var c=b.dataset.f, span=b.querySelector("span");
-    if(!span) return;
-    var n = PROJECTS.filter(function(p,i){
-      return (c==="all" || p.cat===c) && present(i);
-    }).length;
-    span.textContent = n;
-    /* a category with nothing in it yet is not worth offering */
-    b.hidden = (n===0 && c!=="all");
-  });
-}
-function renderGallery(){
-  var g=document.getElementById("gallery");
-  g.innerHTML = PROJECTS.map(function(p,i){
-    var show = filter==="all" || p.cat===filter;
-    return '<button type="button" class="work" data-i="'+i+'"'+(show?'':' hidden')+'>'+
-      '<div class="slot" data-natural data-w="'+esc(p.src)+'"></div>'+
-      '<span class="tag">'+esc(t("f_"+p.cat))+'</span>'+
-      '<span class="cap"><span><b>'+esc(p[lang])+'</b><small>'+esc(t("f_"+p.cat))+'</small></span><i><svg><use href="#i-plus"/></svg></i></span></button>';
-  }).join("");
-  g.querySelectorAll("[data-w]").forEach(function(el){
-    fillSlot(el, el.dataset.w, false, function(){
-      var tile=el.closest(".work");
-      if(tile){ tile.classList.add("missing"); refreshCounts(); }
-    });
-  });
-}
-
-/* lightbox */
+/* ---------- lightbox ---------- */
 var lbItems=[], lbPos=0, lastFocus=null;
 function openLB(items,i){
   lbItems=items; lbPos=i; lastFocus=document.activeElement;
@@ -1286,55 +1085,30 @@ function openLB(items,i){
 function showLB(){
   var it=lbItems[lbPos];
   fillSlot(document.getElementById("lbSlot"), it.src, true);
-  document.getElementById("lbCap").innerHTML = esc(it.cap)+'<small>'+(lbPos+1)+' / '+lbItems.length+'</small>';
+  document.getElementById("lbCap").innerHTML=esc(it.cap)+'<small>'+(lbPos+1)+' / '+lbItems.length+'</small>';
 }
 function closeLB(){ document.getElementById("lb").hidden=true; document.body.style.overflow=""; if(lastFocus) lastFocus.focus(); }
 function stepLB(d){ lbPos=(lbPos+d+lbItems.length)%lbItems.length; showLB(); }
 
-/* hero dimension drawing */
-function drawDims(){
-  var host=document.querySelector(".hero-visual");
-  if(!host) return;
-  var svg=host.querySelector(".dim"), slot=host.querySelector(".slot");
-  var W=host.clientWidth, H=host.clientHeight, sw=slot.offsetWidth, sh=slot.offsetHeight;
-  var rtl = document.documentElement.dir==="rtl";
-  var sx = slot.offsetLeft, sy = slot.offsetTop;
-  svg.setAttribute("viewBox","0 0 "+W+" "+H);
-  var ly = sy-18, lx = rtl ? sx+sw+18 : sx-18, t1=4;
-  var s='';
-  s+='<line class="draw" x1="'+sx+'" y1="'+ly+'" x2="'+(sx+sw)+'" y2="'+ly+'"/>';
-  s+='<line x1="'+sx+'" y1="'+(ly-8)+'" x2="'+sx+'" y2="'+(sy-4)+'"/><line x1="'+(sx+sw)+'" y1="'+(ly-8)+'" x2="'+(sx+sw)+'" y2="'+(sy-4)+'"/>';
-  s+='<line x1="'+(sx-t1)+'" y1="'+(ly+t1)+'" x2="'+(sx+t1)+'" y2="'+(ly-t1)+'" stroke-width="2"/><line x1="'+(sx+sw-t1)+'" y1="'+(ly+t1)+'" x2="'+(sx+sw+t1)+'" y2="'+(ly-t1)+'" stroke-width="2"/>';
-  s+='<rect x="'+(sx+sw/2-34)+'" y="'+(ly-9)+'" width="68" height="18" fill="#050D1F"/><text x="'+(sx+sw/2)+'" y="'+(ly+4)+'" text-anchor="middle">9.00 m</text>';
-  s+='<line class="draw" x1="'+lx+'" y1="'+sy+'" x2="'+lx+'" y2="'+(sy+sh)+'"/>';
-  var tickOut = rtl ? lx+8 : lx-8;
-  s+='<line x1="'+tickOut+'" y1="'+sy+'" x2="'+(rtl?sx+sw+4:sx-4)+'" y2="'+sy+'"/><line x1="'+tickOut+'" y1="'+(sy+sh)+'" x2="'+(rtl?sx+sw+4:sx-4)+'" y2="'+(sy+sh)+'"/>';
-  s+='<line x1="'+(lx-t1)+'" y1="'+(sy+t1)+'" x2="'+(lx+t1)+'" y2="'+(sy-t1)+'" stroke-width="2"/><line x1="'+(lx-t1)+'" y1="'+(sy+sh+t1)+'" x2="'+(lx+t1)+'" y2="'+(sy+sh-t1)+'" stroke-width="2"/>';
-  var my=sy+sh/2;
-  s+='<rect x="'+(lx-9)+'" y="'+(my-34)+'" width="18" height="68" fill="#050D1F"/><text x="'+lx+'" y="'+(my+4)+'" text-anchor="middle" transform="rotate(-90 '+lx+' '+my+')">6.00 m</text>';
-  svg.innerHTML=s;
-}
-
+/* ---------- language ---------- */
 function applyLang(){
-  var html=document.documentElement;
-  html.lang=lang; html.dir = lang==="ar" ? "rtl" : "ltr";
+  var h=document.documentElement;
+  h.lang=lang; h.dir = lang==="ar" ? "rtl" : "ltr";
   document.querySelectorAll("[data-i18n]").forEach(function(el){ el.textContent=t(el.dataset.i18n); });
   document.querySelectorAll("[data-i18n-html]").forEach(function(el){ el.innerHTML=t(el.dataset.i18nHtml); });
   document.querySelectorAll("[data-i18n-ph]").forEach(function(el){ el.placeholder=t(el.dataset.i18nPh); });
-  document.querySelectorAll("[data-i18n-title]").forEach(function(el){ el.title=t(el.dataset.i18nTitle); });
-  var label = lang==="ar" ? "EN" : "عربي";
-  document.getElementById("langBtn").textContent = label;
-  document.getElementById("railLang").textContent = label;
-  document.title = lang==="ar" ? "أمازون إنترناشيونال | تصميم وتنفيذ أجنحة المعارض والديكور" : "Amazon International | Exhibition Booths & Interior Decor";
-  renderServices(); renderStands(); renderSteps(); renderWhy(); renderFilters(); renderGallery(); renderPanels(); fillStaticSlots();
-  setTimeout(refreshCounts, 1200);
-  requestAnimationFrame(drawDims);
+  document.getElementById("langBtn").textContent = lang==="ar" ? "EN" : "عربي";
+  document.title = lang==="ar"
+    ? "الأمازون انترناشيونال للتجارة العامة | ديكور داخلي وأجنحة معارض"
+    : "Amazon International General Trading | Interior Decor & Exhibition Stands";
+  renderHero(); renderServices(); renderFeats(); renderSteps(); renderClients();
+  renderTestimonials(); renderProjects(); renderPanels();
+  document.querySelectorAll(".slot[data-src]").forEach(function(el){ fillSlot(el, el.dataset.src, true); });
   observeReveal();
-  onScroll();
 }
 
 var io = ("IntersectionObserver" in window) ? new IntersectionObserver(function(es){
-  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.remove("pre"); io.unobserve(e.target);} });
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.remove("pre"); io.unobserve(e.target); } });
 },{rootMargin:"0px 0px -8% 0px"}) : null;
 function observeReveal(){
   if(!io) return;
@@ -1344,27 +1118,35 @@ function observeReveal(){
   });
 }
 
-function switchLang(){
+/* ---------- events ---------- */
+document.getElementById("langBtn").addEventListener("click",function(){
   lang = lang==="ar" ? "en" : "ar";
   try{ localStorage.setItem("ai-lang",lang); }catch(e){}
   applyLang();
-}
-document.getElementById("langBtn").addEventListener("click",switchLang);
-document.getElementById("railLang").addEventListener("click",switchLang);
+});
+var burger=document.getElementById("burger");
+burger.addEventListener("click",function(){
+  var o=document.body.classList.toggle("nav-open"); burger.setAttribute("aria-expanded",o);
+});
+document.getElementById("menu").addEventListener("click",function(e){
+  if(e.target.closest("a")){ document.body.classList.remove("nav-open"); burger.setAttribute("aria-expanded","false"); }
+});
 
-document.getElementById("filters").addEventListener("click",function(e){
-  var b=e.target.closest("button[data-f]"); if(!b) return;
-  filter=b.dataset.f;
-  this.querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", x===b); });
-  document.querySelectorAll("#gallery .work").forEach(function(w){
-    var p=PROJECTS[+w.dataset.i]; w.hidden = !(filter==="all"||p.cat===filter);
-  });
+document.getElementById("heroPrev").addEventListener("click",function(){ heroGo(-1); });
+document.getElementById("heroNext").addEventListener("click",function(){ heroGo(1); });
+setInterval(function(){ if(!document.hidden) heroGo(1); }, 7000);
+
+document.getElementById("projPrev").addEventListener("click",function(){ projGo(projI-1); });
+document.getElementById("projNext").addEventListener("click",function(){ projGo(projI+1); });
+document.getElementById("projDots").addEventListener("click",function(e){
+  var b=e.target.closest("button[data-i]"); if(b) projGo(+b.dataset.i);
 });
-document.getElementById("gallery").addEventListener("click",function(e){
-  var w=e.target.closest(".work"); if(!w) return;
-  var vis=visibleProjects();
-  openLB(vis.map(function(i){ return {src:PROJECTS[i].src, cap:PROJECTS[i][lang]}; }), vis.indexOf(+w.dataset.i));
-});
+function openProjects(from){
+  openLB(PROJECTS.map(function(p){ return {src:p.src, cap:p[lang]}; }), from||0);
+}
+document.getElementById("projAll").addEventListener("click",function(){ openProjects(0); });
+document.getElementById("projMedia").addEventListener("click",function(){ openProjects(projI); });
+
 document.getElementById("matStrip").addEventListener("click",function(e){
   var c=e.target.closest(".chip"); if(c) showPanel(+c.dataset.i);
 });
@@ -1374,7 +1156,8 @@ function openRooms(){
   }), matSel);
 }
 document.getElementById("matZoom").addEventListener("click",openRooms);
-document.querySelector(".mat-room .slot").addEventListener("click",openRooms);
+document.getElementById("matRoom").addEventListener("click",openRooms);
+
 document.getElementById("lbClose").addEventListener("click",closeLB);
 document.getElementById("lbPrev").addEventListener("click",function(){ stepLB(-1); });
 document.getElementById("lbNext").addEventListener("click",function(){ stepLB(1); });
@@ -1386,122 +1169,97 @@ document.addEventListener("keydown",function(e){
   if(e.key==="ArrowLeft") stepLB(-1);
 });
 
-/* active section + scroll progress on the floating rail */
-var railLinks = [].slice.call(document.querySelectorAll(".rail a[data-sec]"));
+/* active nav link */
+var links=[].slice.call(document.querySelectorAll(".menu a[data-sec]"));
 function onScroll(){
-  var y=window.scrollY, max=document.documentElement.scrollHeight-window.innerHeight;
-  document.getElementById("railFill").style.height = (max>0 ? Math.max(0,Math.min(100, y/max*100)) : 0)+"%";
-  var cur=railLinks[0].dataset.sec, mark=window.innerHeight*0.32;
-  railLinks.forEach(function(a){
+  var cur=links[0].dataset.sec, mark=window.innerHeight*0.3;
+  links.forEach(function(a){
     var el=document.getElementById(a.dataset.sec);
-    if(el && el.getBoundingClientRect().top <= mark) cur=a.dataset.sec;
+    if(el && el.getBoundingClientRect().top<=mark) cur=a.dataset.sec;
   });
-  railLinks.forEach(function(a){ a.classList.toggle("on", a.dataset.sec===cur); });
+  links.forEach(function(a){ a.classList.toggle("on", a.dataset.sec===cur); });
 }
 window.addEventListener("scroll",onScroll,{passive:true});
-window.addEventListener("resize",function(){ requestAnimationFrame(drawDims); onScroll(); });
 
-function toast(msg){ var el=document.getElementById("toast"); el.textContent=msg; el.hidden=false; clearTimeout(toast.t); toast.t=setTimeout(function(){el.hidden=true;},2600); }
-function copyText(txt, ok){
-  if(navigator.clipboard && navigator.clipboard.writeText){
-    navigator.clipboard.writeText(txt).then(function(){ toast(ok); }, function(){});
-  }
-}
+function toast(m){ var el=document.getElementById("toast"); el.textContent=m; el.hidden=false; clearTimeout(toast.t); toast.t=setTimeout(function(){el.hidden=true;},2600); }
 document.querySelectorAll(".copy").forEach(function(b){
   b.addEventListener("click",function(){
-    var txt=b.dataset.copy;
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(txt).then(function(){ toast(t("copied")); }, select);
-    } else select();
-    function select(){
-      var v=b.parentElement.querySelector(".v"); if(!v) return;
-      var r=document.createRange(); r.selectNodeContents(v);
-      var s=getSelection(); s.removeAllRanges(); s.addRange(r);
-    }
+    if(navigator.clipboard&&navigator.clipboard.writeText)
+      navigator.clipboard.writeText(b.dataset.copy).then(function(){ toast(t("copied")); },function(){});
   });
 });
 
-/* ---------- quote form: sends the filled request on WhatsApp or by email ---------- */
-var qf = document.getElementById("quoteForm"), sendVia = "wa";
-qf.querySelectorAll('button[type="submit"]').forEach(function(b){
-  b.addEventListener("click", function(){ sendVia = b.value; });
+document.getElementById("playBtn").addEventListener("click",function(){
+  if(VIDEO){ window.open(VIDEO,"_blank","noopener"); } else { toast(t("video_soon")); }
 });
-qf.addEventListener("submit", function(e){
+
+/* quote form */
+var qf=document.getElementById("quoteForm"), sendVia="wa";
+qf.querySelectorAll('button[type="submit"]').forEach(function(b){
+  b.addEventListener("click",function(){ sendVia=b.value; });
+});
+qf.addEventListener("submit",function(e){
   e.preventDefault();
-  var fName=document.getElementById("f-name"), fPhone=document.getElementById("f-phone"),
-      fType=document.getElementById("f-type"), fSize=document.getElementById("f-size"),
-      fMsg=document.getElementById("f-msg"), note=document.getElementById("formNote");
-  var name=fName.value.trim(), phone=fPhone.value.trim();
-  if(!name || !phone){
+  var name=document.getElementById("f-name").value.trim(),
+      phone=document.getElementById("f-phone").value.trim(),
+      type=document.getElementById("f-type").value,
+      size=document.getElementById("f-size").value.trim(),
+      msg=document.getElementById("f-msg").value.trim(),
+      note=document.getElementById("formNote");
+  if(!name||!phone){
     note.textContent=t("f_err"); note.style.color="var(--red)";
-    (name ? fPhone : fName).focus();
+    (name?document.getElementById("f-phone"):document.getElementById("f-name")).focus();
     return;
   }
   note.textContent=t("f_note"); note.style.color="";
-
-  var lines=[ t("wa_msg"), "",
-    t("wa_name")+": "+name,
-    t("wa_phone")+": "+phone,
-    t("wa_type")+": "+fType.value ];
-  if(fSize.value.trim()) lines.push(t("wa_size")+": "+fSize.value.trim()+" m²");
-  if(fMsg.value.trim())  lines.push(t("wa_det")+": "+fMsg.value.trim());
+  var lines=[t("wa_msg"),"",t("wa_name")+": "+name,t("wa_phone")+": "+phone,t("wa_type")+": "+type];
+  if(size) lines.push(t("wa_size")+": "+size+" m²");
+  if(msg)  lines.push(t("wa_det")+": "+msg);
   if(location.hostname) lines.push("", t("wa_src")+": "+location.hostname);
-  var body = lines.join("\n");
-
-  /* show the exact text that gets sent, with a copy button as a fallback */
-  document.getElementById("msgText").textContent = body;
-  document.getElementById("msgBox").hidden = false;
-
-  var url = sendVia === "mail"
+  var body=lines.join("\n");
+  document.getElementById("msgText").textContent=body;
+  document.getElementById("msgBox").hidden=false;
+  var url = sendVia==="mail"
     ? "mailto:"+EMAIL+"?subject="+encodeURIComponent(t("wa_subject")+" — "+name)+"&body="+encodeURIComponent(body)
     : "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(body);
-
-  var opened=null;
-  try{ opened = window.open(url, sendVia==="mail" ? "_self" : "_blank", "noopener"); }catch(err){}
-  if(!opened){
-    var a=document.createElement("a"); a.href=url;
-    if(sendVia!=="mail"){ a.target="_blank"; a.rel="noopener"; }
-    document.body.appendChild(a); a.click(); a.remove();
-  }
-  toast(sendVia==="mail" ? t("f_sent_mail") : t("f_sent_wa"));
+  var w=null; try{ w=window.open(url, sendVia==="mail"?"_self":"_blank","noopener"); }catch(err){}
+  if(!w){ var a=document.createElement("a"); a.href=url; if(sendVia!=="mail"){a.target="_blank";a.rel="noopener";}
+          document.body.appendChild(a); a.click(); a.remove(); }
+  toast(sendVia==="mail"?t("f_sent_mail"):t("f_sent_wa"));
 });
-document.getElementById("copyMsg").addEventListener("click", function(){
-  copyText(document.getElementById("msgText").textContent, t("copied"));
+document.getElementById("copyMsg").addEventListener("click",function(){
+  if(navigator.clipboard&&navigator.clipboard.writeText)
+    navigator.clipboard.writeText(document.getElementById("msgText").textContent).then(function(){ toast(t("copied")); },function(){});
 });
 
-/* ---------- map: swap in the fallback panel if the embedded map is blocked ----------
-   Some viewers (and this site's preview) refuse third-party frames. The live Google
-   map works on the real site; everywhere else visitors get the panel below. */
+/* newsletter — no mailing service yet, so it sends the address to the office */
+document.getElementById("newsForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  var f=document.getElementById("nl-email"), v=f.value.trim();
+  if(!v||v.indexOf("@")<1){ toast(t("nl_err")); f.focus(); return; }
+  var url="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(t("nl_msg")+v);
+  var w=null; try{ w=window.open(url,"_blank","noopener"); }catch(err){}
+  if(!w){ var a=document.createElement("a"); a.href=url; a.target="_blank"; a.rel="noopener";
+          document.body.appendChild(a); a.click(); a.remove(); }
+  f.value="";
+});
+
+/* map: swap in the panel where third-party frames are blocked */
 (function(){
   var frame=document.getElementById("mapFrame"), wrap=document.getElementById("mapWrap"),
       fb=document.getElementById("mapFallback"), loaded=false, done=false;
   if(!frame) return;
-  function useFallback(){
-    if(done) return; done=true;
-    frame.hidden=true; fb.hidden=false; wrap.classList.add("blocked");
-  }
-  /* a real Google map is cross-origin, so reading its location throws.
-     A blocked frame is still about:blank, which reads back without error. */
+  function useFallback(){ if(done) return; done=true; frame.hidden=true; fb.hidden=false; wrap.classList.add("blocked"); }
   function isBlocked(){
-    try{
-      var w=frame.contentWindow;
-      if(!w) return true;
-      var href=w.location.href;
-      return !href || href==="about:blank";
-    }catch(e){ return false; }
+    try{ var w=frame.contentWindow; if(!w) return true;
+         var h=w.location.href; return !h||h==="about:blank"; }catch(e){ return false; }
   }
-  frame.addEventListener("load", function(){
-    loaded=true;
-    setTimeout(function(){ if(isBlocked()) useFallback(); },150);
+  frame.addEventListener("load",function(){ loaded=true; setTimeout(function(){ if(isBlocked()) useFallback(); },150); });
+  frame.addEventListener("error",useFallback);
+  document.addEventListener("securitypolicyviolation",function(e){
+    if((e.blockedURI||"").indexOf("google.com")>-1) useFallback();
   });
-  frame.addEventListener("error", useFallback);
-  document.addEventListener("securitypolicyviolation", function(e){
-    if((e.blockedURI||"").indexOf("google.com") > -1) useFallback();
-  });
-  /* the frame loads lazily, so only start waiting once the map is near the screen */
-  function watch(){
-    setTimeout(function(){ if(!loaded) useFallback(); }, 6000);
-  }
+  function watch(){ setTimeout(function(){ if(!loaded) useFallback(); },6000); }
   if("IntersectionObserver" in window){
     var mo=new IntersectionObserver(function(es){
       es.forEach(function(e){ if(e.isIntersecting){ mo.disconnect(); watch(); } });
@@ -1510,8 +1268,8 @@ document.getElementById("copyMsg").addEventListener("click", function(){
   } else watch();
 })();
 
-document.getElementById("yr").textContent = new Date().getFullYear();
-applyLang();
+document.getElementById("yr").textContent=new Date().getFullYear();
+applyLang(); onScroll();
 </script>
 
 </body>
