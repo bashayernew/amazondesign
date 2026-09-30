@@ -125,6 +125,7 @@ html[dir="rtl"] .hero .wrap{align-items:flex-end}
 .hero h1{font-size:clamp(28px,3.6vw,46px);font-weight:900;margin-block:20px 18px;line-height:1.28}
 .hero h1 em{font-style:normal;color:var(--red);display:block}
 .hero p.lead{color:rgba(255,255,255,.86);font-size:clamp(15px,1.25vw,17px);line-height:1.95;max-width:52ch}
+.hero p.lead .tagline{display:block;color:#fff;font-family:var(--display);font-weight:800;font-size:clamp(19px,1.9vw,24px);line-height:1.5;margin-bottom:6px}
 .hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
 .hero-count{position:absolute;inset-inline-end:var(--gutter);bottom:clamp(20px,3vw,38px);display:flex;align-items:center;gap:16px;font-family:"Manrope",sans-serif;font-size:14px;font-weight:600;color:#fff}
 .hero-count button{width:38px;height:38px;border:1.5px solid rgba(255,255,255,.4);border-radius:50%;background:none;color:#fff;display:grid;place-items:center;transition:all .25s}
@@ -519,7 +520,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.72);font-size:14.5px}
     <div class="hero-copy">
       <span class="eyebrow" data-i18n="hero_eyebrow">التصميم · التنفيذ · الإبداع</span>
       <h1 data-i18n-html="hero_title">شركة الأمازون انترناشيونال<em>للتجارة العامة</em></h1>
-      <p class="lead" data-i18n="hero_lead">متخصصون في تصميم وتنفيذ جميع أعمال الديكور الداخلي، من التصميم إلى التنفيذ، بما في ذلك أجنحة المعارض وتصميم وتنفيذ المكاتب، وبديل الشيبورد، وبديل الخشب، والباركيه.</p>
+      <p class="lead" data-i18n-html="hero_lead"><strong class="tagline">تصميم يُلهم، تنفيذ يُتقن</strong>نقدم حلولًا متكاملة لتصميم وتنفيذ الديكور الداخلي والبوثات وأجنحة المعارض.</p>
       <div class="ctas">
         <a href="#contact" class="btn btn-red" data-i18n="cta_contact">تواصل معنا</a>
         <a href="#services" class="btn btn-ghost" data-i18n="cta_services">تعرّف على خدماتنا</a>
@@ -883,7 +884,7 @@ var T = {
     nav_home:"الرئيسية",nav_about:"من نحن",nav_services:"خدماتنا",nav_work:"معرض الأعمال",nav_voices:"آراء العملاء",nav_contact:"تواصل معنا",
     hero_eyebrow:"التصميم · التنفيذ · الإبداع",
     hero_title:"شركة الأمازون انترناشيونال<em>للتجارة العامة</em>",
-    hero_lead:"متخصصون في تصميم وتنفيذ جميع أعمال الديكور الداخلي، من التصميم إلى التنفيذ، بما في ذلك أجنحة المعارض وتصميم وتنفيذ المكاتب، وبديل الشيبورد، وبديل الخشب، والباركيه.",
+    hero_lead:'<strong class="tagline">تصميم يُلهم، تنفيذ يُتقن</strong>نقدم حلولًا متكاملة لتصميم وتنفيذ الديكور الداخلي والبوثات وأجنحة المعارض.',
     cta_contact:"تواصل معنا",cta_services:"تعرّف على خدماتنا",
     sv_eyebrow:"خدماتنا",sv_title:"حلول متكاملة لكل احتياجاتك",sv_sub:"من التصميم حتى التسليم، نوفّر لك كل ما تحتاجه في مكان واحد.",
     sc_title:"جميع خدماتنا في مكان واحد",
@@ -924,7 +925,7 @@ var T = {
     nav_home:"Home",nav_about:"About",nav_services:"Services",nav_work:"Our work",nav_voices:"Clients",nav_contact:"Contact",
     hero_eyebrow:"Design · Build · Craft",
     hero_title:"Amazon International<em>General Trading</em>",
-    hero_lead:"We design and build every kind of interior decor — from concept to completion — including exhibition stands, office fit-out, gypsum-board and wood alternatives, and parquet.",
+    hero_lead:'<strong class="tagline">Design that inspires, execution that excels.</strong>Complete design-and-build solutions for interior decor, booths and exhibition stands.',
     cta_contact:"Contact us",cta_services:"See our services",
     sv_eyebrow:"Services",sv_title:"Complete solutions for everything you need",sv_sub:"From design through to handover, everything you need in one place.",
     sc_title:"All our services in one place",
