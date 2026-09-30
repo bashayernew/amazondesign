@@ -255,8 +255,8 @@ html[dir="ltr"] .svc-card:hover .bar i{transform:translateX(4px)}
 .step p{font-size:13.5px;color:var(--muted);margin-top:6px;line-height:1.7}
 
 /* ---------- testimonials + clients ---------- */
-.trust{display:grid;grid-template-columns:1fr}
-.trust .tst{padding-inline:max(var(--gutter),calc((100% - 1200px)/2))}
+.trust{display:grid;grid-template-columns:1.25fr 1fr}
+.clients{display:flex;flex-direction:column;align-items:center;justify-content:center}
 .tst{background:var(--navy);color:#fff;padding:clamp(44px,5vw,76px) clamp(24px,3.4vw,56px)}
 .tst h2{color:#fff;font-size:clamp(22px,2.7vw,32px);margin-block:14px 0}
 .tst .eyebrow{color:#fff}
@@ -638,7 +638,10 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.72);font-size:14.5px}
     <span class="eyebrow" data-i18n="ts_eyebrow">آراء العملاء</span>
     <h2 data-i18n="ts_title">ثقة عملائنا هي أكبر دافع لنا</h2>
     <div class="tst-grid" id="tstGrid" hidden></div>
-    <p class="tst-empty" id="tstEmpty" data-i18n="ts_empty">هذا القسم جاهز لثلاث شهادات حقيقية من عملائنا. أرسل لنا نص كل شهادة مع اسم صاحبها وصفته وموافقته على النشر، وسنضيفها هنا.</p>
+  </div>
+  <div class="clients">
+    <span class="eyebrow" data-i18n="cl_eyebrow">عملاؤنا</span>
+    <h2 data-i18n="cl_title">نفخر بثقتهم</h2>
   </div>
 </section>
 
@@ -1058,8 +1061,8 @@ function renderClients(){
 }
 function renderTestimonials(){
   var grid=document.getElementById("tstGrid"), empty=document.getElementById("tstEmpty");
-  if(!TESTIMONIALS.length){ grid.hidden=true; empty.hidden=false; return; }
-  grid.hidden=false; empty.hidden=true;
+  if(!TESTIMONIALS.length){ grid.hidden=true; if(empty) empty.hidden=false; return; }
+  grid.hidden=false; if(empty) empty.hidden=true;
   grid.innerHTML = TESTIMONIALS.map(function(x){
     var d=x[lang];
     return '<div class="tst-card"><span class="q">”</span><p>'+esc(d[0])+'</p>'+
