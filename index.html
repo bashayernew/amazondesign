@@ -390,6 +390,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.72);font-size:14.5px}
   .menu a{font-size:22px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.12)}
   .menu a::after{display:none}
   .socials{display:none}
+  .foot .socials{display:flex}
   .hero-copy{max-width:100%}
   .hero-fade{background:rgba(11,32,80,.55)}
   .about-grid,.proj-grid,.contact-grid,.mat-stage,.map-fb{grid-template-columns:1fr}
@@ -487,10 +488,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.72);font-size:14.5px}
     <div class="hd-left">
       <button class="burger" id="burger" type="button" aria-label="Menu" aria-controls="menu" aria-expanded="false"><span></span></button>
       <nav class="socials" aria-label="Social">
-        <a href="#" aria-label="Instagram"><svg><use href="#s-ig"/></svg></a>
-        <a href="#" aria-label="X"><svg><use href="#s-x"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg><use href="#s-in"/></svg></a>
-        <a href="#" aria-label="YouTube"><svg><use href="#s-yt"/></svg></a>
+        <a href="#" data-ig aria-label="Instagram" target="_blank" rel="noopener"><svg><use href="#s-ig"/></svg></a>
       </nav>
       <button class="lang" id="langBtn" type="button">EN</button>
     </div>
@@ -685,6 +683,13 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.72);font-size:14.5px}
             <div class="v" style="font-size:15.5px" data-i18n="hours">السبت – الخميس، 9:00 ص – 6:00 م</div>
           </div>
         </div>
+        <div class="citem">
+          <div class="ic"><svg><use href="#s-ig"/></svg></div>
+          <div>
+            <small data-i18n="ct_ig">انستغرام</small>
+            <div class="v"><a href="#" data-ig target="_blank" rel="noopener" class="ltr" id="igHandle">@instagram</a></div>
+          </div>
+        </div>
       </div>
 
       <form class="quote rv" id="quoteForm" novalidate>
@@ -763,10 +768,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.72);font-size:14.5px}
         <button type="submit" data-i18n="nl_btn">اشترك</button>
       </form>
       <nav class="socials" aria-label="Social">
-        <a href="#" aria-label="Instagram"><svg><use href="#s-ig"/></svg></a>
-        <a href="#" aria-label="X"><svg><use href="#s-x"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg><use href="#s-in"/></svg></a>
-        <a href="#" aria-label="YouTube"><svg><use href="#s-yt"/></svg></a>
+        <a href="#" data-ig aria-label="Instagram" target="_blank" rel="noopener"><svg><use href="#s-ig"/></svg></a>
       </nav>
     </div>
   </div>
@@ -797,6 +799,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.72);font-size:14.5px}
    CLIENTS               client logos: images/clients/<file>
    TESTIMONIALS          left empty on purpose — see the note in the section
    ===================================================================== */
+var INSTAGRAM = "";   /* Instagram username, e.g. "amazon.international" */
 var WHATSAPP = "96555776301";
 var EMAIL    = "amazoninternational527@gmail.com";
 var VIDEO    = "images/video/company-full.mp4";   /* company video: an .mp4 in images/video/ or a YouTube/Vimeo link */
@@ -901,7 +904,7 @@ var T = {
     cl_eyebrow:"عملاؤنا",cl_title:"نفخر بثقتهم",
     ct_eyebrow:"تواصل معنا",ct_title:"لنبدأ مشروعك القادم",
     ct_sub:"زورونا في مكتبنا في حولي، أو تواصلوا معنا بالهاتف أو واتساب أو البريد الإلكتروني.",
-    ct_phone:"الهاتف وواتساب",ct_email:"البريد الإلكتروني",ct_addr:"العنوان",ct_hours:"ساعات العمل",
+    ct_phone:"الهاتف وواتساب",ct_email:"البريد الإلكتروني",ct_addr:"العنوان",ct_ig:"انستغرام",ct_hours:"ساعات العمل",
     addr:"حولي - بن خلدون - مجمع الفوز - الدور الثاني - مكتب 10",
     hours:"السبت – الخميس، 9:00 ص – 6:00 م",copy:"نسخ",copied:"تم النسخ",
     f_title:"اطلب عرض سعر",f_name:"الاسم",f_phone:"رقم الهاتف",f_type:"نوع المشروع",f_size:"المساحة التقريبية (م²)",f_msg:"تفاصيل المشروع",
@@ -942,7 +945,7 @@ var T = {
     cl_eyebrow:"Our clients",cl_title:"Proud of their trust",
     ct_eyebrow:"Contact",ct_title:"Let's start your next project",
     ct_sub:"Visit our office in Hawalli, or reach us by phone, WhatsApp or email.",
-    ct_phone:"Phone & WhatsApp",ct_email:"Email",ct_addr:"Address",ct_hours:"Working hours",
+    ct_phone:"Phone & WhatsApp",ct_email:"Email",ct_addr:"Address",ct_ig:"Instagram",ct_hours:"Working hours",
     addr:"Hawalli - Bin Khaldoun - Al-Fouz Complex - 2nd floor - Office 10",
     hours:"Sat – Thu, 9:00 AM – 6:00 PM",copy:"Copy",copied:"Copied",
     f_title:"Request a quote",f_name:"Name",f_phone:"Phone number",f_type:"Project type",f_size:"Approx. area (m²)",f_msg:"Project details",
@@ -1251,6 +1254,8 @@ function openVideo(){
   document.addEventListener("keydown",esck);
   document.body.appendChild(m);
 }
+document.querySelectorAll("[data-ig]").forEach(function(el){ if(INSTAGRAM) el.href="https://www.instagram.com/"+INSTAGRAM+"/"; });
+if(INSTAGRAM) document.getElementById("igHandle").textContent="@"+INSTAGRAM;
 document.getElementById("playBtn").addEventListener("click",function(){
   if(!VIDEO){ toast(t("video_soon")); return; }
   if(isMp4) openVideo(); else window.open(VIDEO,"_blank","noopener");
