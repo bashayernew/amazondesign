@@ -799,8 +799,9 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.72);font-size:14.5px}
    ===================================================================== */
 var WHATSAPP = "96555776301";
 var EMAIL    = "amazoninternational527@gmail.com";
-var VIDEO    = "images/video/room-cinematic.mp4";   /* company video: an .mp4 in images/video/ or a YouTube/Vimeo link */
-var VIDEO_POSTER = "images/video/room-cinematic.jpg";
+var VIDEO    = "images/video/company-full.mp4";   /* company video: an .mp4 in images/video/ or a YouTube/Vimeo link */
+var VIDEO_POSTER = "images/video/company-poster.jpg";
+var VIDEO_PREVIEW = "images/video/company-preview.mp4";   /* silent landscape loop shown in the about section */
 
 /* hero background video (already trimmed to start at the 3rd second). Set to "" to go back to the photo slider. */
 var HERO_VIDEO  = "images/hero/hero.mp4";
@@ -1237,7 +1238,7 @@ if(isMp4){
   as.removeAttribute("data-src");
   as.innerHTML='<video muted loop playsinline preload="none" poster="'+esc(VIDEO_POSTER)+'" aria-hidden="true"></video>';
   var av=as.querySelector("video"); av.muted=true;
-  var startAbout=function(){ if(av.src) return; av.src=VIDEO; var ap=av.play(); if(ap&&ap.catch) ap.catch(function(){}); };
+  var startAbout=function(){ if(av.src) return; av.src=VIDEO_PREVIEW||VIDEO; var ap=av.play(); if(ap&&ap.catch) ap.catch(function(){}); };
   if("IntersectionObserver" in window){
     var vio=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ startAbout(); vio.disconnect(); } },{rootMargin:"300px"});
     vio.observe(as);
