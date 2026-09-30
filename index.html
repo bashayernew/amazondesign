@@ -1108,7 +1108,7 @@ function renderPanels(){
 function showPanel(i){
   matSel=i;
   var pn=PANELS[i];
-  fillSlot(document.getElementById("matRoom"), "images/panels/rooms/"+pn.code+".jpg", true);
+  fillSlot(document.getElementById("matRoom"), "images/panels/rooms/"+pn.code+".jpg?v=2", true);
   fillSlot(document.getElementById("matSwatch"), "images/panels/"+pn.code+".jpg", true);
   document.getElementById("matCode").textContent=pn.code;
   document.getElementById("matDesc").textContent=pn[lang];
